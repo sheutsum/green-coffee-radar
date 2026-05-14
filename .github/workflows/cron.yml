@@ -1,0 +1,32 @@
+name: green-coffee-radar
+
+on:
+  schedule:
+    # 2시간마다 (UTC). 한국 시간 기준이 아니지만 알림 봇이라 무관.
+    - cron: '0 */2 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # 상태(seen.sqlite) 커밋용
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - run: pip install -r requirements.txt
+
+      - run: python run.py
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT:  ${{ secrets.TG_CHAT }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "state: update seen.sqlite"
+          file_pattern: seen.sqlite
