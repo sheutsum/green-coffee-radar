@@ -1,5 +1,7 @@
 from __future__ import annotations
 import re
+import random
+import time
 from abc import ABC, abstractmethod
 from typing import Optional
 
@@ -110,6 +112,44 @@ _HEADERS = {
     "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.5",
 }
 
+
+def polite_sleep(min_s: float = 0.8, max_s: float = 1.8) -> None:
+    """Random short pause between requests — spreads burst, less robotic."""
+    time.sleep(random.uniform(min_s, max_s))
+
+
+def get_with_retry(
+    client: "httpx.Client",
+    url: str,
+    *,
+    max_retries: int = 3,
+    base_backoff: float = 2.0,
+    **kwargs,
+) -> "httpx.Response":
+    """GET with exponential backoff on 429/5xx and transient transport errors.
+    Honors Retry-After when present. Returns the final Response so the caller
+    can still inspect / raise_for_status()."""
+    for attempt in range(max_retries + 1):
+        try:
+            r = client.get(url, **kwargs)
+        except (httpx.TimeoutException, httpx.TransportError):
+            if attempt >= max_retries:
+                raise
+            time.sleep(base_backoff ** (attempt + 1) + random.uniform(0, 1))
+            continue
+
+        if r.status_code in (429, 502, 503, 504) and attempt < max_retries:
+            ra = r.headers.get("Retry-After", "").strip()
+            if ra.isdigit():
+                delay = float(ra)
+            else:
+                delay = base_backoff ** (attempt + 1) + random.uniform(0, 1)
+            time.sleep(delay)
+            continue
+        return r
+    raise RuntimeError(f"get_with_retry: exhausted retries for {url}")
+
+
 _PRODUCT_ID_RE = re.compile(
     r"/product/[^/]+/(\d+)/|[?&]product_no=(\d+)"
 )
@@ -136,8 +176,10 @@ class Cafe24Scraper(Scraper):
         with httpx.Client(headers=_HEADERS, timeout=self.timeout,
                           follow_redirects=True) as c:
             for page in range(1, self.max_pages + 1):
+                if page > 1:
+                    polite_sleep()
                 url = self.catalog_url_template.format(base=self.base, page=page)
-                r = c.get(url)
+                r = get_with_retry(c, url)
                 r.raise_for_status()
                 items = list(self._parse_list(r.text))
                 # stop when a page yields nothing new (handles end-of-pagination

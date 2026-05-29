@@ -26,7 +26,7 @@ from typing import Iterator
 
 from core.models import Product
 from scrapers.base import (
-    Scraper, guess_origin, guess_process,
+    Scraper, guess_origin, guess_process, polite_sleep, get_with_retry,
 )
 class SixshopScraper(Scraper):
     # --- subclass config ---
@@ -80,7 +80,9 @@ class SixshopScraper(Scraper):
             page = 0
             total_pages = self.max_pages  # 첫 응답으로 갱신
             while page < total_pages and page < self.max_pages:
-                r = c.get(url, params=self._params(page))
+                if page > 0:
+                    polite_sleep()
+                r = get_with_retry(c, url, params=self._params(page))
                 r.raise_for_status()
                 try:
                     data = r.json()

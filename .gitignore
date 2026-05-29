@@ -3,3 +3,13 @@ __pycache__/
 .venv/
 .env
 .DS_Store
+
+# local debug / scratch artifacts
+naver_debug.html
+logs/
+node_modules/
+
+# local-only tooling / PC-specific launchers (not needed in the cloud)
+.claude/
+scheduled_run.ps1
+scheduled_run.vbs

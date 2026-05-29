@@ -13,7 +13,7 @@ from selectolax.parser import HTMLParser
 from core.models import Product
 from scrapers.base import (
     Scraper, _HEADERS, parse_price_krw, parse_unit_g,
-    guess_origin, guess_process,
+    guess_origin, guess_process, polite_sleep, get_with_retry,
 )
 
 _IDX_RE = re.compile(r"[?&]idx=(\d+)")
@@ -43,7 +43,8 @@ class BlackRoadScraper(Scraper):
                 url = self.base + self.catalog_path
                 if page > 1:
                     url += f"?page={page}"
-                r = c.get(url)
+                    polite_sleep()
+                r = get_with_retry(c, url)
                 r.raise_for_status()
                 items = list(self._parse(r.text))
                 new = [p for p in items if p.sku not in seen]

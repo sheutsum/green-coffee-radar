@@ -11,7 +11,7 @@ from selectolax.parser import HTMLParser
 from core.models import Product
 from scrapers.base import (
     Scraper, _HEADERS, parse_price_krw, parse_unit_g,
-    guess_origin, guess_process,
+    guess_origin, guess_process, polite_sleep, get_with_retry,
 )
 
 _PNO_RE = re.compile(r"[?&]pno=([A-F0-9]+)")
@@ -31,8 +31,10 @@ class CobeansScraper(Scraper):
         seen: set[str] = set()
         with httpx.Client(headers=_HEADERS, timeout=20, follow_redirects=True) as c:
             for page in range(1, self.max_pages + 1):
+                if page > 1:
+                    polite_sleep()
                 url = self.catalog_url_template.format(base=self.base, page=page)
-                r = c.get(url)
+                r = get_with_retry(c, url)
                 r.raise_for_status()
                 items = list(self._parse(r.text))
                 new = [p for p in items if p.sku not in seen]
