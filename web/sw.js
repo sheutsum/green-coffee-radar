@@ -1,7 +1,7 @@
 // 생두 레이더 — service worker
 // App shell: cache-first. Feed (feed.json): network-first with cache fallback.
 
-const VERSION = "gcr-v1";
+const VERSION = "gcr-v2";
 const SHELL_CACHE = `${VERSION}-shell`;
 const DATA_CACHE = `${VERSION}-data`;
 

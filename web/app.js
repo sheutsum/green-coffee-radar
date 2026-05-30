@@ -3,6 +3,12 @@
 
 const NEW_DAYS = 7;            // a product is "신상품" if first_seen is within this many days
 const DEFAULT_FEED = "./feed.json";
+
+// GitHub Actions workflow that scrapes + rebuilds feed.json (see .github/workflows/cron.yml).
+// The PWA can trigger it via workflow_dispatch using a token kept ONLY in this device's
+// localStorage — never committed to the public repo / served in the page source.
+const GH = { repo: "sheutsum/green-coffee-radar", workflow: "cron.yml", branch: "main" };
+
 const LS = {
   feedUrl: "gcr.feedUrl",
   favorites: "gcr.favorites",
@@ -10,6 +16,7 @@ const LS = {
   unack: "gcr.unackSkus",
   notify: "gcr.notify",
   cache: "gcr.feedCache",
+  ghToken: "gcr.ghToken",
 };
 
 // ---------- tiny storage helpers ----------
@@ -39,6 +46,7 @@ const state = {
   known: new Set(store.getJSON(LS.known, [])),
   unack: new Set(store.getJSON(LS.unack, [])),
   offline: false,
+  refreshing: false,
 };
 
 // ---------- DOM refs ----------
@@ -113,7 +121,9 @@ function escapeHtml(s) {
 }
 
 // ---------- feed loading ----------
-async function loadFeed({ silent = false } = {}) {
+async function loadFeed({ silent = false, manual = false } = {}) {
+  if (state.refreshing) return;
+  state.refreshing = true;
   if (!silent) {
     el.loader.classList.remove("hidden");
     el.list.innerHTML = "";
@@ -138,13 +148,22 @@ async function loadFeed({ silent = false } = {}) {
       el.refresh.classList.remove("spinning");
       el.empty.classList.remove("hidden");
       el.emptyText.textContent = "피드를 불러올 수 없습니다. 설정에서 피드 주소를 확인하세요.";
+      state.refreshing = false;
+      if (manual) toast("피드를 불러올 수 없습니다");
       return;
     }
   }
 
-  applyFeed(data, { fromNetwork });
+  const appeared = applyFeed(data, { fromNetwork });
   el.loader.classList.add("hidden");
   el.refresh.classList.remove("spinning");
+  state.refreshing = false;
+
+  if (manual) {
+    // new arrivals already surface their own toast via notifyNewArrivals
+    if (state.offline) toast("오프라인 — 저장된 데이터를 보는 중");
+    else if (!appeared) toast("최신 상태입니다 ☕");
+  }
 }
 
 function applyFeed(data, { fromNetwork }) {
@@ -156,6 +175,7 @@ function applyFeed(data, { fromNetwork }) {
   const currentSkus = products.map((p) => p.sku);
   const firstEverLoad = state.known.size === 0;
   const appeared = currentSkus.filter((s) => !state.known.has(s));
+  const newCount = firstEverLoad ? 0 : appeared.length;
 
   if (firstEverLoad) {
     // baseline: treat everything currently listed as already-known (no notification spam)
@@ -177,6 +197,7 @@ function applyFeed(data, { fromNetwork }) {
 
   el.offlineBanner.classList.toggle("hidden", !state.offline);
   render();
+  return newCount;
 }
 
 // ---------- notifications ----------
@@ -470,6 +491,7 @@ function renderSettings() {
     ("Notification" in window) && Notification.permission === "granted";
   const url = feedUrl();
   const updated = state.generatedAt ? new Date(state.generatedAt).toLocaleString("ko-KR") : "—";
+  const tokenSet = !!ghToken();
 
   el.sub.textContent = "환경설정";
   el.list.innerHTML = `
@@ -490,6 +512,23 @@ function renderSettings() {
         <input class="setting-input" id="setFeedUrl" value="${escapeHtml(url)}" autocapitalize="off" autocorrect="off" spellcheck="false" />
         <div class="desc">스크레이퍼가 만든 feed.json의 위치 (기본값: ./feed.json)</div>
       </div>
+    </div>
+
+    <div class="settings-group">
+      <h3>수집</h3>
+      <div class="setting-row tappable" id="setRunScrape">
+        <div><div class="label">지금 새로 수집하기</div><div class="desc">스크레이퍼를 즉시 실행합니다 · 완료까지 1~2분</div></div>
+        <div class="value" id="scrapeState">▶ 실행</div>
+      </div>
+      <div class="setting-row" style="flex-direction:column;align-items:stretch;gap:8px">
+        <div class="label">GitHub 토큰</div>
+        <input class="setting-input" id="setGhToken" type="password" placeholder="${tokenSet ? "••••••••  (저장됨)" : "github_pat_… 붙여넣기"}" autocapitalize="off" autocorrect="off" spellcheck="false" />
+        <div class="desc">${tokenSet ? "✓ 토큰이 이 기기에 저장돼 있습니다. " : ""}<strong>${escapeHtml(GH.repo)}</strong> 레포의 Actions 읽기/쓰기 권한이 있는 fine-grained 토큰. 이 기기에만 저장되며 공개 사이트에는 포함되지 않습니다.</div>
+        ${tokenSet ? '<div class="setting-row tappable" id="setClearToken" style="padding:6px 0 0"><div class="label btn-danger">토큰 삭제</div></div>' : ""}
+      </div>
+      <a class="setting-row tappable" href="https://github.com/${escapeHtml(GH.repo)}/actions/workflows/${escapeHtml(GH.workflow)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <div class="label">GitHub Actions에서 열기 ↗</div><div class="value">수동 실행</div>
+      </a>
     </div>
 
     <div class="settings-group">
@@ -521,6 +560,22 @@ function renderSettings() {
     toast("피드 주소를 저장했습니다");
     loadFeed();
   });
+  $("#setGhToken").addEventListener("change", (e) => {
+    const v = e.target.value.trim();
+    if (!v) return;
+    store.set(LS.ghToken, v);
+    e.target.value = "";
+    toast("토큰을 이 기기에 저장했습니다");
+    renderSettings();
+  });
+  $("#setRunScrape").addEventListener("click", triggerScrape);
+  const clearTokenBtn = $("#setClearToken");
+  if (clearTokenBtn) clearTokenBtn.addEventListener("click", () => {
+    localStorage.removeItem(LS.ghToken);
+    toast("토큰을 삭제했습니다");
+    renderSettings();
+  });
+
   $("#setResetFav").addEventListener("click", () => {
     state.favorites.clear();
     store.setJSON(LS.favorites, []);
@@ -535,6 +590,118 @@ function renderSettings() {
     render();
     toast("신상품 기준을 현재 시점으로 초기화했습니다");
   });
+}
+
+// ---------- scraper trigger (GitHub Actions workflow_dispatch) ----------
+function ghToken() { return store.get(LS.ghToken, "") || ""; }
+
+function setScrapeState(text) {
+  const node = document.getElementById("scrapeState");
+  if (node) node.textContent = text;
+}
+
+async function ghApi(path, opts = {}) {
+  return fetch(`https://api.github.com${path}`, {
+    ...opts,
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${ghToken()}`,
+      "X-GitHub-Api-Version": "2022-11-28",
+      ...(opts.headers || {}),
+    },
+  });
+}
+
+async function latestRunId() {
+  try {
+    const res = await ghApi(`/repos/${GH.repo}/actions/workflows/${GH.workflow}/runs?per_page=1`);
+    if (!res.ok) return null;
+    const j = await res.json();
+    const runs = j.workflow_runs || [];
+    return runs[0] ? runs[0].id : 0;
+  } catch { return null; }
+}
+
+let scrapePolling = false;
+
+async function triggerScrape() {
+  if (!ghToken()) {
+    toast("먼저 GitHub 토큰을 입력하세요");
+    return;
+  }
+  if (scrapePolling) { toast("이미 수집이 진행 중입니다"); return; }
+
+  setScrapeState("시작 중…");
+  const beforeId = await latestRunId(); // baseline so we can spot the run we just started
+
+  let res;
+  try {
+    res = await ghApi(`/repos/${GH.repo}/actions/workflows/${GH.workflow}/dispatches`, {
+      method: "POST",
+      body: JSON.stringify({ ref: GH.branch }),
+    });
+  } catch {
+    setScrapeState("▶ 실행");
+    toast("GitHub에 연결할 수 없습니다");
+    return;
+  }
+
+  if (res.status === 204) {
+    toast("수집을 시작했어요 ☕ 끝나면 자동 새로고침됩니다");
+    pollScrape(beforeId);
+  } else if (res.status === 401 || res.status === 403) {
+    setScrapeState("▶ 실행");
+    toast("토큰 권한을 확인하세요 (Actions 읽기/쓰기)");
+  } else {
+    setScrapeState("▶ 실행");
+    toast(`실행 실패 (HTTP ${res.status})`);
+  }
+}
+
+function pollScrape(beforeId) {
+  scrapePolling = true;
+  setScrapeState("수집 중…");
+  const started = Date.now();
+  const TIMEOUT = 6 * 60 * 1000;
+  let runId = null;
+
+  const stop = (msg) => {
+    scrapePolling = false;
+    setScrapeState("▶ 실행");
+    if (msg) toast(msg);
+  };
+
+  const tick = async () => {
+    if (Date.now() - started > TIMEOUT) {
+      stop("수집이 오래 걸려요 — 잠시 후 수동으로 새로고침하세요");
+      return;
+    }
+    try {
+      if (runId == null) {
+        // find the run we just dispatched (newer than the baseline id)
+        const res = await ghApi(`/repos/${GH.repo}/actions/workflows/${GH.workflow}/runs?per_page=5`);
+        const j = await res.json();
+        const runs = j.workflow_runs || [];
+        const fresh = runs.find((r) => (beforeId == null ? r.status !== "completed" : r.id > beforeId));
+        if (fresh) runId = fresh.id;
+      } else {
+        const res = await ghApi(`/repos/${GH.repo}/actions/runs/${runId}`);
+        const r = await res.json();
+        if (r.status === "completed") {
+          if (r.conclusion === "success") {
+            stop(null);
+            toast("수집 완료! 새 피드를 불러옵니다 ✅");
+            await loadFeed({ silent: true });
+          } else {
+            stop(`수집이 ${r.conclusion || "비정상"}(으)로 끝났어요`);
+          }
+          return;
+        }
+      }
+    } catch { /* transient — keep polling */ }
+    setTimeout(tick, 10000);
+  };
+  setTimeout(tick, 4000);
 }
 
 // ---------- actions ----------
@@ -558,7 +725,8 @@ function switchView(view) {
 
 // ---------- event wiring ----------
 function wireEvents() {
-  el.refresh.addEventListener("click", () => loadFeed());
+  el.refresh.addEventListener("click", () => loadFeed({ manual: true }));
+  wirePullToRefresh();
 
   el.search.addEventListener("input", (e) => {
     state.search = e.target.value;
@@ -608,6 +776,65 @@ function wireEvents() {
       loadFeed({ silent: true });
     }
   });
+}
+
+// ---------- pull-to-refresh ----------
+function wirePullToRefresh() {
+  const main = el.main;
+  const ind = document.createElement("div");
+  ind.id = "ptr";
+  ind.className = "ptr";
+  ind.innerHTML = '<div class="ptr-spinner"></div>';
+  main.prepend(ind);
+
+  const THRESHOLD = 64;   // pull distance (px) needed to trigger
+  const MAX = 96;         // max visible pull
+  let startY = 0;
+  let dist = 0;
+  let pulling = false;
+
+  const reset = (animate) => {
+    ind.style.transition = animate ? "height .2s ease" : "none";
+    ind.style.height = "0px";
+    ind.classList.remove("ready", "loading");
+  };
+
+  main.addEventListener("touchstart", (e) => {
+    if (main.scrollTop <= 0 && !state.refreshing && e.touches.length === 1) {
+      startY = e.touches[0].clientY;
+      pulling = true;
+      dist = 0;
+    } else {
+      pulling = false;
+    }
+  }, { passive: true });
+
+  main.addEventListener("touchmove", (e) => {
+    if (!pulling) return;
+    const dy = e.touches[0].clientY - startY;
+    if (dy <= 0) { pulling = false; reset(true); return; }
+    dist = Math.min(MAX, dy * 0.5); // resistance
+    ind.style.transition = "none";
+    ind.style.height = dist + "px";
+    ind.classList.toggle("ready", dist >= THRESHOLD);
+  }, { passive: true });
+
+  const finish = async () => {
+    if (!pulling) return;
+    pulling = false;
+    if (dist >= THRESHOLD) {
+      ind.style.transition = "height .2s ease";
+      ind.style.height = "44px";
+      ind.classList.add("loading");
+      ind.classList.remove("ready");
+      await loadFeed({ silent: true, manual: true });
+      reset(true);
+    } else {
+      reset(true);
+    }
+  };
+  main.addEventListener("touchend", finish, { passive: true });
+  main.addEventListener("touchcancel", finish, { passive: true });
 }
 
 // ---------- service worker ----------
