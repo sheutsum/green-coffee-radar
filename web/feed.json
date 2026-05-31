@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-31T19:53:17+00:00",
-  "count": 434,
+  "generated_at": "2026-05-31T23:45:54+00:00",
+  "count": 433,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -4175,19 +4175,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6815&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 34900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7622",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 니카라과라 벤디시온 파카마라 내추럴",
-      "origin": "Nicaragua",
-      "process": "내추럴",
-      "price_krw": 23600,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7622&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 23600,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
