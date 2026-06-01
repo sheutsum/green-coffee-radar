@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-05-31T23:45:54+00:00",
-  "count": 433,
+  "generated_at": "2026-06-01T19:31:02+00:00",
+  "count": 422,
   "suppliers": [
     "모모스커피",
-    "블랙로드커피",
     "카페노갈레스",
     "커피 리브레",
     "커피미업",
@@ -11,12 +10,65 @@
     "콤파스 커피"
   ],
   "errors": [
+    "blackroad",
     "verde",
     "ryubeans",
     "chbean",
     "doan"
   ],
   "products": [
+    {
+      "sku": "libre:7705",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 니카라과오호 데 아구아 모고톤",
+      "origin": "Nicaragua",
+      "process": null,
+      "price_krw": 21300,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7705&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 21300,
+      "first_seen": "2026-06-01T19:30:19"
+    },
+    {
+      "sku": "libre:7706",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 니카라과아구아 사르카 엘 토리토 무산소 내추럴",
+      "origin": "Nicaragua",
+      "process": "무산소 내추럴",
+      "price_krw": 22300,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7706&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 22300,
+      "first_seen": "2026-06-01T19:30:19"
+    },
+    {
+      "sku": "libre:7707",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 니카라과로 프로메티도",
+      "origin": "Nicaragua",
+      "process": null,
+      "price_krw": 20700,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7707&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20700,
+      "first_seen": "2026-06-01T19:30:19"
+    },
+    {
+      "sku": "libre:7708",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 니카라과라 벤디시온 파카마라 내추럴",
+      "origin": "Nicaragua",
+      "process": "내추럴",
+      "price_krw": 26900,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7708&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 26900,
+      "first_seen": "2026-06-01T19:30:19"
+    },
     {
       "sku": "coffeemeup:840",
       "supplier": "커피미업",
@@ -83,9 +135,22 @@
       "first_seen": "2026-05-29T07:01:12"
     },
     {
+      "sku": "cobeans:D827F12E35EAE370BA9C65B7F6026695",
+      "supplier": "코빈즈커피",
+      "name": "◼︎일시품절◼︎26 콜롬비아 과코비아 스트로베리 코퍼먼티드",
+      "origin": "Colombia",
+      "process": null,
+      "price_krw": 36800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=D827F12E35EAE370BA9C65B7F6026695&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 36800,
+      "first_seen": "2026-05-28T08:46:21"
+    },
+    {
       "sku": "cobeans:F976B57BB9DD27AA2E7E7DF2825893A6",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 코코넛 코퍼먼티드",
+      "name": "◼︎온라인전용◼︎26 콜롬비아 카페 로사리오 코코넛 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 42800,
@@ -96,35 +161,9 @@
       "first_seen": "2026-05-28T08:46:21"
     },
     {
-      "sku": "cobeans:2D2CA7EEDF739EF4C3800713EC482E1A",
-      "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 워터멜론 코퍼먼티드",
-      "origin": "Colombia",
-      "process": null,
-      "price_krw": 42800,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=2D2CA7EEDF739EF4C3800713EC482E1A&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 42800,
-      "first_seen": "2026-05-28T08:46:21"
-    },
-    {
-      "sku": "cobeans:E58AEA67B01FA747687F038DFDE066F6",
-      "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 애프리콧 코퍼먼티드",
-      "origin": "Colombia",
-      "process": null,
-      "price_krw": 42800,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=E58AEA67B01FA747687F038DFDE066F6&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 42800,
-      "first_seen": "2026-05-28T08:46:21"
-    },
-    {
       "sku": "cobeans:046DDF96C233A273FD390C3D0B1A9AA4",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 아이리쉬 크림 코퍼먼티드",
+      "name": "◼︎온라인전용◼︎26 콜롬비아 카페 로사리오 아이리쉬 크림 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 42800,
@@ -137,7 +176,7 @@
     {
       "sku": "cobeans:F516DFB84B9051ED85B89CDC3A8AB7F5",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 사워솝 코퍼먼티드",
+      "name": "◼︎온라인전용◼︎26 콜롬비아 카페 로사리오 사워솝 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 42800,
@@ -150,7 +189,7 @@
     {
       "sku": "cobeans:6211080FA89981F66B1A0C9D55C61D0F",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 블루베리 코퍼먼티드",
+      "name": "◼︎온라인전용◼︎26 콜롬비아 카페 로사리오 블루베리 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 42800,
@@ -161,9 +200,35 @@
       "first_seen": "2026-05-28T08:46:21"
     },
     {
+      "sku": "cobeans:2D2CA7EEDF739EF4C3800713EC482E1A",
+      "supplier": "코빈즈커피",
+      "name": "26 콜롬비아 카페 로사리오 워터멜론 코퍼먼티드",
+      "origin": "Colombia",
+      "process": null,
+      "price_krw": 42800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=2D2CA7EEDF739EF4C3800713EC482E1A&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 42800,
+      "first_seen": "2026-05-28T08:46:21"
+    },
+    {
+      "sku": "cobeans:E58AEA67B01FA747687F038DFDE066F6",
+      "supplier": "코빈즈커피",
+      "name": "26 콜롬비아 카페 로사리오 애프리콧 코퍼먼티드",
+      "origin": "Colombia",
+      "process": null,
+      "price_krw": 42800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=E58AEA67B01FA747687F038DFDE066F6&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 42800,
+      "first_seen": "2026-05-28T08:46:21"
+    },
+    {
       "sku": "cobeans:E6C2DC3DEE4A51DCEC3A876AA2339A78",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 카페 로사리오 리치 코퍼먼티드",
+      "name": "26 콜롬비아 카페 로사리오 리치 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 42800,
@@ -176,7 +241,7 @@
     {
       "sku": "cobeans:FFEDF5BE3A86E2EE281D54CDC97BC1CF",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 로스 파티오스 피치 코퍼먼티드",
+      "name": "26 콜롬비아 로스 파티오스 피치 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 36800,
@@ -189,7 +254,7 @@
     {
       "sku": "cobeans:49C0B9D84C2A16FCAF9D25694FDA75E1",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 로스 파티오스 체리 코퍼먼티드",
+      "name": "26 콜롬비아 로스 파티오스 체리 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 36800,
@@ -202,25 +267,12 @@
     {
       "sku": "cobeans:149815EB972B3C370DEE3B89D645AE14",
       "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 로스 파티오스 베리 코퍼먼티드",
+      "name": "26 콜롬비아 로스 파티오스 베리 코퍼먼티드",
       "origin": "Colombia",
       "process": null,
       "price_krw": 36800,
       "unit_g": 1000,
       "url": "https://www.cobeans.com/shop/detail.php?pno=149815EB972B3C370DEE3B89D645AE14&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 36800,
-      "first_seen": "2026-05-28T08:46:21"
-    },
-    {
-      "sku": "cobeans:D827F12E35EAE370BA9C65B7F6026695",
-      "supplier": "코빈즈커피",
-      "name": "◼︎6월1일오픈예정◼︎26 콜롬비아 과코비아 스트로베리 코퍼먼티드",
-      "origin": "Colombia",
-      "process": null,
-      "price_krw": 36800,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=D827F12E35EAE370BA9C65B7F6026695&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 36800,
       "first_seen": "2026-05-28T08:46:21"
@@ -330,123 +382,6 @@
       "first_seen": "2026-05-21T03:01:13"
     },
     {
-      "sku": "blackroad:1179",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 포르톤 4FB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1179",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T09:01:15"
-    },
-    {
-      "sku": "blackroad:1178",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 투마코 2NB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1178",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T09:01:15"
-    },
-    {
-      "sku": "blackroad:1180",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 카바나 아바호 3NB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1180",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T09:01:15"
-    },
-    {
-      "sku": "blackroad:1182",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 몬타나 2NB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1182",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T09:01:15"
-    },
-    {
-      "sku": "blackroad:1183",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 구아보 2NC",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 270000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1183",
-      "in_stock": false,
-      "price_per_kg": 270000,
-      "first_seen": "2026-05-20T09:01:15"
-    },
-    {
-      "sku": "blackroad:1176",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 마리오 아바호 4NB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1176",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T08:01:19"
-    },
-    {
-      "sku": "blackroad:1177",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 마리오 아리바 3NB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1177",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T08:01:19"
-    },
-    {
-      "sku": "blackroad:1174",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 레온 6NB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1174",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T08:01:19"
-    },
-    {
-      "sku": "blackroad:1175",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 에스메랄다 레온 3FB",
-      "origin": "Panama",
-      "process": null,
-      "price_krw": 240000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1175",
-      "in_stock": false,
-      "price_per_kg": 240000,
-      "first_seen": "2026-05-20T08:01:19"
-    },
-    {
       "sku": "libre:7688",
       "supplier": "커피 리브레",
       "name": "[New Crop / 소분] 브라질세하도 내추럴 리브레 셀렉션",
@@ -458,19 +393,6 @@
       "in_stock": false,
       "price_per_kg": 19200,
       "first_seen": "2026-05-20T01:01:18"
-    },
-    {
-      "sku": "blackroad:1184",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 누구오 게이샤 내추럴 펄먼테이션",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 812100000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1184",
-      "in_stock": false,
-      "price_per_kg": 812100000,
-      "first_seen": "2026-05-18T13:01:15"
     },
     {
       "sku": "libre:7681",
@@ -562,32 +484,6 @@
       "in_stock": false,
       "price_per_kg": 17800,
       "first_seen": "2026-05-15T05:01:15"
-    },
-    {
-      "sku": "blackroad:1169",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 에콰도르 푸투시오 티피카 매호라도 워시드",
-      "origin": "Ecuador",
-      "process": "워시드",
-      "price_krw": 175000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1169",
-      "in_stock": true,
-      "price_per_kg": 175000,
-      "first_seen": "2026-05-15T04:01:17"
-    },
-    {
-      "sku": "blackroad:1168",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 에콰도르 솔레다드 시드라 웨이브 워시드",
-      "origin": "Ecuador",
-      "process": "워시드",
-      "price_krw": 175000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1168",
-      "in_stock": true,
-      "price_per_kg": 175000,
-      "first_seen": "2026-05-15T04:01:17"
     },
     {
       "sku": "cafenogales:9179704",
@@ -2327,7 +2223,7 @@
       "price_krw": 19800,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/6162034",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 19800,
       "first_seen": "2026-05-14T07:43:04"
     },
@@ -2366,7 +2262,7 @@
       "price_krw": 17600,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/5023312",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 17600,
       "first_seen": "2026-05-14T07:43:04"
     },
@@ -2475,32 +2371,6 @@
       "first_seen": "2026-05-14T07:43:04"
     },
     {
-      "sku": "blackroad:1152",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 돈벤지 핑크버본 언에어로빅 내추럴",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 105000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1152",
-      "in_stock": true,
-      "price_per_kg": 105000,
-      "first_seen": "2026-05-14T07:42:31"
-    },
-    {
-      "sku": "blackroad:1149",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 돈벤지 핑크버본 언에어로빅 내추럴",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 124000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1149",
-      "in_stock": true,
-      "price_per_kg": 124000,
-      "first_seen": "2026-05-14T07:42:31"
-    },
-    {
       "sku": "cobeans:72E6D3238361FE70F22FB0AC624A7072",
       "supplier": "코빈즈커피",
       "name": "페루 엘 디아만테 게이샤 워시드",
@@ -2547,7 +2417,7 @@
       "process": "워시드",
       "price_krw": 19300,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=0E087EC55DCBE7B2D7992D6B69B519FB&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=0E087EC55DCBE7B2D7992D6B69B519FB&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 19300,
       "first_seen": "2026-05-14T07:42:29"
@@ -2771,19 +2641,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7506&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 21500,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7518",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루라스 에티오페스 게이샤 내추럴",
-      "origin": "Peru",
-      "process": "내추럴",
-      "price_krw": 75000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7518&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 75000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
