@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T19:31:02+00:00",
+  "generated_at": "2026-06-02T00:00:53+00:00",
   "count": 422,
   "suppliers": [
     "모모스커피",
@@ -142,7 +142,7 @@
       "process": null,
       "price_krw": 36800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=D827F12E35EAE370BA9C65B7F6026695&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=D827F12E35EAE370BA9C65B7F6026695&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 36800,
       "first_seen": "2026-05-28T08:46:21"
@@ -2417,7 +2417,7 @@
       "process": "워시드",
       "price_krw": 19300,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=0E087EC55DCBE7B2D7992D6B69B519FB&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=0E087EC55DCBE7B2D7992D6B69B519FB&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 19300,
       "first_seen": "2026-05-14T07:42:29"
