@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-02T06:51:40+00:00",
-  "count": 435,
+  "generated_at": "2026-06-02T19:58:31+00:00",
+  "count": 424,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -148,19 +148,6 @@
       "first_seen": "2026-05-29T07:01:12"
     },
     {
-      "sku": "cobeans:D827F12E35EAE370BA9C65B7F6026695",
-      "supplier": "코빈즈커피",
-      "name": "◼︎일시품절◼︎26 콜롬비아 과코비아 스트로베리 코퍼먼티드",
-      "origin": "Colombia",
-      "process": null,
-      "price_krw": 36800,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=D827F12E35EAE370BA9C65B7F6026695&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 36800,
-      "first_seen": "2026-05-28T08:46:21"
-    },
-    {
       "sku": "cobeans:F976B57BB9DD27AA2E7E7DF2825893A6",
       "supplier": "코빈즈커피",
       "name": "◼︎온라인전용◼︎26 콜롬비아 카페 로사리오 코코넛 코퍼먼티드",
@@ -168,7 +155,7 @@
       "process": null,
       "price_krw": 42800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=F976B57BB9DD27AA2E7E7DF2825893A6&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=F976B57BB9DD27AA2E7E7DF2825893A6&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 42800,
       "first_seen": "2026-05-28T08:46:21"
@@ -181,7 +168,7 @@
       "process": null,
       "price_krw": 42800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=046DDF96C233A273FD390C3D0B1A9AA4&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=046DDF96C233A273FD390C3D0B1A9AA4&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 42800,
       "first_seen": "2026-05-28T08:46:21"
@@ -291,17 +278,17 @@
       "first_seen": "2026-05-28T08:46:21"
     },
     {
-      "sku": "cobeans:4079016D940210B4AE9AE7D41C4A2065",
+      "sku": "cobeans:D827F12E35EAE370BA9C65B7F6026695",
       "supplier": "코빈즈커피",
-      "name": "과테말라 안티구아 SHB 워시드",
-      "origin": "Guatemala",
-      "process": "워시드",
-      "price_krw": 17800,
+      "name": "26 콜롬비아 과코비아 스트로베리 코퍼먼티드",
+      "origin": "Colombia",
+      "process": null,
+      "price_krw": 36800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=4079016D940210B4AE9AE7D41C4A2065&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=D827F12E35EAE370BA9C65B7F6026695&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
-      "price_per_kg": 17800,
-      "first_seen": "2026-05-27T14:01:46"
+      "price_per_kg": 36800,
+      "first_seen": "2026-05-28T08:46:21"
     },
     {
       "sku": "momos:2719",
@@ -367,32 +354,6 @@
       "in_stock": true,
       "price_per_kg": null,
       "first_seen": "2026-05-22T08:01:45"
-    },
-    {
-      "sku": "cobeans:234833147B97BB6AED53A8F4F1C7A7D8",
-      "supplier": "코빈즈커피",
-      "name": "26 콜롬비아 빌라 율리아나 파파요 워시드",
-      "origin": "Colombia",
-      "process": "워시드",
-      "price_krw": 39300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=234833147B97BB6AED53A8F4F1C7A7D8&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 39300,
-      "first_seen": "2026-05-21T03:01:13"
-    },
-    {
-      "sku": "cobeans:BA3E9B6A519CFDDC560B5D53210DF1BD",
-      "supplier": "코빈즈커피",
-      "name": "26 콜롬비아 라 파라다 파카마라 애너러빅 내추럴",
-      "origin": "Colombia",
-      "process": "내추럴",
-      "price_krw": 47300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=BA3E9B6A519CFDDC560B5D53210DF1BD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 47300,
-      "first_seen": "2026-05-21T03:01:13"
     },
     {
       "sku": "blackroad:1179",
@@ -614,19 +575,6 @@
       "in_stock": true,
       "price_per_kg": null,
       "first_seen": "2026-05-15T07:01:14"
-    },
-    {
-      "sku": "cobeans:C0A271BC0ECB776A094786474322CB82",
-      "supplier": "코빈즈커피",
-      "name": "과테말라 후에후에 테낭고 SHB 워시드",
-      "origin": "Guatemala",
-      "process": "워시드",
-      "price_krw": 17800,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=C0A271BC0ECB776A094786474322CB82&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 17800,
-      "first_seen": "2026-05-15T05:01:15"
     },
     {
       "sku": "blackroad:1169",
@@ -2548,7 +2496,7 @@
       "price_krw": 105000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1152",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 105000,
       "first_seen": "2026-05-14T07:42:31"
     },
@@ -2564,84 +2512,6 @@
       "in_stock": true,
       "price_per_kg": 124000,
       "first_seen": "2026-05-14T07:42:31"
-    },
-    {
-      "sku": "cobeans:72E6D3238361FE70F22FB0AC624A7072",
-      "supplier": "코빈즈커피",
-      "name": "페루 엘 디아만테 게이샤 워시드",
-      "origin": "Peru",
-      "process": "워시드",
-      "price_krw": 42000,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=72E6D3238361FE70F22FB0AC624A7072&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 42000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "cobeans:250413D2982F1F83AA62A3A323CD2A87",
-      "supplier": "코빈즈커피",
-      "name": "에티오피아 예가체프 코체레 G2 코빈즈 디카페인",
-      "origin": "Ethiopia",
-      "process": "디카페인",
-      "price_krw": 20800,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=250413D2982F1F83AA62A3A323CD2A87&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 20800,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "cobeans:CD10C7F376188A4A2CA3E8FEA2C03AEB",
-      "supplier": "코빈즈커피",
-      "name": "에티오피아 시다마 벤사 케라모 G1 코빈즈 디카페인",
-      "origin": "Ethiopia",
-      "process": "디카페인",
-      "price_krw": 27300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=CD10C7F376188A4A2CA3E8FEA2C03AEB&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 27300,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "cobeans:0E087EC55DCBE7B2D7992D6B69B519FB",
-      "supplier": "코빈즈커피",
-      "name": "◼︎이벤트◼︎에티오피아 게뎁 우리 G1 워시드",
-      "origin": "Ethiopia",
-      "process": "워시드",
-      "price_krw": 19300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=0E087EC55DCBE7B2D7992D6B69B519FB&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 19300,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "cobeans:C91591A8D461C2869B9F535DED3E213E",
-      "supplier": "코빈즈커피",
-      "name": "◼︎이벤트◼︎25 에티오피아 예가체프 아제레 G1 워시드",
-      "origin": "Ethiopia",
-      "process": "워시드",
-      "price_krw": 18300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=C91591A8D461C2869B9F535DED3E213E&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 18300,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "cobeans:FC4DDC15F9F4B4B06EF7844D6BB53ABF",
-      "supplier": "코빈즈커피",
-      "name": "◼︎이벤트◼︎25 에티오피아 구지 우라가 고구구 G1 워시드",
-      "origin": "Ethiopia",
-      "process": "워시드",
-      "price_krw": 20300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=FC4DDC15F9F4B4B06EF7844D6BB53ABF&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 20300,
-      "first_seen": "2026-05-14T07:42:29"
     },
     {
       "sku": "libre:6324",
@@ -4290,19 +4160,6 @@
       "price_krw": 19900,
       "unit_g": 1000,
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7077&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7076",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라엘 타로 Lot.1",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 19900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7076&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 19900,
       "first_seen": "2026-05-14T07:42:29"
