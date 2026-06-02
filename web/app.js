@@ -523,7 +523,7 @@ function renderSettings() {
       <div class="setting-row" style="flex-direction:column;align-items:stretch;gap:8px">
         <div class="label">GitHub 토큰</div>
         <input class="setting-input" id="setGhToken" type="password" placeholder="${tokenSet ? "••••••••  (저장됨)" : "github_pat_… 붙여넣기"}" autocapitalize="off" autocorrect="off" spellcheck="false" />
-        <div class="desc">${tokenSet ? "✓ 토큰이 이 기기에 저장돼 있습니다. " : ""}<strong>${escapeHtml(GH.repo)}</strong> 레포의 Actions 읽기/쓰기 권한이 있는 fine-grained 토큰. 이 기기에만 저장되며 공개 사이트에는 포함되지 않습니다.</div>
+        <div class="desc">${tokenSet ? "✓ 토큰이 이 기기에 저장돼 있습니다. " : ""}fine-grained 토큰 생성 시 — <strong>Repository access</strong>를 <strong>${escapeHtml(GH.repo)}</strong>로 지정하고, <strong>Permissions → Actions</strong>를 <strong>Read and write</strong>로 설정하세요. 이 기기에만 저장되며 공개 사이트에는 포함되지 않습니다.</div>
         ${tokenSet ? '<div class="setting-row tappable" id="setClearToken" style="padding:6px 0 0"><div class="label btn-danger">토큰 삭제</div></div>' : ""}
       </div>
       <a class="setting-row tappable" href="https://github.com/${escapeHtml(GH.repo)}/actions/workflows/${escapeHtml(GH.workflow)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
@@ -649,12 +649,22 @@ async function triggerScrape() {
   if (res.status === 204) {
     toast("수집을 시작했어요 ☕ 끝나면 자동 새로고침됩니다");
     pollScrape(beforeId);
-  } else if (res.status === 401 || res.status === 403) {
-    setScrapeState("▶ 실행");
-    toast("토큰 권한을 확인하세요 (Actions 읽기/쓰기)");
   } else {
     setScrapeState("▶ 실행");
-    toast(`실행 실패 (HTTP ${res.status})`);
+    // GitHub가 돌려주는 실제 사유를 같이 보여주면 원인 파악이 쉬움
+    let reason = "";
+    try { reason = (await res.json()).message || ""; } catch {}
+    if (res.status === 401) {
+      toast("토큰이 잘못됐거나 만료됐어요 — 설정에서 다시 입력하세요");
+    } else if (res.status === 403) {
+      toast(`권한 부족: 토큰에 Actions 읽기/쓰기 권한을 주세요${reason ? ` (${reason})` : ""}`);
+    } else if (res.status === 404) {
+      toast("토큰이 이 레포에 접근할 수 없어요 — fine-grained 토큰의 레포 범위를 확인하세요");
+    } else if (res.status === 422) {
+      toast(`워크플로 실행 불가${reason ? ` (${reason})` : ""}`);
+    } else {
+      toast(`실행 실패 (HTTP ${res.status})${reason ? ` — ${reason}` : ""}`);
+    }
   }
 }
 
