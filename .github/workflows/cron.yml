@@ -2,9 +2,12 @@ name: green-coffee-radar
 
 on:
   schedule:
-    # 30분마다 (UTC). 신상 마이크로랏을 빨리 잡기 위함.
+    # 30분 간격 (UTC). 신상 마이크로랏을 빨리 잡기 위함.
+    # 정각/30분(:00,:30)은 GitHub 부하가 가장 커서 schedule 트리거가 자주 드롭됨 →
+    # 혼잡 시간대를 피해 :07,:37 로 오프셋. 그래도 schedule은 best-effort라
+    # 하루 수회만 뜰 수 있음. 안정적 30분 간격이 필요하면 외부 핑거(workflow_dispatch) 사용.
     # 사이트별 throttle/retry는 scrapers/base.py 의 polite_sleep/get_with_retry 참고.
-    - cron: '*/30 * * * *'
+    - cron: '7,37 * * * *'
   workflow_dispatch: {}
 
 # contents: 상태(seen.sqlite/feed.json) 커밋 / pages·id-token: PWA 배포
