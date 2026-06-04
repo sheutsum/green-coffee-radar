@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-03T22:32:48+00:00",
-  "count": 427,
+  "generated_at": "2026-06-04T10:51:51+00:00",
+  "count": 433,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -18,6 +18,123 @@
   ],
   "products": [
     {
+      "sku": "momos:2804",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Thunguri Natural Heavy",
+      "origin": "Kenya",
+      "process": "Natural",
+      "price_krw": 33500,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-thunguri-natural-heavy/2804/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 33500,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2795",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Thunguri AB Fully Washed",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-thunguri-ab-fully-washed/2795/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 28000,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2793",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Thunguri AA Fully Washed #1",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 32000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-thunguri-aa-fully-washed-1/2793/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 32000,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2798",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Miiri Peaberry Fully Washed",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 23000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-miiri-peaberry-fully-washed/2798/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 23000,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2800",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Kangiri Peaberry Fully Washed",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 25500,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-kangiri-peaberry-fully-washed/2800/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 25500,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2810",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Kamoko Peaberry Fully Washed",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 25500,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-kamoko-peaberry-fully-washed/2810/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 25500,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2806",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Kagunyu Natural Heavy",
+      "origin": "Kenya",
+      "process": "Natural",
+      "price_krw": 33000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-kagunyu-natural-heavy/2806/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 33000,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2796",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Kagunyu AA Fully Washed #11",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 32000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-kagunyu-aa-fully-washed-11/2796/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 32000,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
+      "sku": "momos:2799",
+      "supplier": "모모스커피",
+      "name": "[생두] Kenya Gakundu Peaberry Fully Washed",
+      "origin": "Kenya",
+      "process": "Washed",
+      "price_krw": 23000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-kenya-gakundu-peaberry-fully-washed/2799/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 23000,
+      "first_seen": "2026-06-04T10:50:56"
+    },
+    {
       "sku": "blackroad:1195",
       "supplier": "블랙로드커피",
       "name": "[생두] 파나마 젠슨 알프스 게이샤 워시드 #",
@@ -26,7 +143,7 @@
       "price_krw": 238000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1195",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -39,7 +156,7 @@
       "price_krw": 238000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1194",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -52,7 +169,7 @@
       "price_krw": 238000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1193",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -65,7 +182,7 @@
       "price_krw": 238000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1192",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -78,7 +195,7 @@
       "price_krw": 278000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1191",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 278000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -130,7 +247,7 @@
       "price_krw": 168000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1201",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 168000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -263,19 +380,6 @@
       "in_stock": false,
       "price_per_kg": 26900,
       "first_seen": "2026-06-01T19:30:19"
-    },
-    {
-      "sku": "coffeemeup:840",
-      "supplier": "커피미업",
-      "name": "개인결제창(생두소분비)",
-      "origin": null,
-      "process": null,
-      "price_krw": 4000,
-      "unit_g": null,
-      "url": "https://coffeemeup.store/product/개인결제창생두소분비/840/category/182/display/1/",
-      "in_stock": true,
-      "price_per_kg": null,
-      "first_seen": "2026-05-29T07:46:12"
     },
     {
       "sku": "coffeemeup:2290",
@@ -2449,19 +2553,6 @@
       "first_seen": "2026-05-14T07:43:04"
     },
     {
-      "sku": "cafenogales:8994032",
-      "supplier": "카페노갈레스",
-      "name": "ETR - 2510/ Sidra / Mosto Natural",
-      "origin": null,
-      "process": "Mosto Natural",
-      "price_krw": 69500,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8994032",
-      "in_stock": false,
-      "price_per_kg": 69500,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
       "sku": "cafenogales:6502619",
       "supplier": "카페노갈레스",
       "name": "ETR - 1954/ SL28 / Mosto Washed",
@@ -2551,19 +2642,6 @@
       "in_stock": true,
       "price_per_kg": 124000,
       "first_seen": "2026-05-14T07:42:31"
-    },
-    {
-      "sku": "libre:6324",
-      "supplier": "커피 리브레",
-      "name": "[소분] 케냐키아무구모 AA",
-      "origin": "Kenya",
-      "process": null,
-      "price_krw": 21800,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6324&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21800,
-      "first_seen": "2026-05-14T07:42:29"
     },
     {
       "sku": "libre:6458",
