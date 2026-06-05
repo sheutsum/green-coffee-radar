@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T11:54:36+00:00",
+  "generated_at": "2026-06-05T18:33:46+00:00",
   "count": 435,
   "suppliers": [
     "모모스커피",
@@ -187,19 +187,6 @@
       "first_seen": "2026-06-03T13:00:48"
     },
     {
-      "sku": "blackroad:1194",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 알프스 게이샤 워시드 #",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 238000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1194",
-      "in_stock": false,
-      "price_per_kg": 238000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
       "sku": "blackroad:1193",
       "supplier": "블랙로드커피",
       "name": "[생두] 파나마 젠슨 알프스 게이샤 워시드 #",
@@ -213,14 +200,14 @@
       "first_seen": "2026-06-03T13:00:48"
     },
     {
-      "sku": "blackroad:1192",
+      "sku": "blackroad:1194",
       "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 알프스 게이샤 내추럴 #",
+      "name": "[생두] 파나마 젠슨 알프스 게이샤 워시드 #",
       "origin": "Panama",
-      "process": "내추럴",
+      "process": "워시드",
       "price_krw": 238000,
       "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1192",
+      "url": "https://blackroad.kr/37/?idx=1194",
       "in_stock": false,
       "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
@@ -239,16 +226,16 @@
       "first_seen": "2026-06-03T13:00:48"
     },
     {
-      "sku": "blackroad:1204",
+      "sku": "blackroad:1192",
       "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 워시드 #",
+      "name": "[생두] 파나마 젠슨 알프스 게이샤 내추럴 #",
       "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 168000,
+      "process": "내추럴",
+      "price_krw": 238000,
       "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1204",
+      "url": "https://blackroad.kr/37/?idx=1192",
       "in_stock": false,
-      "price_per_kg": 168000,
+      "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
     },
     {
@@ -265,6 +252,19 @@
       "first_seen": "2026-06-03T13:00:48"
     },
     {
+      "sku": "blackroad:1204",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 젠슨 게이샤 워시드 #",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 168000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1204",
+      "in_stock": false,
+      "price_per_kg": 168000,
+      "first_seen": "2026-06-03T13:00:48"
+    },
+    {
       "sku": "blackroad:1202",
       "supplier": "블랙로드커피",
       "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
@@ -274,19 +274,6 @@
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1202",
       "in_stock": true,
-      "price_per_kg": 168000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
-      "sku": "blackroad:1201",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 168000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1201",
-      "in_stock": false,
       "price_per_kg": 168000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -340,6 +327,19 @@
       "url": "https://blackroad.kr/37/?idx=1197",
       "in_stock": true,
       "price_per_kg": 238000,
+      "first_seen": "2026-06-03T13:00:48"
+    },
+    {
+      "sku": "blackroad:1201",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 168000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1201",
+      "in_stock": false,
+      "price_per_kg": 168000,
       "first_seen": "2026-06-03T13:00:48"
     },
     {
