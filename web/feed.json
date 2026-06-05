@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-04T23:50:21+00:00",
-  "count": 433,
+  "generated_at": "2026-06-05T09:10:01+00:00",
+  "count": 435,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,45 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "coffeemeup:2298",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 게샤빌리지 Oma #039 Natural Gesha1931",
+      "origin": "Ethiopia",
+      "process": "Natural",
+      "price_krw": 189000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-게샤빌리지-oma-039-natural-gesha1931/2298/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-05T09:09:07"
+    },
+    {
+      "sku": "coffeemeup:2297",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 게샤빌리지 Narsha #063 Washed Gesha1931",
+      "origin": "Ethiopia",
+      "process": "Washed",
+      "price_krw": 189000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-게샤빌리지-narsha-063-washed-gesha1931/2297/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-05T09:09:07"
+    },
+    {
+      "sku": "coffeemeup:2299",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 게샤빌리지 E-25  Mosto Anaerobic Honey Gesha1931",
+      "origin": "Ethiopia",
+      "process": "Mosto Anaerobic",
+      "price_krw": 199000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-게샤빌리지-e-25-mosto-anaerobic-honey-gesha1931/2299/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-05T09:09:07"
+    },
     {
       "sku": "momos:2804",
       "supplier": "모모스커피",
@@ -195,7 +234,7 @@
       "price_krw": 278000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1191",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 278000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -208,7 +247,7 @@
       "price_krw": 168000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1204",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 168000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -832,7 +871,7 @@
       "price_krw": 82000,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/9271993",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 82000,
       "first_seen": "2026-05-14T07:43:05"
     },
@@ -2532,11 +2571,11 @@
       "name": "HU-01 / 다수 품종 혼합 / Washed",
       "origin": null,
       "process": "Washed",
-      "price_krw": 17600,
+      "price_krw": 18000,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/5023312",
       "in_stock": true,
-      "price_per_kg": 17600,
+      "price_per_kg": 18000,
       "first_seen": "2026-05-14T07:43:04"
     },
     {
@@ -3174,19 +3213,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6564&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 18200,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6376",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 코스타리카그라니토스 데 알투라 오르티스 1800",
-      "origin": "Costa Rica",
-      "process": null,
-      "price_krw": 21000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6376&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
