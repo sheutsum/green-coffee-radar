@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-11T21:31:16+00:00",
-  "count": 557,
+  "generated_at": "2026-06-12T11:54:38+00:00",
+  "count": 564,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,84 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "libre:7737",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 파나마엘리다 토레 게이샤 DRD 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 340000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7737&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 340000,
+      "first_seen": "2026-06-12T11:53:34"
+    },
+    {
+      "sku": "libre:7738",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 파나마엘리다 토레 게이샤 DRD 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 340000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7738&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 340000,
+      "first_seen": "2026-06-12T11:53:34"
+    },
+    {
+      "sku": "libre:7740",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 파나마엘리다 엘 부로 게이샤 CRD 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 440000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7740&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 440000,
+      "first_seen": "2026-06-12T11:53:34"
+    },
+    {
+      "sku": "libre:7739",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 파나마엘리다 엘 부로 게이샤",
+      "origin": "Panama",
+      "process": null,
+      "price_krw": 440000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7739&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 440000,
+      "first_seen": "2026-06-12T11:53:34"
+    },
+    {
+      "sku": "libre:7736",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 파나마엘리다 아구아카테 게이샤 DRD 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 370000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7736&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 370000,
+      "first_seen": "2026-06-12T11:53:34"
+    },
+    {
+      "sku": "coffeemeup:2301",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 (2021 COE 5위 수상랏) 74158 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 67000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-2021-coe-5위-수상랏-74158-내추럴/2301/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-12T11:53:30"
+    },
     {
       "sku": "doan:13629724698",
       "supplier": "도안 셀렉트 샵",
@@ -51,7 +129,7 @@
       "price_krw": 44500,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/doanselectshop/products/13629679760",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 44500,
       "first_seen": "2026-06-11T21:31:01"
     },
@@ -142,7 +220,7 @@
       "price_krw": 47500,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/doanselectshop/products/13629677074",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 47500,
       "first_seen": "2026-06-11T21:31:01"
     },
@@ -155,7 +233,7 @@
       "price_krw": 682500,
       "unit_g": 15000,
       "url": "https://smartstore.naver.com/doanselectshop/products/13629676263",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 45500,
       "first_seen": "2026-06-11T21:31:01"
     },
@@ -227,7 +305,7 @@
     {
       "sku": "blackroad:1206",
       "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 세니소스 게이샤 워시드 \"룰루\"",
+      "name": "[생두] 파나마 세니소스 게이샤 워시드 컴패티션 랏",
       "origin": "Panama",
       "process": "워시드",
       "price_krw": 3000000,
@@ -623,6 +701,19 @@
       "price_krw": 168000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1203",
+      "in_stock": true,
+      "price_per_kg": 168000,
+      "first_seen": "2026-06-03T13:00:48"
+    },
+    {
+      "sku": "blackroad:1202",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 168000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1202",
       "in_stock": true,
       "price_per_kg": 168000,
       "first_seen": "2026-06-03T13:00:48"
@@ -4016,7 +4107,7 @@
       "price_krw": 130000,
       "unit_g": 5000,
       "url": "https://smartstore.naver.com/verde_trade/products/13485655742",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 26000,
       "first_seen": "2026-05-14T07:42:37"
     },
@@ -4029,7 +4120,7 @@
       "price_krw": 27000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/verde_trade/products/13485645876",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 27000,
       "first_seen": "2026-05-14T07:42:37"
     },
@@ -4302,7 +4393,7 @@
       "price_krw": 124000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1149",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 124000,
       "first_seen": "2026-05-14T07:42:31"
     },
