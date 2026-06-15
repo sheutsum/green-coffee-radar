@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-14T20:52:05+00:00",
-  "count": 431,
+  "generated_at": "2026-06-15T16:29:52+00:00",
+  "count": 430,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,19 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "compass:9396702",
+      "supplier": "콤파스 커피",
+      "name": "[생두] 베트남 잔야 마크 셀렉션 - 인천 에디션",
+      "origin": null,
+      "process": null,
+      "price_krw": 55000,
+      "unit_g": 1000,
+      "url": "https://compasscoffee.kr/product/9396702",
+      "in_stock": false,
+      "price_per_kg": 55000,
+      "first_seen": "2026-06-15T16:29:51"
+    },
     {
       "sku": "libre:7737",
       "supplier": "커피 리브레",
@@ -3008,19 +3021,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:7257",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스엘 에스푸에르소 파라이네마",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20600,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7257&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20600,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:7612",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스엘 시프레스 게이샤",
@@ -3746,19 +3746,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7618&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 27900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6816",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과라 에스페란사 마라카투라 허니",
-      "origin": "Nicaragua",
-      "process": "허니",
-      "price_krw": 33400,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6816&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 33400,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
