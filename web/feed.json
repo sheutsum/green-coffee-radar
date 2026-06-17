@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-16T18:19:18+00:00",
-  "count": 430,
+  "generated_at": "2026-06-17T00:01:39+00:00",
+  "count": 427,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -730,19 +730,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7680&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 30500,
-      "first_seen": "2026-05-17T10:56:14"
-    },
-    {
-      "sku": "libre:7674",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 콜롬비아우일라 라 테라사 카투라 치로소",
-      "origin": "Colombia",
-      "process": null,
-      "price_krw": 33800,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7674&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 33800,
       "first_seen": "2026-05-17T10:56:14"
     },
     {
@@ -3229,19 +3216,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:7525",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스라스 싱코 에르마나스 파라이네마",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20600,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7525&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20600,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:7003",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스라스 비르히니아스 게이샤 Lot.2",
@@ -4019,19 +3993,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7507&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 24000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7506",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루라스 티링게스 티피카 무산소 워시드",
-      "origin": "Peru",
-      "process": "무산소 워시드",
-      "price_krw": 21500,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7506&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21500,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
