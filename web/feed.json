@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T21:16:21+00:00",
-  "count": 546,
+  "generated_at": "2026-06-19T12:38:08+00:00",
+  "count": 545,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,97 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "ryubeans:13636021470",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 케라모 시다마 산타와네 내추럴 G1 1KG",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 23000,
+      "unit_g": 1000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13636021470",
+      "in_stock": true,
+      "price_per_kg": 23000,
+      "first_seen": "2026-06-19T12:37:36"
+    },
+    {
+      "sku": "ryubeans:13637906777",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 케라모 시다마 부라 카라모 무산소 내추럴 1kg",
+      "origin": "Ethiopia",
+      "process": "무산소 내추럴",
+      "price_krw": 60000,
+      "unit_g": 1000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13637906777",
+      "in_stock": true,
+      "price_per_kg": 60000,
+      "first_seen": "2026-06-19T12:37:36"
+    },
+    {
+      "sku": "ryubeans:13637894431",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 케라모 시다마 부라 카라모 무산소 내추럴 15kg",
+      "origin": "Ethiopia",
+      "process": "무산소 내추럴",
+      "price_krw": 862500,
+      "unit_g": 15000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13637894431",
+      "in_stock": true,
+      "price_per_kg": 57500,
+      "first_seen": "2026-06-19T12:37:36"
+    },
+    {
+      "sku": "ryubeans:13637910411",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 케라모 시다마 부라 아게나 무산소 내추럴 1kg",
+      "origin": "Ethiopia",
+      "process": "무산소 내추럴",
+      "price_krw": 60000,
+      "unit_g": 1000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13637910411",
+      "in_stock": true,
+      "price_per_kg": 60000,
+      "first_seen": "2026-06-19T12:37:36"
+    },
+    {
+      "sku": "ryubeans:13637821284",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 케라모 시다마 부라 아게나 무산소 내추럴 15kg",
+      "origin": "Ethiopia",
+      "process": "무산소 내추럴",
+      "price_krw": 862500,
+      "unit_g": 15000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13637821284",
+      "in_stock": true,
+      "price_per_kg": 57500,
+      "first_seen": "2026-06-19T12:37:36"
+    },
+    {
+      "sku": "coffeemeup:2300",
+      "supplier": "커피미업",
+      "name": "(생두) 과테말라 엘 인헤르토 말라위 게이샤 워시드",
+      "origin": "Guatemala",
+      "process": "워시드",
+      "price_krw": 128000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-과테말라-엘-인헤르토-말라위-게이샤-워시드/2300/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-19T12:37:02"
+    },
+    {
+      "sku": "coffeemeup:2303",
+      "supplier": "커피미업",
+      "name": "(생두) 과테말라 엘 인헤르토 The First Crop 게이샤 워시드",
+      "origin": "Guatemala",
+      "process": "워시드",
+      "price_krw": 197000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-과테말라-엘-인헤르토-the-first-crop-게이샤-워시드/2303/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-19T12:37:02"
+    },
     {
       "sku": "cobeans:8C59FD6FBE0E9793EC2B27971221CACE",
       "supplier": "코빈즈커피",
@@ -132,19 +223,6 @@
       "in_stock": true,
       "price_per_kg": 15500,
       "first_seen": "2026-06-18T12:04:26"
-    },
-    {
-      "sku": "libre:6700",
-      "supplier": "커피 리브레",
-      "name": "[소분] 에티오피아시다모 벤사 무라고 니구세 나레 무산소 내추럴",
-      "origin": "Ethiopia",
-      "process": "무산소 내추럴",
-      "price_krw": 35000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6700&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 35000,
-      "first_seen": "2026-06-18T12:02:19"
     },
     {
       "sku": "libre:7757",
@@ -2209,7 +2287,7 @@
       "price_krw": 130000,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/9397490",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 130000,
       "first_seen": "2026-05-14T07:43:05"
     },
@@ -3878,45 +3956,6 @@
       "first_seen": "2026-05-14T07:42:46"
     },
     {
-      "sku": "ryubeans:12281720722",
-      "supplier": "류빈스커피",
-      "name": "[2025] 파나마 체바스 워시드 다크룸 LOT 2701",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 340000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/ryubeans/products/12281720722",
-      "in_stock": true,
-      "price_per_kg": 340000,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
-      "sku": "ryubeans:12281677325",
-      "supplier": "류빈스커피",
-      "name": "[2025] 파나마 체바스 오리온 내추럴 콜드룸 1kg",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 270000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/ryubeans/products/12281677325",
-      "in_stock": true,
-      "price_per_kg": 270000,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
-      "sku": "ryubeans:12423615245",
-      "supplier": "류빈스커피",
-      "name": "[2025] 파나마 체바스 게이샤 워시드 다크룸 2701 150g",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 55000,
-      "unit_g": 150,
-      "url": "https://smartstore.naver.com/ryubeans/products/12423615245",
-      "in_stock": true,
-      "price_per_kg": 366667,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
       "sku": "ryubeans:12423677740",
       "supplier": "류빈스커피",
       "name": "[2025] 파나마 체바스 게이샤 오리온 내추럴 콜드룸 150g",
@@ -3943,19 +3982,6 @@
       "first_seen": "2026-05-14T07:42:46"
     },
     {
-      "sku": "ryubeans:12281734164",
-      "supplier": "류빈스커피",
-      "name": "[2025] 파나마 체바스 게이샤 내추럴 다크룸 LOT 007 1kg",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 370000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/ryubeans/products/12281734164",
-      "in_stock": true,
-      "price_per_kg": 370000,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
       "sku": "ryubeans:12423719554",
       "supplier": "류빈스커피",
       "name": "[2025] 파나마 체바스 게이샤 내추럴 다크룸 007 150g",
@@ -3979,19 +4005,6 @@
       "url": "https://smartstore.naver.com/ryubeans/products/12423829487",
       "in_stock": true,
       "price_per_kg": 186667,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
-      "sku": "ryubeans:12281708305",
-      "supplier": "류빈스커피",
-      "name": "[2025] 파나마 체바스 DVC 워시드 1kg",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 172000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/ryubeans/products/12281708305",
-      "in_stock": true,
-      "price_per_kg": 172000,
       "first_seen": "2026-05-14T07:42:46"
     },
     {
@@ -4463,6 +4476,19 @@
       "first_seen": "2026-05-14T07:42:31"
     },
     {
+      "sku": "libre:7143",
+      "supplier": "커피 리브레",
+      "name": "[소분] 파나마핀카 하트만 카투라",
+      "origin": "Panama",
+      "process": null,
+      "price_krw": 19500,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7143&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 19500,
+      "first_seen": "2026-05-14T07:42:29"
+    },
+    {
       "sku": "libre:7142",
       "supplier": "커피 리브레",
       "name": "[소분] 파나마핀카 하트만 게이샤 내추럴",
@@ -4580,32 +4606,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6371",
-      "supplier": "커피 리브레",
-      "name": "[소분] 코스타리카에르마노스 발소 바라 블랑카",
-      "origin": "Costa Rica",
-      "process": null,
-      "price_krw": 21000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6371&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6568",
-      "supplier": "커피 리브레",
-      "name": "[소분] 코스타리카산타 테레사 2000 라 피냐타 게이샤",
-      "origin": "Costa Rica",
-      "process": null,
-      "price_krw": 66000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6568&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 66000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6565",
       "supplier": "커피 리브레",
       "name": "[소분] 코스타리카산타 테레사 2000 라 몬타냐",
@@ -4629,19 +4629,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6564&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 18200,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6376",
-      "supplier": "커피 리브레",
-      "name": "[소분] 코스타리카그라니토스 데 알투라 오르티스 1800",
-      "origin": "Costa Rica",
-      "process": null,
-      "price_krw": 21000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6376&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
