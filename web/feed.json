@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T17:32:56+00:00",
+  "generated_at": "2026-06-24T22:03:54+00:00",
   "count": 544,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -194,7 +194,7 @@
       "price_krw": 23000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/ryubeans/products/13636021470",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 23000,
       "first_seen": "2026-06-19T12:37:36"
     },
