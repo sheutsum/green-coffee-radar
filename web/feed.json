@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T22:06:55+00:00",
+  "generated_at": "2026-06-24T10:30:01+00:00",
   "count": 544,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -16,6 +16,45 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "ryubeans:13641883905",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 알로 시다마 벤사 하테사 내추럴 1kg",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 35000,
+      "unit_g": 1000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13641883905",
+      "in_stock": true,
+      "price_per_kg": 35000,
+      "first_seen": "2026-06-24T10:29:33"
+    },
+    {
+      "sku": "ryubeans:13641894512",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 알로 시다마 벤사 하테사 내추럴 10kg",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 335000,
+      "unit_g": 10000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13641894512",
+      "in_stock": true,
+      "price_per_kg": 33500,
+      "first_seen": "2026-06-24T10:29:33"
+    },
+    {
+      "sku": "ryubeans:13641077326",
+      "supplier": "류빈스커피",
+      "name": "[2026] 에티오피아 알로 시다마 벤사 파피초 내추럴 10kg",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 335000,
+      "unit_g": 10000,
+      "url": "https://smartstore.naver.com/ryubeans/products/13641077326",
+      "in_stock": true,
+      "price_per_kg": 33500,
+      "first_seen": "2026-06-24T10:29:33"
+    },
     {
       "sku": "ryubeans:13641178851",
       "supplier": "류빈스커피",
@@ -110,14 +149,14 @@
     {
       "sku": "cobeans:8169E05E2A0DEBCB15458F2CC1EFF0EA",
       "supplier": "코빈즈커피",
-      "name": "26 브라질 코빈즈 인퓨즈드 초코",
+      "name": "◼︎오픈예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
       "origin": "Brazil",
       "process": null,
-      "price_krw": 0,
+      "price_krw": 26300,
       "unit_g": 1000,
       "url": "https://www.cobeans.com/shop/detail.php?pno=8169E05E2A0DEBCB15458F2CC1EFF0EA&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
-      "price_per_kg": 0,
+      "price_per_kg": 26300,
       "first_seen": "2026-06-22T16:15:53"
     },
     {
@@ -1283,7 +1322,7 @@
       "name": "개인결제창(생두)",
       "origin": null,
       "process": null,
-      "price_krw": 6460700,
+      "price_krw": 2414000,
       "unit_g": null,
       "url": "https://coffeemeup.store/product/개인결제창생두/840/category/182/display/1/",
       "in_stock": true,
@@ -3982,32 +4021,6 @@
       "first_seen": "2026-05-14T07:42:46"
     },
     {
-      "sku": "ryubeans:12615473132",
-      "supplier": "류빈스커피",
-      "name": "[2025]코스타리카 하시엔다 코페이 타카라 게이샤 워시드 Lot 184 2025 150g",
-      "origin": "Costa Rica",
-      "process": "워시드",
-      "price_krw": 23900,
-      "unit_g": 150,
-      "url": "https://smartstore.naver.com/ryubeans/products/12615473132",
-      "in_stock": true,
-      "price_per_kg": 159333,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
-      "sku": "ryubeans:12743774862",
-      "supplier": "류빈스커피",
-      "name": "[2025]에티오피아 웨스트아라시 난세보 불가 워시드 2025 150g",
-      "origin": "Ethiopia",
-      "process": "워시드",
-      "price_krw": 2700,
-      "unit_g": 150,
-      "url": "https://smartstore.naver.com/ryubeans/products/12743774862",
-      "in_stock": true,
-      "price_per_kg": 18000,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
       "sku": "ryubeans:12743852746",
       "supplier": "류빈스커피",
       "name": "[2025]에티오피아 니구세 시다마 부라 몰케 내추럴 2025 150g",
@@ -4044,19 +4057,6 @@
       "url": "https://smartstore.naver.com/ryubeans/products/12743838447",
       "in_stock": true,
       "price_per_kg": 29333,
-      "first_seen": "2026-05-14T07:42:46"
-    },
-    {
-      "sku": "ryubeans:12700169268",
-      "supplier": "류빈스커피",
-      "name": "[2025] 우간다 품바 아라비카 내추럴 20kg",
-      "origin": null,
-      "process": "내추럴",
-      "price_krw": 238000,
-      "unit_g": 20000,
-      "url": "https://smartstore.naver.com/ryubeans/products/12700169268",
-      "in_stock": true,
-      "price_per_kg": 11900,
       "first_seen": "2026-05-14T07:42:46"
     },
     {
