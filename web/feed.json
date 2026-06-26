@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T10:40:26+00:00",
-  "count": 535,
+  "generated_at": "2026-06-26T17:25:35+00:00",
+  "count": 549,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -11,11 +11,10 @@
     "카페노갈레스",
     "커피 리브레",
     "커피미업",
+    "코빈즈커피",
     "콤파스 커피"
   ],
-  "errors": [
-    "cobeans"
-  ],
+  "errors": [],
   "products": [
     {
       "sku": "blackroad:1216",
@@ -252,6 +251,32 @@
       "first_seen": "2026-06-23T10:50:53"
     },
     {
+      "sku": "cobeans:42FE880812925E520249E808937738D2",
+      "supplier": "코빈즈커피",
+      "name": "플라스틱 샘플 튜브 30개입",
+      "origin": null,
+      "process": null,
+      "price_krw": 24000,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=42FE880812925E520249E808937738D2&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 24000,
+      "first_seen": "2026-06-22T16:15:53"
+    },
+    {
+      "sku": "cobeans:8169E05E2A0DEBCB15458F2CC1EFF0EA",
+      "supplier": "코빈즈커피",
+      "name": "◼︎6/29 오픈예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "origin": "Brazil",
+      "process": null,
+      "price_krw": 26300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8169E05E2A0DEBCB15458F2CC1EFF0EA&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 26300,
+      "first_seen": "2026-06-22T16:15:53"
+    },
+    {
       "sku": "libre:7766",
       "supplier": "커피 리브레",
       "name": "[New Crop / 소분] 에티오피아예가체프 게뎁 초르소",
@@ -356,6 +381,58 @@
       "first_seen": "2026-06-19T12:37:02"
     },
     {
+      "sku": "cobeans:8C59FD6FBE0E9793EC2B27971221CACE",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 방코 고티티 Lot.2 G1 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 28800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8C59FD6FBE0E9793EC2B27971221CACE&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28800,
+      "first_seen": "2026-06-18T21:15:28"
+    },
+    {
+      "sku": "cobeans:5ACDC9CA5D99AE66AFDFE1EEA0E3B26B",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 구지 우라가 고구구 G1 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 28800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=5ACDC9CA5D99AE66AFDFE1EEA0E3B26B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28800,
+      "first_seen": "2026-06-18T21:15:28"
+    },
+    {
+      "sku": "cobeans:D7619BEB6EB189509885FBC192D2874B",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 라레사 G1 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 28800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=D7619BEB6EB189509885FBC192D2874B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28800,
+      "first_seen": "2026-06-18T21:15:28"
+    },
+    {
+      "sku": "cobeans:4BE5A36CBACA8AB9D2066DEBFE4E65C1",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 단체 G1 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 28800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=4BE5A36CBACA8AB9D2066DEBFE4E65C1&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28800,
+      "first_seen": "2026-06-18T21:15:28"
+    },
+    {
       "sku": "ryubeans:13636017659",
       "supplier": "류빈스커피",
       "name": "[2026] 에티오피아 케라모 시다마 산타와네 내추럴 G1 2026 20KG",
@@ -432,6 +509,110 @@
       "in_stock": false,
       "price_per_kg": 25000,
       "first_seen": "2026-06-18T12:02:19"
+    },
+    {
+      "sku": "cobeans:4A3E00961A08879C34F91CA0070EA2F5",
+      "supplier": "코빈즈커피",
+      "name": "26 케냐 AA FAQ 워시드",
+      "origin": "Kenya",
+      "process": "워시드",
+      "price_krw": 16800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=4A3E00961A08879C34F91CA0070EA2F5&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 16800,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:9D28DE8FF9BB6A3FA41FDDFDC28F3BC1",
+      "supplier": "코빈즈커피",
+      "name": "26 우간다 로부스타 내추럴",
+      "origin": null,
+      "process": "내추럴",
+      "price_krw": 10300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=9D28DE8FF9BB6A3FA41FDDFDC28F3BC1&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 10300,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:F0BBAC6FA079F1E00B2C14C1D3C6CCF0",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 예가체프 G2 TOP 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 18300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=F0BBAC6FA079F1E00B2C14C1D3C6CCF0&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 18300,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:155FA09596C7E18E50B58EB7E0C6CCB4",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 시다마 벤사 G2 TOP 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 18300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=155FA09596C7E18E50B58EB7E0C6CCB4&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 18300,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:2288F691B58EDECADCC9A8691762B4FD",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 구지 함벨라 틸트라 가요 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 28800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=2288F691B58EDECADCC9A8691762B4FD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28800,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:B5BAA9C23AC3E015AD287B17A3D4AFA3",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 구지 함벨라 반티넨카 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 28800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=B5BAA9C23AC3E015AD287B17A3D4AFA3&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28800,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:1D94108E907BB8311D8802B48FD54B4A",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 구지 우라가 시코 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 27800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=1D94108E907BB8311D8802B48FD54B4A&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 27800,
+      "first_seen": "2026-06-17T13:04:02"
+    },
+    {
+      "sku": "cobeans:1680829293F2A8541EFA2647A0290F88",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 방코 고티티 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 27800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=1680829293F2A8541EFA2647A0290F88&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 27800,
+      "first_seen": "2026-06-17T13:04:02"
     },
     {
       "sku": "compass:9396702",
