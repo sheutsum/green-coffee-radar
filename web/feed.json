@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T21:52:58+00:00",
-  "count": 549,
+  "generated_at": "2026-06-27T08:13:27+00:00",
+  "count": 547,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -17,17 +17,17 @@
   "errors": [],
   "products": [
     {
-      "sku": "blackroad:1216",
+      "sku": "blackroad:1220",
       "supplier": "블랙로드커피",
-      "name": "[생두] 개인결제창",
+      "name": "신의 물방울 에디션",
       "origin": null,
       "process": null,
-      "price_krw": 270000,
+      "price_krw": 0,
       "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1216",
+      "url": "https://blackroad.kr/37/?idx=1220",
       "in_stock": true,
-      "price_per_kg": 270000,
-      "first_seen": "2026-06-26T10:39:39"
+      "price_per_kg": 0,
+      "first_seen": "2026-06-27T08:12:36"
     },
     {
       "sku": "coffeemeup:2308",
@@ -298,7 +298,7 @@
       "price_krw": 23000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/ryubeans/products/13636021470",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 23000,
       "first_seen": "2026-06-19T12:37:36"
     },
@@ -919,11 +919,11 @@
       "name": "[생두] 파나마 세니소스 게이샤 워시드 컴패티션 랏",
       "origin": "Panama",
       "process": "워시드",
-      "price_krw": 3000000,
+      "price_krw": 2600000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1206",
-      "in_stock": false,
-      "price_per_kg": 3000000,
+      "in_stock": true,
+      "price_per_kg": 2600000,
       "first_seen": "2026-06-11T12:32:25"
     },
     {
@@ -1289,19 +1289,6 @@
       "in_stock": true,
       "price_per_kg": 23000,
       "first_seen": "2026-06-04T10:50:56"
-    },
-    {
-      "sku": "blackroad:1203",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 워시드 #",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 168000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1203",
-      "in_stock": false,
-      "price_per_kg": 168000,
-      "first_seen": "2026-06-03T13:00:48"
     },
     {
       "sku": "blackroad:1202",
@@ -4578,19 +4565,6 @@
       "in_stock": false,
       "price_per_kg": 28000,
       "first_seen": "2026-05-14T07:42:37"
-    },
-    {
-      "sku": "blackroad:1149",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 돈벤지 핑크버본 언에어로빅 내추럴",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 124000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1149",
-      "in_stock": false,
-      "price_per_kg": 124000,
-      "first_seen": "2026-05-14T07:42:31"
     },
     {
       "sku": "libre:7142",
