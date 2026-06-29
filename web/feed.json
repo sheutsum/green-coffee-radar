@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-29T10:15:19+00:00",
-  "count": 420,
+  "generated_at": "2026-06-29T14:37:43+00:00",
+  "count": 421,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,19 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "cafenogales:6500647",
+      "supplier": "카페노갈레스",
+      "name": "PLA-1680 / Geisha / White Honey CM",
+      "origin": null,
+      "process": "White Honey CM",
+      "price_krw": 89200,
+      "unit_g": 1000,
+      "url": "https://www.cafenogales.co.kr/product/6500647",
+      "in_stock": true,
+      "price_per_kg": 89200,
+      "first_seen": "2026-06-29T14:37:37"
+    },
     {
       "sku": "cobeans:8F125DA0B3432ED853C0B6F7EE5AAA6B",
       "supplier": "코빈즈커피",
