@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-28T22:41:07+00:00",
-  "count": 547,
+  "generated_at": "2026-06-29T00:18:59+00:00",
+  "count": 546,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -1574,19 +1574,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7681&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 32500,
-      "first_seen": "2026-05-17T10:56:14"
-    },
-    {
-      "sku": "libre:7680",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 콜롬비아우일라 라스 라하스 부르봉 아히",
-      "origin": "Colombia",
-      "process": null,
-      "price_krw": 30500,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7680&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 30500,
       "first_seen": "2026-05-17T10:56:14"
     },
     {
