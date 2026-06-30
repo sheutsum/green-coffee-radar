@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-30T00:17:15+00:00",
-  "count": 421,
+  "generated_at": "2026-06-30T04:49:38+00:00",
+  "count": 420,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -33,12 +33,12 @@
     {
       "sku": "cobeans:8F125DA0B3432ED853C0B6F7EE5AAA6B",
       "supplier": "코빈즈커피",
-      "name": "◼︎6/30 오전 10시 오픈예정◼︎26 브라질 코빈즈 인퓨즈드 초코 원두 샘플",
+      "name": "26 브라질 코빈즈 인퓨즈드 초코 원두 샘플",
       "origin": "Brazil",
       "process": null,
       "price_krw": 3500,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=8F125DA0B3432ED853C0B6F7EE5AAA6B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8F125DA0B3432ED853C0B6F7EE5AAA6B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 3500,
       "first_seen": "2026-06-29T10:11:54"
@@ -254,7 +254,7 @@
     {
       "sku": "cobeans:8169E05E2A0DEBCB15458F2CC1EFF0EA",
       "supplier": "코빈즈커피",
-      "name": "◼︎6/30 오전 10시 오픈예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "name": "◼︎일시품절◼︎26 브라질 코빈즈 인퓨즈드 초코",
       "origin": "Brazil",
       "process": null,
       "price_krw": 26300,
@@ -402,7 +402,7 @@
       "process": "워시드",
       "price_krw": 18300,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=F0BBAC6FA079F1E00B2C14C1D3C6CCF0&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=F0BBAC6FA079F1E00B2C14C1D3C6CCF0&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 18300,
       "first_seen": "2026-06-17T13:04:02"
@@ -509,19 +509,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7738&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 340000,
-      "first_seen": "2026-06-12T11:53:34"
-    },
-    {
-      "sku": "libre:7740",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 파나마엘리다 엘 부로 게이샤 CRD 내추럴",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 440000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7740&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 440000,
       "first_seen": "2026-06-12T11:53:34"
     },
     {
