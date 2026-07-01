@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-30T23:25:13+00:00",
-  "count": 420,
+  "generated_at": "2026-07-01T00:53:49+00:00",
+  "count": 419,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -3068,19 +3068,6 @@
       "price_krw": 21800,
       "unit_g": 1000,
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6458&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21800,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6085",
-      "supplier": "커피 리브레",
-      "name": "[소분] 케냐카루만디 AA",
-      "origin": "Kenya",
-      "process": null,
-      "price_krw": 21800,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6085&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 21800,
       "first_seen": "2026-05-14T07:42:29"
