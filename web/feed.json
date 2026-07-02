@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T04:18:21+00:00",
-  "count": 400,
+  "generated_at": "2026-07-02T07:54:09+00:00",
+  "count": 407,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,136 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "cobeans:EAA52F3366768BCA401DCA9EA5B181DD",
+      "supplier": "코빈즈커피",
+      "name": "◼︎7월 10일 14시 재입고예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "origin": "Brazil",
+      "process": null,
+      "price_krw": 26300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=EAA52F3366768BCA401DCA9EA5B181DD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 26300,
+      "first_seen": "2026-07-02T07:53:26"
+    },
+    {
+      "sku": "libre:7798",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 인도아티칸",
+      "origin": "India",
+      "process": null,
+      "price_krw": 20000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7798&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7799",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 인도강가기리",
+      "origin": "India",
+      "process": null,
+      "price_krw": 19500,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7799&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 19500,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7804",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라파소 가나도",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7804&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 28000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7801",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라엘 템픽스케",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7801&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 28000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7803",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라엘 세로",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7803&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 28000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7800",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라엔트레 볼카네스",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 23000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7800&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 23000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7805",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라베텔",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7805&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 28000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7802",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라라 타시타",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7802&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 28000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
+    {
+      "sku": "libre:7806",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 과테말라라 벤디시온",
+      "origin": "Guatemala",
+      "process": null,
+      "price_krw": 28000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7806&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 28000,
+      "first_seen": "2026-07-02T07:53:13"
+    },
     {
       "sku": "momos:2829",
       "supplier": "모모스커피",
@@ -376,7 +506,7 @@
       "process": "워시드",
       "price_krw": 16800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=4A3E00961A08879C34F91CA0070EA2F5&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=4A3E00961A08879C34F91CA0070EA2F5&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 16800,
       "first_seen": "2026-06-17T13:04:02"
@@ -3814,19 +3944,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6342",
-      "supplier": "커피 리브레",
-      "name": "[소분] 과테말라엘 템픽스케",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 19900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6342&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:7077",
       "supplier": "커피 리브레",
       "name": "[소분] 과테말라엘 타로 Lot.2",
@@ -3848,19 +3965,6 @@
       "price_krw": 19900,
       "unit_g": 1000,
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7080&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6338",
-      "supplier": "커피 리브레",
-      "name": "[소분] 과테말라엔트레 볼카네스",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 19900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6338&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 19900,
       "first_seen": "2026-05-14T07:42:29"
@@ -4396,19 +4500,6 @@
       "url": "https://momos.co.kr/product/생두-papua-new-guinea-kesonga-ax/2619/category/162/display/1/",
       "in_stock": true,
       "price_per_kg": 20000,
-      "first_seen": "2026-05-14T07:39:47"
-    },
-    {
-      "sku": "momos:2634",
-      "supplier": "모모스커피",
-      "name": "[생두] Papua New Guinea B-17",
-      "origin": "Papua New Guinea",
-      "process": null,
-      "price_krw": 18500,
-      "unit_g": 1000,
-      "url": "https://momos.co.kr/product/생두-papua-new-guinea-b-17/2634/category/162/display/1/",
-      "in_stock": true,
-      "price_per_kg": 18500,
       "first_seen": "2026-05-14T07:39:47"
     },
     {
