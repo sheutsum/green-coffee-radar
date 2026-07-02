@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T23:41:53+00:00",
-  "count": 401,
+  "generated_at": "2026-07-02T04:18:21+00:00",
+  "count": 400,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -288,19 +288,6 @@
       "url": "https://www.cobeans.com/shop/detail.php?pno=42FE880812925E520249E808937738D2&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 24000,
-      "first_seen": "2026-06-22T16:15:53"
-    },
-    {
-      "sku": "cobeans:8169E05E2A0DEBCB15458F2CC1EFF0EA",
-      "supplier": "코빈즈커피",
-      "name": "◼︎일시품절◼︎26 브라질 코빈즈 인퓨즈드 초코",
-      "origin": "Brazil",
-      "process": null,
-      "price_krw": 26300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=8169E05E2A0DEBCB15458F2CC1EFF0EA&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 26300,
       "first_seen": "2026-06-22T16:15:53"
     },
     {
