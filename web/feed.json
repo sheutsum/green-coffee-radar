@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-03T01:14:44+00:00",
-  "count": 402,
+  "generated_at": "2026-07-03T05:35:06+00:00",
+  "count": 406,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,149 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "libre:7811",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스호스틴 파라이네마",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 20600,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7811&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20600,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7814",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스파트리아르카",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 21800,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7814&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 21800,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7812",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스오스만투스",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 20900,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7812&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20900,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7813",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스엘 모나르카",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 21800,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7813&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 21800,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7808",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스엘 나랑호 - 호세 파라이네마",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 20600,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7808&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20600,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7810",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스알타미라 파라이네마",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 20600,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7810&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20600,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7809",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스산타 루시아 파라이네마",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 20600,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7809&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20600,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7815",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스라 호야",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 21800,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7815&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 21800,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7816",
+      "supplier": "커피 리브레",
+      "name": "[소분] 니카라과플로르 아술",
+      "origin": "Nicaragua",
+      "process": null,
+      "price_krw": 20700,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7816&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20700,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7817",
+      "supplier": "커피 리브레",
+      "name": "[소분] 니카라과라스 나랑하스",
+      "origin": "Nicaragua",
+      "process": null,
+      "price_krw": 21300,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7817&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 21300,
+      "first_seen": "2026-07-03T05:34:12"
+    },
+    {
+      "sku": "libre:7818",
+      "supplier": "커피 리브레",
+      "name": "[소분] 니카라과라 에스페란사 - 카를로스",
+      "origin": "Nicaragua",
+      "process": null,
+      "price_krw": 21300,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7818&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 21300,
+      "first_seen": "2026-07-03T05:34:12"
+    },
     {
       "sku": "cobeans:EAA52F3366768BCA401DCA9EA5B181DD",
       "supplier": "코빈즈커피",
@@ -2441,11 +2584,11 @@
       "name": "[생두] 과테말라 쿠불코 워시드",
       "origin": "Guatemala",
       "process": "워시드",
-      "price_krw": 15000,
+      "price_krw": 17500,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/6029592",
-      "in_stock": false,
-      "price_per_kg": 15000,
+      "in_stock": true,
+      "price_per_kg": 17500,
       "first_seen": "2026-05-14T07:43:05"
     },
     {
@@ -2512,32 +2655,6 @@
       "in_stock": true,
       "price_per_kg": 80000,
       "first_seen": "2026-05-14T07:43:05"
-    },
-    {
-      "sku": "cafenogales:8124782",
-      "supplier": "카페노갈레스",
-      "name": "SU-021 / Andungsari,Sigararutang / Honey",
-      "origin": null,
-      "process": "Honey",
-      "price_krw": 22800,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8124782",
-      "in_stock": false,
-      "price_per_kg": 22800,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
-      "sku": "cafenogales:8124695",
-      "supplier": "카페노갈레스",
-      "name": "SU-013 / Abyssinia,Catimor,Typica / Nat,CM",
-      "origin": null,
-      "process": "Nat,CM",
-      "price_krw": 31800,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8124695",
-      "in_stock": false,
-      "price_per_kg": 31800,
-      "first_seen": "2026-05-14T07:43:04"
     },
     {
       "sku": "cafenogales:9299895",
@@ -2631,19 +2748,6 @@
       "first_seen": "2026-05-14T07:43:04"
     },
     {
-      "sku": "cafenogales:9312976",
-      "supplier": "카페노갈레스",
-      "name": "IFF-2422 / Papayo / AN-Natural",
-      "origin": null,
-      "process": "AN-Natural",
-      "price_krw": 72800,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/9312976",
-      "in_stock": false,
-      "price_per_kg": 72800,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
       "sku": "cafenogales:4470727",
       "supplier": "카페노갈레스",
       "name": "HU-Decaf / 다수 품종 혼합 / Decaffeinated",
@@ -2667,19 +2771,6 @@
       "url": "https://www.cafenogales.co.kr/product/9299878",
       "in_stock": true,
       "price_per_kg": 28800,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
-      "sku": "cafenogales:8994083",
-      "supplier": "카페노갈레스",
-      "name": "HU-2530 / Geisha / Co Fermented Natural",
-      "origin": null,
-      "process": "Co Fermented Natural",
-      "price_krw": 59400,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8994083",
-      "in_stock": false,
-      "price_per_kg": 59400,
       "first_seen": "2026-05-14T07:43:04"
     },
     {
@@ -2709,19 +2800,6 @@
       "first_seen": "2026-05-14T07:43:04"
     },
     {
-      "sku": "cafenogales:8996010",
-      "supplier": "카페노갈레스",
-      "name": "HU-2516 / 다수 품종 혼합 / Co-Fermented Washed",
-      "origin": null,
-      "process": "Co-Fermented Washed",
-      "price_krw": 43200,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8996010",
-      "in_stock": false,
-      "price_per_kg": 43200,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
       "sku": "cafenogales:8996029",
       "supplier": "카페노갈레스",
       "name": "HU-2515 / Papayo / Anaerobic Natural",
@@ -2732,19 +2810,6 @@
       "url": "https://www.cafenogales.co.kr/product/8996029",
       "in_stock": true,
       "price_per_kg": 52400,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
-      "sku": "cafenogales:8994157",
-      "supplier": "카페노갈레스",
-      "name": "HU-2512 / 다수 품종 혼합 / Co-Fermented",
-      "origin": null,
-      "process": "Co-Fermented",
-      "price_krw": 43200,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8994157",
-      "in_stock": false,
-      "price_per_kg": 43200,
       "first_seen": "2026-05-14T07:43:04"
     },
     {
@@ -2865,19 +2930,6 @@
       "first_seen": "2026-05-14T07:43:04"
     },
     {
-      "sku": "cafenogales:8991610",
-      "supplier": "카페노갈레스",
-      "name": "ETR - 1946/ Aji-Eth Landrace / Mosto Natural",
-      "origin": null,
-      "process": "Mosto Natural",
-      "price_krw": 69800,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8991610",
-      "in_stock": false,
-      "price_per_kg": 69800,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
       "sku": "cafenogales:9393578",
       "supplier": "카페노갈레스",
       "name": "CA-01 / 다수 품종 혼합 / Washed",
@@ -2901,19 +2953,6 @@
       "url": "https://www.cafenogales.co.kr/product/5882628",
       "in_stock": true,
       "price_per_kg": 19600,
-      "first_seen": "2026-05-14T07:43:04"
-    },
-    {
-      "sku": "cafenogales:8932622",
-      "supplier": "카페노갈레스",
-      "name": "BR-05 / 다수 품종 혼합 / Pulped Natural",
-      "origin": null,
-      "process": "Pulped Natural",
-      "price_krw": 17400,
-      "unit_g": 1000,
-      "url": "https://www.cafenogales.co.kr/product/8932622",
-      "in_stock": false,
-      "price_per_kg": 17400,
       "first_seen": "2026-05-14T07:43:04"
     },
     {
@@ -3291,6 +3330,19 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7609&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 64100,
+      "first_seen": "2026-05-14T07:42:29"
+    },
+    {
+      "sku": "libre:6991",
+      "supplier": "커피 리브레",
+      "name": "[소분] 온두라스로스 피노스",
+      "origin": "Honduras",
+      "process": null,
+      "price_krw": 20900,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=6991&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20900,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
