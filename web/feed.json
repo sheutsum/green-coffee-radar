@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-03T05:35:06+00:00",
-  "count": 406,
+  "generated_at": "2026-07-03T08:39:15+00:00",
+  "count": 408,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,19 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "libre:7833",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 인도쿠르그 로부스타 리브레 셀렉션 2026",
+      "origin": "India",
+      "process": null,
+      "price_krw": 13700,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7833&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 13700,
+      "first_seen": "2026-07-03T08:38:31"
+    },
     {
       "sku": "libre:7811",
       "supplier": "커피 리브레",
@@ -341,6 +354,19 @@
       "in_stock": true,
       "price_per_kg": 20500,
       "first_seen": "2026-07-01T10:48:14"
+    },
+    {
+      "sku": "coffeemeup:2325",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 (2021 COE 1위 수상랏) 74158 무산소 내추럴",
+      "origin": "Ethiopia",
+      "process": "무산소 내추럴",
+      "price_krw": 97000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-2021-coe-1위-수상랏-74158-무산소-내추럴/2325/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-01T06:42:47"
     },
     {
       "sku": "cafenogales:6500647",
