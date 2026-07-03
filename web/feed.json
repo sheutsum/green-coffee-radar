@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T23:20:26+00:00",
-  "count": 407,
+  "generated_at": "2026-07-03T01:14:44+00:00",
+  "count": 402,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -33,7 +33,7 @@
     {
       "sku": "libre:7798",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 인도아티칸",
+      "name": "[New Crop / 소분] 인도아티칸 2026",
       "origin": "India",
       "process": null,
       "price_krw": 20000,
@@ -46,7 +46,7 @@
     {
       "sku": "libre:7799",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 인도강가기리",
+      "name": "[New Crop / 소분] 인도강가기리 2026",
       "origin": "India",
       "process": null,
       "price_krw": 19500,
@@ -59,7 +59,7 @@
     {
       "sku": "libre:7804",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라파소 가나도",
+      "name": "[New Crop / 소분] 과테말라파소 가나도 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 28000,
@@ -72,7 +72,7 @@
     {
       "sku": "libre:7801",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라엘 템픽스케",
+      "name": "[New Crop / 소분] 과테말라엘 템픽스케 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 28000,
@@ -85,7 +85,7 @@
     {
       "sku": "libre:7803",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라엘 세로",
+      "name": "[New Crop / 소분] 과테말라엘 세로 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 28000,
@@ -98,7 +98,7 @@
     {
       "sku": "libre:7800",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라엔트레 볼카네스",
+      "name": "[New Crop / 소분] 과테말라엔트레 볼카네스 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 23000,
@@ -111,7 +111,7 @@
     {
       "sku": "libre:7805",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라베텔",
+      "name": "[New Crop / 소분] 과테말라베텔 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 28000,
@@ -124,7 +124,7 @@
     {
       "sku": "libre:7802",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라라 타시타",
+      "name": "[New Crop / 소분] 과테말라라 타시타 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 28000,
@@ -137,7 +137,7 @@
     {
       "sku": "libre:7806",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 과테말라라 벤디시온",
+      "name": "[New Crop / 소분] 과테말라라 벤디시온 2026",
       "origin": "Guatemala",
       "process": null,
       "price_krw": 28000,
@@ -423,7 +423,7 @@
     {
       "sku": "libre:7766",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 에티오피아예가체프 게뎁 초르소",
+      "name": "[New Crop / 소분] 에티오피아예가체프 게뎁 초르소 2026",
       "origin": "Ethiopia",
       "process": null,
       "price_krw": 28000,
@@ -488,7 +488,7 @@
     {
       "sku": "libre:7757",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 에티오피아예가체프 코체레 다니초",
+      "name": "[New Crop / 소분] 에티오피아예가체프 코체레 다니초 2026",
       "origin": "Ethiopia",
       "process": null,
       "price_krw": 25000,
@@ -618,7 +618,7 @@
     {
       "sku": "libre:7737",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 파나마엘리다 토레 게이샤 DRD 워시드",
+      "name": "[New Crop / 소분] 파나마엘리다 토레 게이샤 DRD 워시드 2026",
       "origin": "Panama",
       "process": "워시드",
       "price_krw": 340000,
@@ -631,7 +631,7 @@
     {
       "sku": "libre:7738",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 파나마엘리다 토레 게이샤 DRD 내추럴",
+      "name": "[New Crop / 소분] 파나마엘리다 토레 게이샤 DRD 내추럴 2026",
       "origin": "Panama",
       "process": "내추럴",
       "price_krw": 340000,
@@ -644,7 +644,7 @@
     {
       "sku": "libre:7739",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 파나마엘리다 엘 부로 게이샤",
+      "name": "[New Crop / 소분] 파나마엘리다 엘 부로 게이샤 2026",
       "origin": "Panama",
       "process": null,
       "price_krw": 440000,
@@ -657,7 +657,7 @@
     {
       "sku": "libre:7736",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 파나마엘리다 아구아카테 게이샤 DRD 워시드",
+      "name": "[New Crop / 소분] 파나마엘리다 아구아카테 게이샤 DRD 워시드 2026",
       "origin": "Panama",
       "process": "워시드",
       "price_krw": 370000,
@@ -3112,32 +3112,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6421",
-      "supplier": "커피 리브레",
-      "name": "[소분] 인도젬스 오브 아라쿠 7위 소일 스픽스 내추럴",
-      "origin": "India",
-      "process": "내추럴",
-      "price_krw": 65000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6421&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 65000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6422",
-      "supplier": "커피 리브레",
-      "name": "[소분] 인도젬스 오브 아라쿠 12위 루비 어번던스",
-      "origin": "India",
-      "process": null,
-      "price_krw": 48000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6422&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 48000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6637",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스푸링글라 리브레 셀렉션",
@@ -3242,32 +3216,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:7522",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스세리토스 파라이네마",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20600,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7522&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20600,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7524",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스산타 클라라 파라이네마",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20600,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7524&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20600,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6711",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스베스트 파라이네마 2위 라 푸엔테 내추럴",
@@ -3343,19 +3291,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7609&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 64100,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6991",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스로스 피노스",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6991&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20900,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
@@ -4375,7 +4310,7 @@
     {
       "sku": "libre:7460",
       "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 인도바드라 아라비카",
+      "name": "[New Crop / 소분] 인도바드라 아라비카 2026",
       "origin": "India",
       "process": null,
       "price_krw": 19500,
