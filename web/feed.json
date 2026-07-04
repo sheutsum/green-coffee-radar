@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T07:26:37+00:00",
+  "generated_at": "2026-07-04T09:48:59+00:00",
   "count": 408,
   "suppliers": [
     "모모스커피",
@@ -858,7 +858,7 @@
       "price_krw": 2600000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1206",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 2600000,
       "first_seen": "2026-06-11T12:32:25"
     },
