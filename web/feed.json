@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-04T23:42:41+00:00",
-  "count": 408,
+  "generated_at": "2026-07-05T04:17:25+00:00",
+  "count": 405,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -850,19 +850,6 @@
       "first_seen": "2026-06-11T12:33:03"
     },
     {
-      "sku": "blackroad:1206",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 세니소스 게이샤 워시드 컴패티션 랏",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 2600000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1206",
-      "in_stock": true,
-      "price_per_kg": 2600000,
-      "first_seen": "2026-06-11T12:32:25"
-    },
-    {
       "sku": "coffeemeup:2298",
       "supplier": "커피미업",
       "name": "(생두) 에티오피아 게샤빌리지 Oma #039 Natural Gesha1931",
@@ -1003,32 +990,6 @@
       "url": "https://blackroad.kr/37/?idx=1202",
       "in_stock": true,
       "price_per_kg": 168000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
-      "sku": "blackroad:1200",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 188000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1200",
-      "in_stock": false,
-      "price_per_kg": 188000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
-      "sku": "blackroad:1199",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 188000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1199",
-      "in_stock": false,
-      "price_per_kg": 188000,
       "first_seen": "2026-06-03T13:00:48"
     },
     {
