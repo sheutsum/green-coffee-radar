@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T23:42:36+00:00",
-  "count": 405,
+  "generated_at": "2026-07-06T04:25:22+00:00",
+  "count": 404,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -389,7 +389,7 @@
       "process": null,
       "price_krw": 3500,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=8F125DA0B3432ED853C0B6F7EE5AAA6B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8F125DA0B3432ED853C0B6F7EE5AAA6B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 3500,
       "first_seen": "2026-06-29T10:11:54"
@@ -675,7 +675,7 @@
       "process": "워시드",
       "price_krw": 16800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=4A3E00961A08879C34F91CA0070EA2F5&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=4A3E00961A08879C34F91CA0070EA2F5&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 16800,
       "first_seen": "2026-06-17T13:04:02"
@@ -1042,19 +1042,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7705&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 21300,
-      "first_seen": "2026-06-01T19:30:19"
-    },
-    {
-      "sku": "libre:7706",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과아구아 사르카 엘 토리토 무산소 내추럴",
-      "origin": "Nicaragua",
-      "process": "무산소 내추럴",
-      "price_krw": 22300,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7706&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 22300,
       "first_seen": "2026-06-01T19:30:19"
     },
     {
@@ -3879,19 +3866,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:7078",
-      "supplier": "커피 리브레",
-      "name": "[소분] 과테말라팔로 블랑코",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 19900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7078&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:7179",
       "supplier": "커피 리브레",
       "name": "[소분] 과테말라우에우에테낭고 우니온 칸티닐",
@@ -4799,6 +4773,19 @@
       "url": "https://momos.co.kr/product/생두-ethiopia-hure-station-g1-mosto-anaerobic-natural/2715/category/162/display/1/",
       "in_stock": true,
       "price_per_kg": 47500,
+      "first_seen": "2026-05-14T07:39:47"
+    },
+    {
+      "sku": "momos:2568",
+      "supplier": "모모스커피",
+      "name": "[생두] Ethiopia Guji Uraga Siko Natural Swiss Water DECAF",
+      "origin": "Ethiopia",
+      "process": "Natural",
+      "price_krw": 25500,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-ethiopia-guji-uraga-siko-natural-swiss-water-decaf/2568/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 25500,
       "first_seen": "2026-05-14T07:39:47"
     },
     {
