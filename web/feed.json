@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-08T22:38:53+00:00",
-  "count": 411,
+  "generated_at": "2026-07-09T00:19:31+00:00",
+  "count": 410,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -4175,19 +4175,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7520&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 26000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7510",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루라 프리마베라 게이샤",
-      "origin": "Peru",
-      "process": null,
-      "price_krw": 42000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7510&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 42000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
