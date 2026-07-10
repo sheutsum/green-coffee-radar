@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-10T08:03:39+00:00",
-  "count": 408,
+  "generated_at": "2026-07-10T11:16:40+00:00",
+  "count": 411,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,45 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "momos:2837",
+      "supplier": "모모스커피",
+      "name": "[생두] Ethiopia Safo Mosto Anaerobic Natural",
+      "origin": "Ethiopia",
+      "process": "Anaerobic Natural",
+      "price_krw": 75000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-ethiopia-safo-mosto-anaerobic-natural/2837/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 75000,
+      "first_seen": "2026-07-10T11:15:39"
+    },
+    {
+      "sku": "momos:2838",
+      "supplier": "모모스커피",
+      "name": "[생두] Ethiopia Safo Classic Mini-beans Washed",
+      "origin": "Ethiopia",
+      "process": "Washed",
+      "price_krw": 65000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-ethiopia-safo-classic-mini-beans-washed/2838/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 65000,
+      "first_seen": "2026-07-10T11:15:39"
+    },
+    {
+      "sku": "momos:2836",
+      "supplier": "모모스커피",
+      "name": "[생두] Ethiopia Hatessa Anaerobic Natural",
+      "origin": "Ethiopia",
+      "process": "Anaerobic Natural",
+      "price_krw": 57000,
+      "unit_g": 1000,
+      "url": "https://momos.co.kr/product/생두-ethiopia-hatessa-anaerobic-natural/2836/category/162/display/1/",
+      "in_stock": true,
+      "price_per_kg": 57000,
+      "first_seen": "2026-07-10T11:15:39"
+    },
     {
       "sku": "cobeans:CC70903297FE1E25537AE50AEA186306",
       "supplier": "코빈즈커피",
@@ -546,7 +585,7 @@
       "price_krw": 89200,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/6500647",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 89200,
       "first_seen": "2026-06-29T14:37:37"
     },
