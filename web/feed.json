@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-10T04:38:01+00:00",
-  "count": 405,
+  "generated_at": "2026-07-10T08:03:39+00:00",
+  "count": 408,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,32 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "cobeans:CC70903297FE1E25537AE50AEA186306",
+      "supplier": "코빈즈커피",
+      "name": "◼︎7월 13일 오후 2시 4차 생산분 재입고예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "origin": "Brazil",
+      "process": null,
+      "price_krw": 26300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=CC70903297FE1E25537AE50AEA186306&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 26300,
+      "first_seen": "2026-07-10T08:02:59"
+    },
+    {
+      "sku": "coffeemeup:2329",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 우정 (Ujeong) 콜드룸 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 136000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-우정-ujeong-콜드룸-내추럴/2329/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-10T08:02:50"
+    },
     {
       "sku": "libre:7859",
       "supplier": "커피 리브레",
@@ -319,12 +345,12 @@
     {
       "sku": "cobeans:EAA52F3366768BCA401DCA9EA5B181DD",
       "supplier": "코빈즈커피",
-      "name": "◼︎7월 10일 14시 재입고예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "name": "◼︎3차 생산분 입고◼︎26 브라질 코빈즈 인퓨즈드 초코",
       "origin": "Brazil",
       "process": null,
       "price_krw": 26300,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=EAA52F3366768BCA401DCA9EA5B181DD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=EAA52F3366768BCA401DCA9EA5B181DD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 26300,
       "first_seen": "2026-07-02T07:53:26"
@@ -4201,6 +4227,19 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7520&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 26000,
+      "first_seen": "2026-05-14T07:42:29"
+    },
+    {
+      "sku": "libre:7509",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 페루라 팔마 게이샤",
+      "origin": "Peru",
+      "process": null,
+      "price_krw": 49500,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7509&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 49500,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
