@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-09T22:42:11+00:00",
-  "count": 406,
+  "generated_at": "2026-07-10T00:16:19+00:00",
+  "count": 405,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -4136,19 +4136,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7504&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 25000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7516",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루엘 포르베니르 내추럴",
-      "origin": "Peru",
-      "process": "내추럴",
-      "price_krw": 26000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7516&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 26000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
