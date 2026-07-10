@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T00:16:19+00:00",
+  "generated_at": "2026-07-10T04:38:01+00:00",
   "count": 405,
   "suppliers": [
     "모모스커피",
@@ -104,7 +104,7 @@
       "price_krw": 64000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1227",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 64000,
       "first_seen": "2026-07-07T15:35:19"
     },
@@ -1625,7 +1625,7 @@
       "price_krw": 49800,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/8987018",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 49800,
       "first_seen": "2026-05-14T07:43:05"
     },
