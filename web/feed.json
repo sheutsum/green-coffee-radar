@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-13T01:11:29+00:00",
-  "count": 408,
+  "generated_at": "2026-07-13T05:05:55+00:00",
+  "count": 410,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,19 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "blackroad:1234",
+      "supplier": "블랙로드커피",
+      "name": "아라우즈5종",
+      "origin": null,
+      "process": null,
+      "price_krw": 138000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1234",
+      "in_stock": true,
+      "price_per_kg": 138000,
+      "first_seen": "2026-07-13T05:05:21"
+    },
     {
       "sku": "momos:2837",
       "supplier": "모모스커피",
@@ -59,7 +72,7 @@
     {
       "sku": "cobeans:CC70903297FE1E25537AE50AEA186306",
       "supplier": "코빈즈커피",
-      "name": "◼︎7월 13일 오후 2시 4차 생산분 재입고예정◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "name": "◼︎4차 생산분 재입고◼︎26 브라질 코빈즈 인퓨즈드 초코",
       "origin": "Brazil",
       "process": null,
       "price_krw": 26300,
@@ -1755,7 +1768,7 @@
       "price_krw": 17500,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/7890803",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 17500,
       "first_seen": "2026-05-14T07:43:05"
     },
@@ -3967,6 +3980,19 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7617&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 23600,
+      "first_seen": "2026-05-14T07:42:29"
+    },
+    {
+      "sku": "libre:6819",
+      "supplier": "커피 리브레",
+      "name": "[소분] 니카라과라스 오르텐시아스",
+      "origin": "Nicaragua",
+      "process": null,
+      "price_krw": 20700,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=6819&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20700,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
