@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-13T05:05:55+00:00",
-  "count": 410,
+  "generated_at": "2026-07-13T08:27:47+00:00",
+  "count": 413,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,58 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "compass:9593894",
+      "supplier": "콤파스 커피",
+      "name": "[생두] 브라질 한슈 상 베네지투 옐로 버번 펄프드 내추럴",
+      "origin": "Brazil",
+      "process": "내추럴",
+      "price_krw": 17500,
+      "unit_g": 1000,
+      "url": "https://compasscoffee.kr/product/9593894",
+      "in_stock": true,
+      "price_per_kg": 17500,
+      "first_seen": "2026-07-13T08:27:45"
+    },
+    {
+      "sku": "compass:9631078",
+      "supplier": "콤파스 커피",
+      "name": "[생두] 브라질 산타 키떼리아 옐로 버번 펄프드 내추럴의 사본",
+      "origin": "Brazil",
+      "process": "내추럴",
+      "price_krw": 17500,
+      "unit_g": 1000,
+      "url": "https://compasscoffee.kr/product/9631078",
+      "in_stock": true,
+      "price_per_kg": 17500,
+      "first_seen": "2026-07-13T08:27:45"
+    },
+    {
+      "sku": "blackroad:1235",
+      "supplier": "블랙로드커피",
+      "name": "페르가미노 6종",
+      "origin": null,
+      "process": null,
+      "price_krw": 480000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1235",
+      "in_stock": true,
+      "price_per_kg": 480000,
+      "first_seen": "2026-07-13T08:27:06"
+    },
+    {
+      "sku": "cobeans:B75BD27B5A48A1B48987A18D831F6336",
+      "supplier": "코빈즈커피",
+      "name": "◼︎7월 15일 오전 10시 5차 생산분 사전예약◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "origin": "Brazil",
+      "process": null,
+      "price_krw": 26300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=B75BD27B5A48A1B48987A18D831F6336&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 26300,
+      "first_seen": "2026-07-13T08:27:02"
+    },
     {
       "sku": "blackroad:1234",
       "supplier": "블랙로드커피",
@@ -77,7 +129,7 @@
       "process": null,
       "price_krw": 26300,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=CC70903297FE1E25537AE50AEA186306&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=CC70903297FE1E25537AE50AEA186306&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 26300,
       "first_seen": "2026-07-10T08:02:59"
@@ -598,7 +650,7 @@
       "price_krw": 89200,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/6500647",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 89200,
       "first_seen": "2026-06-29T14:37:37"
     },
@@ -1222,7 +1274,7 @@
       "price_krw": 238000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1197",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 238000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -4253,19 +4305,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7514&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 75000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7520",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루라 플로르 데 라 팔마 내추럴",
-      "origin": "Peru",
-      "process": "내추럴",
-      "price_krw": 26000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7520&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 26000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
