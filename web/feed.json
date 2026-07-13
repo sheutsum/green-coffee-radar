@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T08:27:47+00:00",
+  "generated_at": "2026-07-13T11:42:13+00:00",
   "count": 413,
   "suppliers": [
     "모모스커피",
@@ -650,7 +650,7 @@
       "price_krw": 89200,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/6500647",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 89200,
       "first_seen": "2026-06-29T14:37:37"
     },
