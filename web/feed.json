@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T23:33:26+00:00",
-  "count": 411,
+  "generated_at": "2026-07-13T01:11:29+00:00",
+  "count": 408,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -3307,19 +3307,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6326",
-      "supplier": "커피 리브레",
-      "name": "[소분] 케냐무가야 AB",
-      "origin": "Kenya",
-      "process": null,
-      "price_krw": 20900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6326&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6637",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스푸링글라 리브레 셀렉션",
@@ -3983,19 +3970,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6819",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과라스 오르텐시아스",
-      "origin": "Nicaragua",
-      "process": null,
-      "price_krw": 20700,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6819&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20700,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6822",
       "supplier": "커피 리브레",
       "name": "[소분] 니카라과라스 마리아스 라스 골론드리나스",
@@ -4266,19 +4240,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7520&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 26000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7509",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루라 팔마 게이샤",
-      "origin": "Peru",
-      "process": null,
-      "price_krw": 49500,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7509&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 49500,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
