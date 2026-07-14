@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T12:21:33+00:00",
-  "count": 410,
+  "generated_at": "2026-07-14T14:27:24+00:00",
+  "count": 411,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,19 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "compass:9633109",
+      "supplier": "콤파스 커피",
+      "name": "[생두] 에티오피아 구지 야비토 토메 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 25000,
+      "unit_g": 1000,
+      "url": "https://compasscoffee.kr/product/9633109",
+      "in_stock": true,
+      "price_per_kg": 25000,
+      "first_seen": "2026-07-14T14:27:23"
+    },
     {
       "sku": "libre:7863",
       "supplier": "커피 리브레",
