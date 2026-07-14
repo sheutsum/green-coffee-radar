@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T06:38:11+00:00",
-  "count": 413,
+  "generated_at": "2026-07-14T08:54:56+00:00",
+  "count": 411,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -3385,19 +3385,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6637",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스푸링글라 리브레 셀렉션",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 17800,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6637&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 17800,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6638",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스파라이네마 리브레 셀렉션",
@@ -3850,19 +3837,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6757&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 95000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6756",
-      "supplier": "커피 리브레",
-      "name": "[소분] 예멘베이트 알알 무산소 내추럴",
-      "origin": "Yemen",
-      "process": "무산소 내추럴",
-      "price_krw": 97000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6756&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 97000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
