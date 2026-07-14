@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T10:55:30+00:00",
-  "count": 411,
+  "generated_at": "2026-07-14T12:21:33+00:00",
+  "count": 410,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -46,13 +46,13 @@
     {
       "sku": "compass:9631078",
       "supplier": "콤파스 커피",
-      "name": "[생두] 브라질 산타 키떼리아 옐로 버번 펄프드 내추럴의 사본",
+      "name": "[생두] 브라질 산타 키떼리아 옐로 버번 펄프드 내추럴",
       "origin": "Brazil",
       "process": "내추럴",
       "price_krw": 17500,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/9631078",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 17500,
       "first_seen": "2026-07-13T08:27:45"
     },
@@ -1342,19 +1342,6 @@
       "in_stock": false,
       "price_per_kg": 26900,
       "first_seen": "2026-06-01T19:30:19"
-    },
-    {
-      "sku": "coffeemeup:840",
-      "supplier": "커피미업",
-      "name": "개인결제창(생두)",
-      "origin": null,
-      "process": null,
-      "price_krw": 4046700,
-      "unit_g": null,
-      "url": "https://coffeemeup.store/product/개인결제창생두/840/category/182/display/1/",
-      "in_stock": true,
-      "price_per_kg": null,
-      "first_seen": "2026-05-29T07:46:12"
     },
     {
       "sku": "momos:2719",
