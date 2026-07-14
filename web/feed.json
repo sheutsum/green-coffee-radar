@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-13T23:31:42+00:00",
-  "count": 413,
+  "generated_at": "2026-07-14T01:00:22+00:00",
+  "count": 412,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -4110,19 +4110,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7072&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 19900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7179",
-      "supplier": "커피 리브레",
-      "name": "[소분] 과테말라우에우에테낭고 우니온 칸티닐",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 18600,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7179&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 18600,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
