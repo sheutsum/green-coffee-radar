@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T23:31:34+00:00",
-  "count": 411,
+  "generated_at": "2026-07-15T00:56:39+00:00",
+  "count": 410,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -146,19 +146,6 @@
       "in_stock": true,
       "price_per_kg": 57000,
       "first_seen": "2026-07-10T11:15:39"
-    },
-    {
-      "sku": "cobeans:CC70903297FE1E25537AE50AEA186306",
-      "supplier": "코빈즈커피",
-      "name": "◼︎4차 생산분 재입고◼︎26 브라질 코빈즈 인퓨즈드 초코",
-      "origin": "Brazil",
-      "process": null,
-      "price_krw": 26300,
-      "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=CC70903297FE1E25537AE50AEA186306&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
-      "in_stock": false,
-      "price_per_kg": 26300,
-      "first_seen": "2026-07-10T08:02:59"
     },
     {
       "sku": "coffeemeup:2329",
@@ -987,7 +974,7 @@
       "process": "워시드",
       "price_krw": 18300,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=F0BBAC6FA079F1E00B2C14C1D3C6CCF0&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=F0BBAC6FA079F1E00B2C14C1D3C6CCF0&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 18300,
       "first_seen": "2026-06-17T13:04:02"
@@ -1052,7 +1039,7 @@
       "process": "내추럴",
       "price_krw": 27800,
       "unit_g": 1000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=1680829293F2A8541EFA2647A0290F88&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=1680829293F2A8541EFA2647A0290F88&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 27800,
       "first_seen": "2026-06-17T13:04:02"
