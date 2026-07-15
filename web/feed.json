@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T04:15:11+00:00",
+  "generated_at": "2026-07-15T06:39:24+00:00",
   "count": 395,
   "suppliers": [
     "모모스커피",
@@ -2051,11 +2051,11 @@
       "name": "[생두] 에티오피아 구지 우라가 하르수 워시드",
       "origin": "Ethiopia",
       "process": "워시드",
-      "price_krw": 22000,
+      "price_krw": 25000,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/8147306",
       "in_stock": false,
-      "price_per_kg": 22000,
+      "price_per_kg": 25000,
       "first_seen": "2026-05-14T07:43:05"
     },
     {
