@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T04:02:29+00:00",
-  "count": 477,
+  "generated_at": "2026-07-16T04:17:29+00:00",
+  "count": 475,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -1106,19 +1106,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7798&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 20000,
-      "first_seen": "2026-07-02T07:53:13"
-    },
-    {
-      "sku": "libre:7799",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 인도강가기리 2026",
-      "origin": "India",
-      "process": null,
-      "price_krw": 19500,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7799&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19500,
       "first_seen": "2026-07-02T07:53:13"
     },
     {
@@ -4200,19 +4187,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6564&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 18200,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6458",
-      "supplier": "커피 리브레",
-      "name": "[소분] 케냐카빙가라 AA",
-      "origin": "Kenya",
-      "process": null,
-      "price_krw": 21800,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6458&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21800,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
