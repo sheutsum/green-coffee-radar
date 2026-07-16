@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T07:17:31+00:00",
-  "count": 494,
+  "generated_at": "2026-07-16T07:32:29+00:00",
+  "count": 490,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -2237,19 +2237,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7705&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 21300,
-      "first_seen": "2026-06-01T19:30:19"
-    },
-    {
-      "sku": "libre:7707",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과로 프로메티도",
-      "origin": "Nicaragua",
-      "process": null,
-      "price_krw": 20700,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7707&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20700,
       "first_seen": "2026-06-01T19:30:19"
     },
     {
@@ -4632,19 +4619,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6991",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스로스 피노스",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6991&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:7615",
       "supplier": "커피 리브레",
       "name": "[소분] 온두라스로스 시르게로스 게이샤",
@@ -5100,19 +5074,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6819",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과라스 오르텐시아스",
-      "origin": "Nicaragua",
-      "process": null,
-      "price_krw": 20700,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6819&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20700,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6822",
       "supplier": "커피 리브레",
       "name": "[소분] 니카라과라스 마리아스 라스 골론드리나스",
@@ -5277,19 +5238,6 @@
       "price_krw": 19900,
       "unit_g": 1000,
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7075&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19900,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7074",
-      "supplier": "커피 리브레",
-      "name": "[소분] 과테말라란초 라스 베가스 Lot.1",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 19900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7074&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 19900,
       "first_seen": "2026-05-14T07:42:29"
