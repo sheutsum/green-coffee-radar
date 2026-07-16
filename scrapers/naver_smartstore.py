@@ -9,9 +9,11 @@ SSR 데이터가 박혀 있다:
 이 어댑터는 위 셋을 순서대로 시도하고, JSON 트리에서 상품처럼 보이는
 객체들을 찾아 평탄화한다.
 
-⚠️ 네이버는 봇 차단이 까다로워서, 데이터센터 IP나 어색한 헤더에서는 403/엠티
-페이지가 반환될 수 있다. 자택/회사 등 일반 IP에서는 대체로 통한다.
-실패 시 Playwright fallback이 필요할 수 있다.
+⚠️ 봇 차단: 2026-07 기준 네이버는 **모든 데스크톱 TLS 지문**(chrome131~146,
+safari, edge 전부 확인)의 smartstore 요청을 nid.naver.com 로그인으로 리다이렉트
+시킨다. IP는 무관 — 자택 IP와 GitHub Actions 양쪽에서 동일하게 막힌다.
+모바일 프로파일(chrome131_android)만 통과하며, 이 경우 m.smartstore.naver.com
+모바일 SSR 페이지로 붙는다. 그래서 _IMPERSONATE는 android 고정이다.
 """
 from __future__ import annotations
 import re
@@ -34,8 +36,9 @@ _NAVER_EXTRA_HEADERS = {
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-# 어떤 Chrome 버전을 흉내낼지 (curl_cffi에서 지원하는 최신 프로파일들 중 하나)
-_IMPERSONATE = "chrome131"
+# 반드시 android 프로파일. 데스크톱 지문은 전부 로그인 월로 튕긴다(모듈 docstring
+# 참고). 최신 chrome146도 막히므로 "버전을 올리는" 방향으로는 해결되지 않는다.
+_IMPERSONATE = "chrome131_android"
 
 _PRELOAD_RE = re.compile(
     r"window\.__PRELOADED_STATE__\s*=\s*({.+?})\s*;", re.DOTALL
@@ -122,8 +125,15 @@ class NaverSmartStoreScraper(Scraper):
     supplier_name: str = ""
 
     base = "https://smartstore.naver.com"
-    page_size = 40
-    max_pages = 15
+    page_size = 20
+    # ponytail: 모바일 SSR은 page/size 파라미터를 무시하고 st=RECENT 최신 20개만
+    # 준다(page=1,2,3 모두 동일한 20개 반환 확인). 즉 카탈로그 전체(verde 기준
+    # categoryProducts.totalCount=341)가 아니라 최신 20개만 본다.
+    # 15분 주기 신상 감시가 목적이라 한 스토어가 15분 안에 21개 이상을 올리지
+    # 않는 한 놓치지 않는다. 다만 PWA feed의 네이버 스토어 상품 수도 20으로 잘린다.
+    # 전체 카탈로그가 필요해지면 내부 API(/i/v1/stores/{channelNo}/categories/
+    # {catId}/products)를 뚫어야 하는데 2026-07 기준 429로 막혀 있다.
+    max_pages = 1
 
     def _catalog_url(self, page: int) -> str:
         return (
@@ -166,6 +176,15 @@ class NaverSmartStoreScraper(Scraper):
                 if r.status_code >= 400:
                     raise RuntimeError(
                         f"{self.name}: HTTP {r.status_code} from {url}"
+                    )
+                # 봇으로 찍히면 200 + 로그인 페이지가 온다. 이걸 잡아내지 않으면
+                # 아래 파서가 "SSR JSON not found = layout 변경"이라는 엉뚱한
+                # 진단을 내놓는다(실제로 그래서 한참 헤맴).
+                if "nidlogin" in str(r.url):
+                    raise RuntimeError(
+                        f"{self.name}: 로그인 월로 리다이렉트됨({r.url}). "
+                        f"impersonate={_IMPERSONATE} 가 봇으로 검출됨 — "
+                        "다른 모바일 프로파일 검토 필요."
                     )
                 items = list(self._extract_products(r.text))
                 new = [p for p in items if p.sku not in seen]
