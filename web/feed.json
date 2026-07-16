@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T01:47:21+00:00",
-  "count": 398,
+  "generated_at": "2026-07-16T02:02:23+00:00",
+  "count": 404,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,84 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "cobeans:FC03D48253286A798F5116EC00E99B2B",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 시다마 벤사 하마쇼 G1 애너러빅 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 46800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=FC03D48253286A798F5116EC00E99B2B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 46800,
+      "first_seen": "2026-07-16T02:01:37"
+    },
+    {
+      "sku": "cobeans:4DE81D9105C85BCA6E6E4666E6DD536A",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 할로 베리티 G1 워시드 드라이 퍼먼테이션",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 28300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=4DE81D9105C85BCA6E6E4666E6DD536A&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 28300,
+      "first_seen": "2026-07-16T02:01:37"
+    },
+    {
+      "sku": "cobeans:E354FD90B2D5C777BFEC87A352A18976",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 단체 G1 화이트허니",
+      "origin": "Ethiopia",
+      "process": "허니",
+      "price_krw": 30300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=E354FD90B2D5C777BFEC87A352A18976&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 30300,
+      "first_seen": "2026-07-16T02:01:37"
+    },
+    {
+      "sku": "cobeans:F1748D6B0FD9D439F71450117EBA2725",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 단체 G1 애너러빅 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 38300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=F1748D6B0FD9D439F71450117EBA2725&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 38300,
+      "first_seen": "2026-07-16T02:01:37"
+    },
+    {
+      "sku": "cobeans:8E68C3C7BF14AD0BCABA52BABFA470BD",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 단체 G1 애너러빅 내추럴 코라수마",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 42800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8E68C3C7BF14AD0BCABA52BABFA470BD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 42800,
+      "first_seen": "2026-07-16T02:01:37"
+    },
+    {
+      "sku": "cobeans:6412FEF87392AE8C987B0ECC79DA1902",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 게뎁 단체 G1 레드허니",
+      "origin": "Ethiopia",
+      "process": "허니",
+      "price_krw": 37300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=6412FEF87392AE8C987B0ECC79DA1902&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 37300,
+      "first_seen": "2026-07-16T02:01:37"
+    },
     {
       "sku": "cobeans:C61FBEF63DF5FF317AECDC3670094472",
       "supplier": "코빈즈커피",
@@ -117,7 +195,7 @@
       "price_krw": 480000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1235",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 480000,
       "first_seen": "2026-07-13T08:27:06"
     },
