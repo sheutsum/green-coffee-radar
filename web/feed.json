@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T23:38:17+00:00",
-  "count": 396,
+  "generated_at": "2026-07-16T01:07:41+00:00",
+  "count": 398,
   "suppliers": [
     "모모스커피",
     "블랙로드커피",
@@ -17,6 +17,19 @@
     "doan"
   ],
   "products": [
+    {
+      "sku": "cobeans:C61FBEF63DF5FF317AECDC3670094472",
+      "supplier": "코빈즈커피",
+      "name": "◼︎7월 20일 오전 10시 6차 생산분 사전예약◼︎[최대 10kg 구매 가능]26 브라질 코빈즈 인퓨즈드 초코",
+      "origin": "Brazil",
+      "process": null,
+      "price_krw": 26300,
+      "unit_g": 10000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=C61FBEF63DF5FF317AECDC3670094472&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 2630,
+      "first_seen": "2026-07-16T01:06:57"
+    },
     {
       "sku": "compass:9633559",
       "supplier": "콤파스 커피",
@@ -111,7 +124,7 @@
     {
       "sku": "cobeans:B75BD27B5A48A1B48987A18D831F6336",
       "supplier": "코빈즈커피",
-      "name": "◼︎5차 생산분 사전예약◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "name": "◼︎5차 생산분 품절◼︎26 브라질 코빈즈 인퓨즈드 초코",
       "origin": "Brazil",
       "process": null,
       "price_krw": 26300,
@@ -1224,6 +1237,19 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7681&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 32500,
+      "first_seen": "2026-05-17T10:56:14"
+    },
+    {
+      "sku": "libre:7680",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 콜롬비아우일라 라스 라하스 부르봉 아히",
+      "origin": "Colombia",
+      "process": null,
+      "price_krw": 30500,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7680&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 30500,
       "first_seen": "2026-05-17T10:56:14"
     },
     {
@@ -2938,7 +2964,7 @@
       "price_krw": 16800,
       "unit_g": 1000,
       "url": "https://www.cafenogales.co.kr/product/6677571",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 16800,
       "first_seen": "2026-05-14T07:43:04"
     },
