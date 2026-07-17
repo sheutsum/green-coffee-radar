@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-17T04:47:03+00:00",
-  "count": 490,
+  "generated_at": "2026-07-17T07:27:51+00:00",
+  "count": 494,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,58 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "coffeemeup:2328",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 우정 (Ujeong) 콜드룸 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 142000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-우정-ujeong-콜드룸-워시드/2328/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
+    {
+      "sku": "coffeemeup:2339",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 Godicho 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 36000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-godicho-내추럴/2339/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
+    {
+      "sku": "coffeemeup:2340",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 Bona Gute 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 34000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-bona-gute-워시드/2340/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
+    {
+      "sku": "coffeemeup:2338",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 Bombe 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 36000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-bombe-내추럴/2338/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
     {
       "sku": "libre:7907",
       "supplier": "커피 리브레",
