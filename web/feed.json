@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-20T04:02:29+00:00",
-  "count": 494,
+  "generated_at": "2026-07-20T04:17:27+00:00",
+  "count": 496,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,32 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "cobeans:8CFF9BF6694DCCFC3B6A613D05D51D16",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 시다마 아르베고나 루무다모 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 31800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8CFF9BF6694DCCFC3B6A613D05D51D16&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 31800,
+      "first_seen": "2026-07-20T04:16:36"
+    },
+    {
+      "sku": "cobeans:8E065119C74EFE3A47AEC8796964CF8B",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 구지 우라가 라로 G1 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 26300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=8E065119C74EFE3A47AEC8796964CF8B&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 26300,
+      "first_seen": "2026-07-20T04:16:36"
+    },
     {
       "sku": "cafenogales:9633479",
       "supplier": "카페노갈레스",
