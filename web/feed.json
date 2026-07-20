@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T06:32:28+00:00",
+  "generated_at": "2026-07-20T06:47:28+00:00",
   "count": 492,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -443,19 +443,6 @@
       "url": "https://smartstore.naver.com/doanselectshop/products/13647049206",
       "in_stock": true,
       "price_per_kg": 53000,
-      "first_seen": "2026-07-16T02:07:10"
-    },
-    {
-      "sku": "doan:13647049848",
-      "supplier": "도안 셀렉트 샵",
-      "name": "[생두][뉴크롭] 에티오피아 코르소 불레 모디파이드 워시드 15kg, 1개",
-      "origin": "Ethiopia",
-      "process": "워시드",
-      "price_krw": 765000,
-      "unit_g": 15000,
-      "url": "https://smartstore.naver.com/doanselectshop/products/13647049848",
-      "in_stock": true,
-      "price_per_kg": 51000,
       "first_seen": "2026-07-16T02:07:10"
     },
     {
@@ -1964,6 +1951,19 @@
       "url": "https://smartstore.naver.com/doanselectshop/products/13629677074",
       "in_stock": false,
       "price_per_kg": 47500,
+      "first_seen": "2026-06-11T21:31:01"
+    },
+    {
+      "sku": "doan:13629676263",
+      "supplier": "도안 셀렉트 샵",
+      "name": "[생두] [뉴크롭] 에티오피아 구지 바데이 허니 15kg, 1개",
+      "origin": "Ethiopia",
+      "process": "허니",
+      "price_krw": 682500,
+      "unit_g": 15000,
+      "url": "https://smartstore.naver.com/doanselectshop/products/13629676263",
+      "in_stock": false,
+      "price_per_kg": 45500,
       "first_seen": "2026-06-11T21:31:01"
     },
     {
