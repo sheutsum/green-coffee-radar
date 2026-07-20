@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-20T00:11:03+00:00",
-  "count": 492,
+  "generated_at": "2026-07-20T02:17:21+00:00",
+  "count": 491,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -2248,7 +2248,7 @@
       "price_krw": 188000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1198",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 188000,
       "first_seen": "2026-06-03T13:00:48"
     },
@@ -5615,19 +5615,6 @@
       "price_krw": 348000,
       "unit_g": 500,
       "url": "https://coffeemeup.store/product/생두500g-파나마-알토-밤비토-el-cierre-게이샤-허니/2150/category/182/display/1/",
-      "in_stock": true,
-      "price_per_kg": 696000,
-      "first_seen": "2026-05-14T07:42:28"
-    },
-    {
-      "sku": "coffeemeup:2156",
-      "supplier": "커피미업",
-      "name": "(생두/500g) 파나마 알토 밤비토 Del Mundo 게이샤 허니",
-      "origin": "Panama",
-      "process": "허니",
-      "price_krw": 348000,
-      "unit_g": 500,
-      "url": "https://coffeemeup.store/product/생두500g-파나마-알토-밤비토-del-mundo-게이샤-허니/2156/category/182/display/1/",
       "in_stock": true,
       "price_per_kg": 696000,
       "first_seen": "2026-05-14T07:42:28"
