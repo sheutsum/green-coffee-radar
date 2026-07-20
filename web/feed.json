@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-20T02:32:26+00:00",
-  "count": 491,
+  "generated_at": "2026-07-20T02:47:35+00:00",
+  "count": 494,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,45 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "cafenogales:9633479",
+      "supplier": "카페노갈레스",
+      "name": "IFF-2624 / Pink Bourbon / Washed",
+      "origin": null,
+      "process": "Washed",
+      "price_krw": 62400,
+      "unit_g": 1000,
+      "url": "https://www.cafenogales.co.kr/product/9633479",
+      "in_stock": true,
+      "price_per_kg": 62400,
+      "first_seen": "2026-07-20T02:47:30"
+    },
+    {
+      "sku": "cafenogales:9633405",
+      "supplier": "카페노갈레스",
+      "name": "IFF-2623 / Geisha / Washed",
+      "origin": null,
+      "process": "Washed",
+      "price_krw": 81800,
+      "unit_g": 1000,
+      "url": "https://www.cafenogales.co.kr/product/9633405",
+      "in_stock": true,
+      "price_per_kg": 81800,
+      "first_seen": "2026-07-20T02:47:30"
+    },
+    {
+      "sku": "blackroad:1239",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 165000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1239",
+      "in_stock": true,
+      "price_per_kg": 165000,
+      "first_seen": "2026-07-20T02:46:42"
+    },
     {
       "sku": "coffeemeup:2328",
       "supplier": "커피미업",
