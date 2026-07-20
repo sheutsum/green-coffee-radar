@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-20T22:10:30+00:00",
-  "count": 476,
+  "generated_at": "2026-07-20T23:36:09+00:00",
+  "count": 492,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -10,12 +10,11 @@
     "씨에이치빈",
     "카페노갈레스",
     "커피 리브레",
+    "커피미업",
     "코빈즈커피",
     "콤파스 커피"
   ],
-  "errors": [
-    "coffeemeup"
-  ],
+  "errors": [],
   "products": [
     {
       "sku": "cobeans:DD17E652CD2A08FDB8BF7F68E2AD3814",
@@ -120,6 +119,58 @@
       "in_stock": false,
       "price_per_kg": 165000,
       "first_seen": "2026-07-20T02:46:42"
+    },
+    {
+      "sku": "coffeemeup:2328",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 우정 (Ujeong) 콜드룸 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 142000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-우정-ujeong-콜드룸-워시드/2328/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
+    {
+      "sku": "coffeemeup:2339",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 Godicho 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 36000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-godicho-내추럴/2339/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
+    {
+      "sku": "coffeemeup:2340",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 Bona Gute 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 34000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-bona-gute-워시드/2340/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
+    },
+    {
+      "sku": "coffeemeup:2338",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 Bombe 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 36000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-bombe-내추럴/2338/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-17T07:26:54"
     },
     {
       "sku": "libre:7907",
@@ -1097,6 +1148,19 @@
       "first_seen": "2026-07-10T11:15:39"
     },
     {
+      "sku": "coffeemeup:2329",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 우정 (Ujeong) 콜드룸 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 136000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-우정-ujeong-콜드룸-내추럴/2329/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-10T08:02:50"
+    },
+    {
       "sku": "libre:7859",
       "supplier": "커피 리브레",
       "name": "[New Crop / 소분] 에티오피아카파 비타 리브레 셀렉션 2026",
@@ -1552,6 +1616,19 @@
       "first_seen": "2026-07-01T10:48:14"
     },
     {
+      "sku": "coffeemeup:2325",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 타미루 (2021 COE 1위 수상랏) 74158 무산소 내추럴",
+      "origin": "Ethiopia",
+      "process": "무산소 내추럴",
+      "price_krw": 97000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-타미루-2021-coe-1위-수상랏-74158-무산소-내추럴/2325/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-01T06:42:47"
+    },
+    {
       "sku": "cafenogales:6500647",
       "supplier": "카페노갈레스",
       "name": "PLA-1680 / Geisha / White Honey CM",
@@ -1563,6 +1640,97 @@
       "in_stock": false,
       "price_per_kg": 89200,
       "first_seen": "2026-06-29T14:37:37"
+    },
+    {
+      "sku": "coffeemeup:2320",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 라 에스메랄다 Porton #3NB 게이샤 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 477000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-라-에스메랄다-porton-3nb-게이샤-내추럴/2320/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
+    },
+    {
+      "sku": "coffeemeup:2322",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 라 에스메랄다 Noria #5FB 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 477000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-라-에스메랄다-noria-5fb-게이샤-워시드/2322/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
+    },
+    {
+      "sku": "coffeemeup:2318",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 라 에스메랄다 Lino #8FC 게이샤 콜드룸 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 525000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-라-에스메랄다-lino-8fc-게이샤-콜드룸-워시드/2318/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
+    },
+    {
+      "sku": "coffeemeup:2316",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 라 에스메랄다 Durazno #4FB 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 477000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-라-에스메랄다-durazno-4fb-게이샤-워시드/2316/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
+    },
+    {
+      "sku": "coffeemeup:2312",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 라 에스메랄다 Cabana Arriba #6NB 게이샤 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 477000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-라-에스메랄다-cabana-arriba-6nb-게이샤-내추럴/2312/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
+    },
+    {
+      "sku": "coffeemeup:2314",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 라 에스메랄다 Bosque #5ANC 게이샤 콜드룸 무산소 내추럴",
+      "origin": "Panama",
+      "process": "무산소 내추럴",
+      "price_krw": 525000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-라-에스메랄다-bosque-5anc-게이샤-콜드룸-무산소-내추럴/2314/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
+    },
+    {
+      "sku": "coffeemeup:2309",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 Finca Malaquita #08 게이샤 무산소 내추럴",
+      "origin": "Panama",
+      "process": "무산소 내추럴",
+      "price_krw": 465000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-finca-malaquita-08-게이샤-무산소-내추럴/2309/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-26T10:37:48"
     },
     {
       "sku": "libre:7766",
@@ -1940,6 +2108,19 @@
       "in_stock": true,
       "price_per_kg": 27000,
       "first_seen": "2026-06-10T12:44:19"
+    },
+    {
+      "sku": "coffeemeup:2298",
+      "supplier": "커피미업",
+      "name": "(생두) 에티오피아 게샤빌리지 Oma #039 Natural Gesha1931",
+      "origin": "Ethiopia",
+      "process": "Natural",
+      "price_krw": 189000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-에티오피아-게샤빌리지-oma-039-natural-gesha1931/2298/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-06-05T09:09:07"
     },
     {
       "sku": "momos:2804",
@@ -5437,6 +5618,32 @@
       "in_stock": false,
       "price_per_kg": 27500,
       "first_seen": "2026-05-14T07:42:29"
+    },
+    {
+      "sku": "coffeemeup:2150",
+      "supplier": "커피미업",
+      "name": "(생두/500g) 파나마 알토 밤비토 El Cierre 게이샤 허니",
+      "origin": "Panama",
+      "process": "허니",
+      "price_krw": 348000,
+      "unit_g": 500,
+      "url": "https://coffeemeup.store/product/생두500g-파나마-알토-밤비토-el-cierre-게이샤-허니/2150/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": 696000,
+      "first_seen": "2026-05-14T07:42:28"
+    },
+    {
+      "sku": "coffeemeup:2057",
+      "supplier": "커피미업",
+      "name": "(생두) 과테말라 La Bella 카투라 워시드",
+      "origin": "Guatemala",
+      "process": "워시드",
+      "price_krw": 18400,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-과테말라-la-bella-카투라-워시드/2057/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-05-14T07:42:28"
     },
     {
       "sku": "momos:2633",
