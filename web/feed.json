@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T05:47:31+00:00",
-  "count": 492,
+  "generated_at": "2026-07-21T06:02:29+00:00",
+  "count": 491,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -4954,19 +4954,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6755&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 132000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:6240",
-      "supplier": "커피 리브레",
-      "name": "[소분] 에티오피아시다모 아르베고나 보체사",
-      "origin": "Ethiopia",
-      "process": null,
-      "price_krw": 22000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6240&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 22000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
