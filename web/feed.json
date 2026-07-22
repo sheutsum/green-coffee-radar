@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T06:32:39+00:00",
-  "count": 492,
+  "generated_at": "2026-07-22T06:47:31+00:00",
+  "count": 493,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,19 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "cobeans:E113BB92C69391DD39E2488F9F588382",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 시다마 아르베고나 보체사 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 31800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=E113BB92C69391DD39E2488F9F588382&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 31800,
+      "first_seen": "2026-07-22T06:46:38"
+    },
     {
       "sku": "cobeans:DD17E652CD2A08FDB8BF7F68E2AD3814",
       "supplier": "코빈즈커피",
