@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T02:32:26+00:00",
-  "count": 493,
+  "generated_at": "2026-07-22T02:47:31+00:00",
+  "count": 492,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -5084,19 +5084,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6824&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 20700,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7620",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과엘 캄발라체 마라카투라 내추럴",
-      "origin": "Nicaragua",
-      "process": "내추럴",
-      "price_krw": 34400,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7620&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 34400,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
