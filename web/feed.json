@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T06:02:32+00:00",
+  "generated_at": "2026-07-22T06:17:29+00:00",
   "count": 492,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -2092,7 +2092,7 @@
       "price_krw": 28000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/verde_trade/products/13628256873",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 28000,
       "first_seen": "2026-06-10T12:44:19"
     },
