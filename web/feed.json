@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T07:17:32+00:00",
-  "count": 493,
+  "generated_at": "2026-07-22T07:32:37+00:00",
+  "count": 492,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -5617,19 +5617,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7204&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 18000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7348",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 디카페인에티오피아 예가체프 할로 베리티 내추럴",
-      "origin": "Ethiopia",
-      "process": "내추럴",
-      "price_krw": 27500,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7348&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 27500,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
