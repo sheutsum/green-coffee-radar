@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T03:02:29+00:00",
-  "count": 484,
+  "generated_at": "2026-07-23T03:17:33+00:00",
+  "count": 488,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,58 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "blackroad:1240",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 엘리다 토레 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 320000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1240",
+      "in_stock": true,
+      "price_per_kg": 320000,
+      "first_seen": "2026-07-23T03:16:39"
+    },
+    {
+      "sku": "blackroad:1241",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 엘리다 로마 아리바 게이샤 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 320000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1241",
+      "in_stock": true,
+      "price_per_kg": 320000,
+      "first_seen": "2026-07-23T03:16:39"
+    },
+    {
+      "sku": "blackroad:1243",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 알티에리 티피카 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 55000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1243",
+      "in_stock": true,
+      "price_per_kg": 55000,
+      "first_seen": "2026-07-23T03:16:39"
+    },
+    {
+      "sku": "blackroad:1242",
+      "supplier": "블랙로드커피",
+      "name": "[생두] 파나마 아라우즈 게이샤 내추럴 PHT(Panama Highend Trasure)",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 165000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1242",
+      "in_stock": true,
+      "price_per_kg": 165000,
+      "first_seen": "2026-07-23T03:16:39"
+    },
     {
       "sku": "doan:13647059822",
       "supplier": "도안 셀렉트 샵",
