@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T03:32:42+00:00",
-  "count": 488,
+  "generated_at": "2026-07-23T03:47:29+00:00",
+  "count": 489,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -4915,6 +4915,19 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6757&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 95000,
+      "first_seen": "2026-05-14T07:42:29"
+    },
+    {
+      "sku": "libre:6756",
+      "supplier": "커피 리브레",
+      "name": "[소분] 예멘베이트 알알 무산소 내추럴",
+      "origin": "Yemen",
+      "process": "무산소 내추럴",
+      "price_krw": 97000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=6756&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 97000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
