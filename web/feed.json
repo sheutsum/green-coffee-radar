@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T00:11:38+00:00",
-  "count": 492,
+  "generated_at": "2026-07-23T02:42:36+00:00",
+  "count": 484,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,32 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "doan:13647059822",
+      "supplier": "도안 셀렉트 샵",
+      "name": "[생두][뉴크롭] 콜롬비아 엘 나랑호 알버트 칼돈 게이샤 워시드 12kg, 1개",
+      "origin": "Colombia",
+      "process": "워시드",
+      "price_krw": 864000,
+      "unit_g": 12000,
+      "url": "https://smartstore.naver.com/doanselectshop/products/13647059822",
+      "in_stock": false,
+      "price_per_kg": 72000,
+      "first_seen": "2026-07-23T02:42:30"
+    },
+    {
+      "sku": "cobeans:540AE6B0F6AC6E155062F3DD4F0B2B01",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 안다라차 G2 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 16800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=540AE6B0F6AC6E155062F3DD4F0B2B01&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 16800,
+      "first_seen": "2026-07-23T02:41:44"
+    },
     {
       "sku": "cobeans:E113BB92C69391DD39E2488F9F588382",
       "supplier": "코빈즈커피",
@@ -129,7 +155,7 @@
       "price_krw": 165000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1239",
-      "in_stock": false,
+      "in_stock": true,
       "price_per_kg": 165000,
       "first_seen": "2026-07-20T02:46:42"
     },
@@ -1096,19 +1122,6 @@
       "first_seen": "2026-07-13T08:27:45"
     },
     {
-      "sku": "blackroad:1235",
-      "supplier": "블랙로드커피",
-      "name": "페르가미노 6종",
-      "origin": null,
-      "process": null,
-      "price_krw": 480000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1235",
-      "in_stock": false,
-      "price_per_kg": 480000,
-      "first_seen": "2026-07-13T08:27:06"
-    },
-    {
       "sku": "blackroad:1234",
       "supplier": "블랙로드커피",
       "name": "아라우즈5종",
@@ -1213,19 +1226,6 @@
       "first_seen": "2026-07-09T11:16:48"
     },
     {
-      "sku": "blackroad:1231",
-      "supplier": "블랙로드커피",
-      "name": "파나마 모레노 마라고지페 워시드",
-      "origin": "Panama",
-      "process": "워시드",
-      "price_krw": 135000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1231",
-      "in_stock": false,
-      "price_per_kg": 135000,
-      "first_seen": "2026-07-07T15:35:19"
-    },
-    {
       "sku": "blackroad:1230",
       "supplier": "블랙로드커피",
       "name": "파나마 모레노 SL28 워시드",
@@ -1252,19 +1252,6 @@
       "first_seen": "2026-07-07T15:35:19"
     },
     {
-      "sku": "blackroad:1227",
-      "supplier": "블랙로드커피",
-      "name": "파나마 로스 브루오스 파카마라 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 64000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1227",
-      "in_stock": false,
-      "price_per_kg": 64000,
-      "first_seen": "2026-07-07T15:35:19"
-    },
-    {
       "sku": "blackroad:1226",
       "supplier": "블랙로드커피",
       "name": "파나마 로스 브루오스 게이샤 허니 #",
@@ -1274,19 +1261,6 @@
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1226",
       "in_stock": true,
-      "price_per_kg": 158000,
-      "first_seen": "2026-07-07T15:35:19"
-    },
-    {
-      "sku": "blackroad:1224",
-      "supplier": "블랙로드커피",
-      "name": "파나마 로스 브루오스 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 158000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1224",
-      "in_stock": false,
       "price_per_kg": 158000,
       "first_seen": "2026-07-07T15:35:19"
     },
@@ -1301,19 +1275,6 @@
       "url": "https://blackroad.kr/37/?idx=1225",
       "in_stock": true,
       "price_per_kg": 943000,
-      "first_seen": "2026-07-07T15:35:19"
-    },
-    {
-      "sku": "blackroad:1229",
-      "supplier": "블랙로드커피",
-      "name": "파나마 라 후이카 아나카페 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 374000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1229",
-      "in_stock": false,
-      "price_per_kg": 374000,
       "first_seen": "2026-07-07T15:35:19"
     },
     {
@@ -1980,19 +1941,6 @@
       "first_seen": "2026-06-11T21:31:01"
     },
     {
-      "sku": "doan:13629676263",
-      "supplier": "도안 셀렉트 샵",
-      "name": "[생두] [뉴크롭] 에티오피아 구지 바데이 허니 15kg, 1개",
-      "origin": "Ethiopia",
-      "process": "허니",
-      "price_krw": 682500,
-      "unit_g": 15000,
-      "url": "https://smartstore.naver.com/doanselectshop/products/13629676263",
-      "in_stock": false,
-      "price_per_kg": 45500,
-      "first_seen": "2026-06-11T21:31:01"
-    },
-    {
       "sku": "compass:9472573",
       "supplier": "콤파스 커피",
       "name": "[생두] 에티오피아 예가체프 콩가 G2 워시드",
@@ -2266,45 +2214,6 @@
       "first_seen": "2026-06-04T10:50:56"
     },
     {
-      "sku": "blackroad:1202",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 168000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1202",
-      "in_stock": false,
-      "price_per_kg": 168000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
-      "sku": "blackroad:1198",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 188000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1198",
-      "in_stock": false,
-      "price_per_kg": 188000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
-      "sku": "blackroad:1197",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 젠슨 게이샤 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 238000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1197",
-      "in_stock": false,
-      "price_per_kg": 238000,
-      "first_seen": "2026-06-03T13:00:48"
-    },
-    {
       "sku": "momos:2808",
       "supplier": "모모스커피",
       "name": "[생두] Ethiopia Hure Station G1 Anaerobic Natural",
@@ -2459,19 +2368,6 @@
       "in_stock": false,
       "price_per_kg": 33800,
       "first_seen": "2026-05-17T10:56:14"
-    },
-    {
-      "sku": "blackroad:1168",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 에콰도르 솔레다드 시드라 웨이브 워시드",
-      "origin": "Ecuador",
-      "process": "워시드",
-      "price_krw": 175000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1168",
-      "in_stock": false,
-      "price_per_kg": 175000,
-      "first_seen": "2026-05-15T04:01:17"
     },
     {
       "sku": "cafenogales:9179704",
