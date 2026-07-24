@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-24T07:02:29+00:00",
-  "count": 477,
+  "generated_at": "2026-07-24T07:14:51+00:00",
+  "count": 478,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,19 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "coffeemeup:2347",
+      "supplier": "커피미업",
+      "name": "(생두) 온두라스 Fincas Mierisch 산타루시아 (COE 2년연속 우승농장) 게이샤 워시드",
+      "origin": "Honduras",
+      "process": "워시드",
+      "price_krw": 157000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-온두라스-fincas-mierisch-산타루시아-coe-2년연속-우승농장-게이샤-워시드/2347/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-24T07:13:56"
+    },
     {
       "sku": "blackroad:1240",
       "supplier": "블랙로드커피",
