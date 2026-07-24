@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T07:34:01+00:00",
+  "generated_at": "2026-07-24T07:49:06+00:00",
   "count": 463,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -17,6 +17,19 @@
     "cobeans"
   ],
   "products": [
+    {
+      "sku": "ryubeans:13680339814",
+      "supplier": "류빈스커피",
+      "name": "[2026] 브라질 파젠다 호도무뇨 에티오피아 드워프 다크룸 퍼먼테이션 내추럴 16/18 150g",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 6500,
+      "unit_g": 150,
+      "url": "https://smartstore.naver.com/ryubeans/products/13680339814",
+      "in_stock": true,
+      "price_per_kg": 43333,
+      "first_seen": "2026-07-24T07:48:39"
+    },
     {
       "sku": "coffeemeup:2347",
       "supplier": "커피미업",
@@ -717,19 +730,6 @@
       "url": "https://smartstore.naver.com/ryubeans/products/13658985481",
       "in_stock": true,
       "price_per_kg": 39000,
-      "first_seen": "2026-07-16T02:06:31"
-    },
-    {
-      "sku": "ryubeans:13658981779",
-      "supplier": "류빈스커피",
-      "name": "[2026] 브라질 파젠다 호도무뇨 게이샤 다크룸 퍼먼테이션 내추럴 16/18 1kg",
-      "origin": "Brazil",
-      "process": "내추럴",
-      "price_krw": 42000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/ryubeans/products/13658981779",
-      "in_stock": true,
-      "price_per_kg": 42000,
       "first_seen": "2026-07-16T02:06:31"
     },
     {
