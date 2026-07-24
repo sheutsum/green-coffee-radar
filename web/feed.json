@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-24T08:32:34+00:00",
-  "count": 478,
+  "generated_at": "2026-07-24T08:47:32+00:00",
+  "count": 479,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -16,6 +16,19 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "cobeans:1680E9FA7B4DD5D62ECE800239BB53BD",
+      "supplier": "코빈즈커피",
+      "name": "[최대 10kg 구매 가능]◼︎7차 생산분 8월 3일 오후 2시 사전예약◼︎26 브라질 코빈즈 인퓨즈드 초코",
+      "origin": "Brazil",
+      "process": null,
+      "price_krw": 26300,
+      "unit_g": 10000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=1680E9FA7B4DD5D62ECE800239BB53BD&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 2630,
+      "first_seen": "2026-07-24T08:46:44"
+    },
     {
       "sku": "ryubeans:13680353460",
       "supplier": "류빈스커피",
