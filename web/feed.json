@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T04:32:38+00:00",
+  "generated_at": "2026-07-24T04:47:22+00:00",
   "count": 478,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -1124,7 +1124,7 @@
     {
       "sku": "blackroad:1234",
       "supplier": "블랙로드커피",
-      "name": "아라우즈5종",
+      "name": "[생두] 아라우즈5종",
       "origin": null,
       "process": null,
       "price_krw": 138000,
@@ -1228,7 +1228,7 @@
     {
       "sku": "blackroad:1230",
       "supplier": "블랙로드커피",
-      "name": "파나마 모레노 SL28 워시드",
+      "name": "[생두] 파나마 모레노 SL28 워시드",
       "origin": "Panama",
       "process": "워시드",
       "price_krw": 135000,
@@ -1241,7 +1241,7 @@
     {
       "sku": "blackroad:1228",
       "supplier": "블랙로드커피",
-      "name": "파나마 로스 브루오스 파카마라 내추럴 #",
+      "name": "[생두] 파나마 로스 브루오스 파카마라 내추럴 #",
       "origin": "Panama",
       "process": "내추럴",
       "price_krw": 964000,
@@ -1254,7 +1254,7 @@
     {
       "sku": "blackroad:1226",
       "supplier": "블랙로드커피",
-      "name": "파나마 로스 브루오스 게이샤 허니 #",
+      "name": "[생두] 파나마 로스 브루오스 게이샤 허니 #",
       "origin": "Panama",
       "process": "허니",
       "price_krw": 158000,
@@ -1267,7 +1267,7 @@
     {
       "sku": "blackroad:1225",
       "supplier": "블랙로드커피",
-      "name": "파나마 라 후이카 옐로우 카투아이 내추럴 #",
+      "name": "[생두] 파나마 라 후이카 옐로우 카투아이 내추럴 #",
       "origin": "Panama",
       "process": "내추럴",
       "price_krw": 943000,
