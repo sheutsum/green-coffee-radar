@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T11:48:08+00:00",
+  "generated_at": "2026-07-25T13:58:18+00:00",
   "count": 479,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -77,7 +77,7 @@
       "price_krw": 320000,
       "unit_g": 1000,
       "url": "https://blackroad.kr/37/?idx=1240",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 320000,
       "first_seen": "2026-07-23T03:16:39"
     },
