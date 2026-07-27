@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T23:40:42+00:00",
+  "generated_at": "2026-07-27T02:04:31+00:00",
   "count": 479,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -1845,7 +1845,7 @@
       "price_krw": 49000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/doanselectshop/products/13629738376",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 49000,
       "first_seen": "2026-06-11T21:31:01"
     },
