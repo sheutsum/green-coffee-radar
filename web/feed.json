@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T21:45:10+00:00",
+  "generated_at": "2026-07-27T23:17:19+00:00",
   "count": 474,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -3522,7 +3522,7 @@
       "price_krw": 27000,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/9396717",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 27000,
       "first_seen": "2026-05-14T07:43:05"
     },
