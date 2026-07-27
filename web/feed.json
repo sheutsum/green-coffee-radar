@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T06:47:33+00:00",
-  "count": 475,
+  "generated_at": "2026-07-27T07:02:34+00:00",
+  "count": 473,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -4242,19 +4242,6 @@
       "first_seen": "2026-05-14T07:42:29"
     },
     {
-      "sku": "libre:6274",
-      "supplier": "커피 리브레",
-      "name": "[소분] 파나마엘리다 게이샤 내추럴 ASD RF1D - VUELTA 2503-120425",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 360000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=6274&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 360000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
       "sku": "libre:6658",
       "supplier": "커피 리브레",
       "name": "[소분] 코스타리카트리부토스 데 오타 게이샤 락틱 허니",
@@ -4512,19 +4499,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7004&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 17800,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7333",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스레예스",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 20900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7333&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 20900,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
