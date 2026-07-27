@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T03:32:25+00:00",
-  "count": 478,
+  "generated_at": "2026-07-27T03:47:31+00:00",
+  "count": 477,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -5316,19 +5316,6 @@
       "price_krw": 28500,
       "unit_g": 1000,
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7592&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 28500,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7587",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 케냐키 AA 2026",
-      "origin": "Kenya",
-      "process": null,
-      "price_krw": 28500,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7587&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 28500,
       "first_seen": "2026-05-14T07:42:29"
