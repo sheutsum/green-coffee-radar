@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T05:47:35+00:00",
-  "count": 476,
+  "generated_at": "2026-07-27T06:02:28+00:00",
+  "count": 475,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -4395,19 +4395,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7612&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 64100,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7613",
-      "supplier": "커피 리브레",
-      "name": "[소분] 온두라스엘 리퀴담바 티피카",
-      "origin": "Honduras",
-      "process": null,
-      "price_krw": 21800,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7613&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 21800,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
