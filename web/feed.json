@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T02:32:30+00:00",
-  "count": 479,
+  "generated_at": "2026-07-27T02:47:35+00:00",
+  "count": 478,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -1249,19 +1249,6 @@
       "url": "https://blackroad.kr/37/?idx=1230",
       "in_stock": false,
       "price_per_kg": 135000,
-      "first_seen": "2026-07-07T15:35:19"
-    },
-    {
-      "sku": "blackroad:1228",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 파나마 로스 브루오스 파카마라 내추럴 #",
-      "origin": "Panama",
-      "process": "내추럴",
-      "price_krw": 964000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1228",
-      "in_stock": false,
-      "price_per_kg": 964000,
       "first_seen": "2026-07-07T15:35:19"
     },
     {
