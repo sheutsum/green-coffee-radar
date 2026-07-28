@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T05:47:29+00:00",
-  "count": 474,
+  "generated_at": "2026-07-28T06:02:32+00:00",
+  "count": 473,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -5201,19 +5201,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7503&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 24000,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7517",
-      "supplier": "커피 리브레",
-      "name": "[New Crop / 소분] 페루라 루쿠마 게이샤 내추럴",
-      "origin": "Peru",
-      "process": "내추럴",
-      "price_krw": 65000,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7517&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 65000,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
