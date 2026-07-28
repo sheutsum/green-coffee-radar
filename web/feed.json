@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T05:02:32+00:00",
-  "count": 475,
+  "generated_at": "2026-07-28T05:17:28+00:00",
+  "count": 474,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -5006,19 +5006,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=6169&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 19500,
-      "first_seen": "2026-05-14T07:42:29"
-    },
-    {
-      "sku": "libre:7077",
-      "supplier": "커피 리브레",
-      "name": "[소분] 과테말라엘 타로 Lot.2",
-      "origin": "Guatemala",
-      "process": null,
-      "price_krw": 19900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7077&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 19900,
       "first_seen": "2026-05-14T07:42:29"
     },
     {
