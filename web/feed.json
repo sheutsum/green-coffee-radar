@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T06:18:20+00:00",
-  "count": 397,
+  "generated_at": "2026-07-29T09:25:45+00:00",
+  "count": 401,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -15,6 +15,58 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "cobeans:30F8F6B940D1073D8B6A5EEBC46DD6E5",
+      "supplier": "코빈즈커피",
+      "name": "26 콩고 키부 K4 워시드",
+      "origin": null,
+      "process": "워시드",
+      "price_krw": 14800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=30F8F6B940D1073D8B6A5EEBC46DD6E5&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 14800,
+      "first_seen": "2026-07-29T09:24:47"
+    },
+    {
+      "sku": "cobeans:0B7E926154C1274E8B602FF0D7C133D7",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 시다마 넨세보 G1 워시드",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 22300,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=0B7E926154C1274E8B602FF0D7C133D7&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 22300,
+      "first_seen": "2026-07-29T09:24:47"
+    },
+    {
+      "sku": "cobeans:F2E43FA3400D826DF4195A9AC70DCA62",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 시다마 넨세보 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 24800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=F2E43FA3400D826DF4195A9AC70DCA62&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 24800,
+      "first_seen": "2026-07-29T09:24:47"
+    },
+    {
+      "sku": "cobeans:EB06B9DB06012A7A4179B8F3CB5384D3",
+      "supplier": "코빈즈커피",
+      "name": "26 에티오피아 구지 우라가 G1 내추럴",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 24800,
+      "unit_g": 1000,
+      "url": "https://www.cobeans.com/shop/detail.php?pno=EB06B9DB06012A7A4179B8F3CB5384D3&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "in_stock": false,
+      "price_per_kg": 24800,
+      "first_seen": "2026-07-29T09:24:47"
+    },
     {
       "sku": "verde:13686297971",
       "supplier": "베르데 트레이드",
@@ -575,19 +627,6 @@
       "first_seen": "2026-07-16T02:07:10"
     },
     {
-      "sku": "doan:13647049206",
-      "supplier": "도안 셀렉트 샵",
-      "name": "[생두][뉴크롭] 에티오피아 코르소 불레 모디파이드 워시드 1kg, 1개",
-      "origin": "Ethiopia",
-      "process": "워시드",
-      "price_krw": 53000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/doanselectshop/products/13647049206",
-      "in_stock": false,
-      "price_per_kg": 53000,
-      "first_seen": "2026-07-16T02:07:10"
-    },
-    {
       "sku": "doan:13647049848",
       "supplier": "도안 셀렉트 샵",
       "name": "[생두][뉴크롭] 에티오피아 코르소 불레 모디파이드 워시드 15kg, 1개",
@@ -1128,7 +1167,7 @@
       "process": null,
       "price_krw": 26300,
       "unit_g": 10000,
-      "url": "https://www.cobeans.com/shop/detail.php?pno=C61FBEF63DF5FF317AECDC3670094472&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D1&ctype=2&cno1=1037",
+      "url": "https://www.cobeans.com/shop/detail.php?pno=C61FBEF63DF5FF317AECDC3670094472&rURL=https%3A%2F%2Fwww.cobeans.com%2Fshop%2Fbig_section.php%3Fcno1%3D1037%26sort%3D1%26page%3D2&ctype=2&cno1=1037",
       "in_stock": false,
       "price_per_kg": 2630,
       "first_seen": "2026-07-16T01:06:57"
@@ -1846,6 +1885,19 @@
       "url": "https://smartstore.naver.com/doanselectshop/products/13629737738",
       "in_stock": false,
       "price_per_kg": 48000,
+      "first_seen": "2026-06-11T21:31:01"
+    },
+    {
+      "sku": "doan:13629677074",
+      "supplier": "도안 셀렉트 샵",
+      "name": "[생두] [뉴크롭] 에티오피아 구지 바데이 허니 1kg, 1개",
+      "origin": "Ethiopia",
+      "process": "허니",
+      "price_krw": 47500,
+      "unit_g": 1000,
+      "url": "https://smartstore.naver.com/doanselectshop/products/13629677074",
+      "in_stock": false,
+      "price_per_kg": 47500,
       "first_seen": "2026-06-11T21:31:01"
     },
     {
