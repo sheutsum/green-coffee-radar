@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T03:35:48+00:00",
-  "count": 395,
+  "generated_at": "2026-07-29T06:18:20+00:00",
+  "count": 397,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -15,6 +15,58 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "verde:13686297971",
+      "supplier": "베르데 트레이드",
+      "name": "2026 베르데 트레이드 9종 100g 샘플 세트",
+      "origin": null,
+      "process": null,
+      "price_krw": 26100,
+      "unit_g": 100,
+      "url": "https://smartstore.naver.com/verde_trade/products/13686297971",
+      "in_stock": true,
+      "price_per_kg": 261000,
+      "first_seen": "2026-07-29T06:17:41"
+    },
+    {
+      "sku": "libre:7936",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 인도아자드 힌드 로부스타 무산소 내추럴 2026",
+      "origin": "India",
+      "process": "무산소 내추럴",
+      "price_krw": 18500,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7936&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 18500,
+      "first_seen": "2026-07-29T06:17:18"
+    },
+    {
+      "sku": "libre:7935",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 인도아자드 힌드 로부스타 2026",
+      "origin": "India",
+      "process": null,
+      "price_krw": 17000,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7935&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 17000,
+      "first_seen": "2026-07-29T06:17:18"
+    },
+    {
+      "sku": "libre:7934",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 인도아자드 힌드 CxR 2026",
+      "origin": "India",
+      "process": null,
+      "price_krw": 17500,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7934&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 17500,
+      "first_seen": "2026-07-29T06:17:18"
+    },
     {
       "sku": "chbean:13675252746",
       "supplier": "씨에이치빈",
@@ -531,8 +583,21 @@
       "price_krw": 53000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/doanselectshop/products/13647049206",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 53000,
+      "first_seen": "2026-07-16T02:07:10"
+    },
+    {
+      "sku": "doan:13647049848",
+      "supplier": "도안 셀렉트 샵",
+      "name": "[생두][뉴크롭] 에티오피아 코르소 불레 모디파이드 워시드 15kg, 1개",
+      "origin": "Ethiopia",
+      "process": "워시드",
+      "price_krw": 765000,
+      "unit_g": 15000,
+      "url": "https://smartstore.naver.com/doanselectshop/products/13647049848",
+      "in_stock": false,
+      "price_per_kg": 51000,
       "first_seen": "2026-07-16T02:07:10"
     },
     {
@@ -1784,19 +1849,6 @@
       "first_seen": "2026-06-11T21:31:01"
     },
     {
-      "sku": "doan:13629677074",
-      "supplier": "도안 셀렉트 샵",
-      "name": "[생두] [뉴크롭] 에티오피아 구지 바데이 허니 1kg, 1개",
-      "origin": "Ethiopia",
-      "process": "허니",
-      "price_krw": 47500,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/doanselectshop/products/13629677074",
-      "in_stock": false,
-      "price_per_kg": 47500,
-      "first_seen": "2026-06-11T21:31:01"
-    },
-    {
       "sku": "compass:9472573",
       "supplier": "콤파스 커피",
       "name": "[생두] 에티오피아 예가체프 콩가 G2 워시드",
@@ -1875,19 +1927,6 @@
       "first_seen": "2026-06-10T12:44:19"
     },
     {
-      "sku": "verde:13628234652",
-      "supplier": "베르데 트레이드",
-      "name": "(2026 뉴크롭) 베르데 트레이드 에티오피아 시다마 벤사 워시드 G1 1KG (ETHIOPIA SIDAMA BENSA WASHED)",
-      "origin": "Ethiopia",
-      "process": "Washed",
-      "price_krw": 27000,
-      "unit_g": 1000,
-      "url": "https://smartstore.naver.com/verde_trade/products/13628234652",
-      "in_stock": true,
-      "price_per_kg": 27000,
-      "first_seen": "2026-06-10T12:44:19"
-    },
-    {
       "sku": "verde:13628261221",
       "supplier": "베르데 트레이드",
       "name": "(2026 뉴크롭) 베르데 트레이드 에티오피아 벤치 마지 게샤 워시드 #2 G1 5KG (ETHIOPIA BENCH MAJI GESHA WASHED #2)",
@@ -1963,19 +2002,6 @@
       "url": "https://coffeelibre.kr/product/detail.html?product_no=7705&cate_no=57&display_group=1",
       "in_stock": false,
       "price_per_kg": 21300,
-      "first_seen": "2026-06-01T19:30:19"
-    },
-    {
-      "sku": "libre:7708",
-      "supplier": "커피 리브레",
-      "name": "[소분] 니카라과라 벤디시온 파카마라 내추럴",
-      "origin": "Nicaragua",
-      "process": "내추럴",
-      "price_krw": 26900,
-      "unit_g": 1000,
-      "url": "https://coffeelibre.kr/product/detail.html?product_no=7708&cate_no=57&display_group=1",
-      "in_stock": false,
-      "price_per_kg": 26900,
       "first_seen": "2026-06-01T19:30:19"
     },
     {
