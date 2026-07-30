@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T06:47:28+00:00",
+  "generated_at": "2026-07-30T07:02:34+00:00",
   "count": 400,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -31,7 +31,7 @@
     {
       "sku": "cobeans:0B7E926154C1274E8B602FF0D7C133D7",
       "supplier": "코빈즈커피",
-      "name": "26 에티오피아 시다마 넨세보 G1 워시드",
+      "name": "26 에티오피아 오로미아 웨스트 아르시 넨세보 G1 워시드",
       "origin": "Ethiopia",
       "process": "워시드",
       "price_krw": 22300,
@@ -44,7 +44,7 @@
     {
       "sku": "cobeans:F2E43FA3400D826DF4195A9AC70DCA62",
       "supplier": "코빈즈커피",
-      "name": "26 에티오피아 시다마 넨세보 G1 내추럴",
+      "name": "26 에티오피아 오로미아 웨스트 아르시 넨세보 G1 내추럴",
       "origin": "Ethiopia",
       "process": "내추럴",
       "price_krw": 24800,
