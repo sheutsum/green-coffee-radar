@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T20:23:17+00:00",
-  "count": 401,
+  "generated_at": "2026-07-30T21:47:04+00:00",
+  "count": 404,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -15,6 +15,58 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "blackroad:1257",
+      "supplier": "블랙로드커피",
+      "name": "파나마 아라우즈 게이샤 허니",
+      "origin": "Panama",
+      "process": "허니",
+      "price_krw": 138000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1257",
+      "in_stock": true,
+      "price_per_kg": 138000,
+      "first_seen": "2026-07-30T21:46:13"
+    },
+    {
+      "sku": "blackroad:1258",
+      "supplier": "블랙로드커피",
+      "name": "파나마 아라우즈 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 138000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1258",
+      "in_stock": true,
+      "price_per_kg": 138000,
+      "first_seen": "2026-07-30T21:46:13"
+    },
+    {
+      "sku": "blackroad:1260",
+      "supplier": "블랙로드커피",
+      "name": "파나마 아라우즈 게이샤 내추럴 #",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 138000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1260",
+      "in_stock": true,
+      "price_per_kg": 138000,
+      "first_seen": "2026-07-30T21:46:13"
+    },
+    {
+      "sku": "blackroad:1259",
+      "supplier": "블랙로드커피",
+      "name": "파나마 아라우즈 게이샤 내추럴 #",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 138000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1259",
+      "in_stock": true,
+      "price_per_kg": 138000,
+      "first_seen": "2026-07-30T21:46:13"
+    },
     {
       "sku": "blackroad:1254",
       "supplier": "블랙로드커피",
@@ -1262,19 +1314,6 @@
       "in_stock": false,
       "price_per_kg": 17500,
       "first_seen": "2026-07-13T08:27:45"
-    },
-    {
-      "sku": "blackroad:1234",
-      "supplier": "블랙로드커피",
-      "name": "[생두] 아라우즈5종",
-      "origin": null,
-      "process": null,
-      "price_krw": 138000,
-      "unit_g": 1000,
-      "url": "https://blackroad.kr/37/?idx=1234",
-      "in_stock": true,
-      "price_per_kg": 138000,
-      "first_seen": "2026-07-13T05:05:21"
     },
     {
       "sku": "coffeemeup:2329",
