@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T12:47:28+00:00",
-  "count": 400,
+  "generated_at": "2026-07-30T13:02:26+00:00",
+  "count": 401,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -15,6 +15,19 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "blackroad:1254",
+      "supplier": "블랙로드커피",
+      "name": "파나마 칸델라 SL28 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 63000,
+      "unit_g": 1000,
+      "url": "https://blackroad.kr/37/?idx=1254",
+      "in_stock": true,
+      "price_per_kg": 63000,
+      "first_seen": "2026-07-30T13:01:34"
+    },
     {
       "sku": "cobeans:30F8F6B940D1073D8B6A5EEBC46DD6E5",
       "supplier": "코빈즈커피",
