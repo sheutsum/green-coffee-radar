@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-31T05:06:09+00:00",
-  "count": 390,
+  "generated_at": "2026-07-31T08:09:39+00:00",
+  "count": 395,
   "suppliers": [
     "도안 셀렉트 샵",
     "류빈스커피",
@@ -15,6 +15,58 @@
   ],
   "errors": [],
   "products": [
+    {
+      "sku": "coffeemeup:2346",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 잰슨 Hacienda #26-55 게이샤 내추럴",
+      "origin": "Panama",
+      "process": "내추럴",
+      "price_krw": 173000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-잰슨-hacienda-26-55-게이샤-내추럴/2346/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-31T08:08:32"
+    },
+    {
+      "sku": "coffeemeup:2345",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 Finca Talamanca 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 163000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-finca-talamanca-게이샤-워시드/2345/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-31T08:08:32"
+    },
+    {
+      "sku": "coffeemeup:2344",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 Finca Aguilar Peralta #500125 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 163000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-finca-aguilar-peralta-500125-게이샤-워시드/2344/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-31T08:08:32"
+    },
+    {
+      "sku": "coffeemeup:2343",
+      "supplier": "커피미업",
+      "name": "(생두) 파나마 Finca Aguilar Peralta #040226 게이샤 워시드",
+      "origin": "Panama",
+      "process": "워시드",
+      "price_krw": 163000,
+      "unit_g": null,
+      "url": "https://coffeemeup.store/product/생두-파나마-finca-aguilar-peralta-040226-게이샤-워시드/2343/category/182/display/1/",
+      "in_stock": true,
+      "price_per_kg": null,
+      "first_seen": "2026-07-31T08:08:32"
+    },
     {
       "sku": "blackroad:1257",
       "supplier": "블랙로드커피",
@@ -1147,6 +1199,19 @@
       "first_seen": "2026-07-14T14:27:23"
     },
     {
+      "sku": "libre:7863",
+      "supplier": "커피 리브레",
+      "name": "[New Crop / 소분] 에티오피아리무 코사 내추럴 리브레 셀렉션 2026",
+      "origin": "Ethiopia",
+      "process": "내추럴",
+      "price_krw": 20300,
+      "unit_g": 1000,
+      "url": "https://coffeelibre.kr/product/detail.html?product_no=7863&cate_no=57&display_group=1",
+      "in_stock": false,
+      "price_per_kg": 20300,
+      "first_seen": "2026-07-14T06:37:29"
+    },
+    {
       "sku": "compass:9593894",
       "supplier": "콤파스 커피",
       "name": "[생두] 브라질 한슈 상 베네지투 옐로 버번 펄프드 내추럴",
@@ -1714,7 +1779,7 @@
       "price_krw": 49000,
       "unit_g": 1000,
       "url": "https://smartstore.naver.com/doanselectshop/products/13629734539",
-      "in_stock": true,
+      "in_stock": false,
       "price_per_kg": 49000,
       "first_seen": "2026-06-11T21:31:01"
     },
