@@ -11,13 +11,13 @@ from __future__ import annotations
 import re
 from typing import Iterator
 
-import httpx
+from curl_cffi import requests as cc_requests
 from selectolax.parser import HTMLParser
 
 from core.models import Product
 from scrapers.base import (
-    Scraper, _HEADERS, parse_price_krw, parse_unit_g,
-    guess_origin, guess_process, polite_sleep, get_with_retry,
+    Scraper, parse_price_krw, parse_unit_g,
+    guess_origin, guess_process, polite_sleep, cc_get_with_retry,
 )
 
 _GOODS_NO_RE = re.compile(r"goodsNo=(\d+)")
@@ -40,15 +40,22 @@ class GodomallScraper(Scraper):
     def fetch(self) -> list[Product]:
         out: list[Product] = []
         seen: set[str] = set()
-        with httpx.Client(headers=_HEADERS, timeout=self.timeout,
-                          follow_redirects=True) as c:
+        # 고도몰(로얄커피 등)은 데이터센터 IP + 봇 UA 조합에 403을 준다 —
+        # 자택에서는 httpx 로도 되지만 Actions runner 에서 막힌다.
+        with cc_requests.Session() as c:
+            c.headers.update({"Accept-Language": "ko-KR,ko;q=0.9,en;q=0.5"})
             for cate in self.cate_cds:
                 cat_seen: set[str] = set()
                 for page in range(1, self.max_pages + 1):
                     if out:
                         polite_sleep()
-                    r = get_with_retry(c, self._catalog_url(cate, page))
-                    r.raise_for_status()
+                    r = cc_get_with_retry(c, self._catalog_url(cate, page),
+                                          timeout=self.timeout)
+                    if r.status_code >= 400:
+                        raise RuntimeError(
+                            f"{self.name}: HTTP {r.status_code} from "
+                            f"{self._catalog_url(cate, page)}"
+                        )
                     items = list(self._parse(r.text))
                     new = [p for p in items if p.sku not in cat_seen]
                     if not new:

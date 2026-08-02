@@ -163,6 +163,28 @@ _PRODUCT_ID_RE = re.compile(
 )
 
 
+# ---------------------------------------------------------------------------
+# curl_cffi 경유 GET — 평범한 httpx 요청은 TLS 지문만 보고 막는 곳들이 있다.
+# 자택 IP에서는 통과해도 GitHub Actions runner IP에서 403/429가 나는 게 전형적
+# (고도몰 = 403, Shopify = 429 local_rate_limited). 크롬 지문을 흉내내면 뚫린다.
+# ---------------------------------------------------------------------------
+CC_IMPERSONATE = "chrome131"
+
+
+def cc_get_with_retry(session, url, *, max_retries: int = 3,
+                      base_backoff: float = 4.0, **kwargs):
+    """curl_cffi 세션용 GET + 429/5xx 지수 백오프. 최종 응답을 그대로 돌려준다."""
+    last = None
+    for attempt in range(max_retries + 1):
+        last = session.get(url, impersonate=CC_IMPERSONATE, **kwargs)
+        if last.status_code not in (429, 502, 503, 504) or attempt >= max_retries:
+            return last
+        ra = str(last.headers.get("Retry-After", "")).strip()
+        delay = float(ra) if ra.isdigit() else base_backoff ** (attempt + 1) / 2
+        time.sleep(min(delay, 30) + random.uniform(0, 1))
+    return last
+
+
 class Cafe24Scraper(Scraper):
     # --- config (subclass overrides) ---
     name: str
