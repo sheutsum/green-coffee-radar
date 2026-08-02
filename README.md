@@ -120,6 +120,17 @@ python tools/check_scrapers.py gsc sopex  # 일부만
 상품 0개는 예외가 아니라 조용한 실패라서, `run.py`가 이를 에러로 취급해
 `feed.json`의 `errors`에 넣는다.
 
+### ⚠️ 클라우드에서만 막히는 곳 (2026-08 확인)
+
+`royal`(403) · `falcon`(429 `local_rate_limited`) 은 **자택 IP에서는 되고
+GitHub Actions runner IP에서만 막힌다.** httpx → curl_cffi impersonate 로
+TLS 지문까지 흉내내도 동일해서, 지문이 아니라 데이터센터 IP 차단으로 보인다.
+매 크론마다 `feed.json`의 `errors`에 남고 그 두 곳 상품(약 98개)은 빠진다.
+뚫으려면 프록시가 필요한데, 30곳 중 2곳 때문에 붙일 값어치는 없다고 판단해 뒀다.
+
+(과거 네이버 스마트스토어도 같은 증상이었으나 `chrome131_android` 지문으로
+해결됨 — 지문 문제와 IP 문제는 구분해서 봐야 한다.)
+
 ### ⚠️ momos 깨짐 (2026-08 확인)
 
 모모스커피가 Cafe24 → imweb으로 사이트를 갈아엎어서
