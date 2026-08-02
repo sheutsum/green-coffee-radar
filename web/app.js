@@ -175,20 +175,24 @@ function applyFeed(data, { fromNetwork }) {
   const currentSkus = products.map((p) => p.sku);
   const firstEverLoad = state.known.size === 0;
   const appeared = currentSkus.filter((s) => !state.known.has(s));
-  const newCount = firstEverLoad ? 0 : appeared.length;
+  // 기기에서 처음 보는 SKU ≠ 새로 나온 상품. 감시 쇼핑몰을 추가하면 그 가게
+  // 재고 전체가 '처음 보는 SKU'가 되는데, 그건 새로 입고된 게 아니라 이제야
+  // 보이기 시작한 것뿐이다. 알림은 카탈로그 기준(first_seen)으로만 낸다.
+  const bySku = new Map(products.map((p) => [p.sku, p]));
+  const fresh = appeared.filter((s) => {
+    const p = bySku.get(s);
+    return p && isCatalogNew(p);
+  });
+  const newCount = firstEverLoad ? 0 : fresh.length;
 
   if (firstEverLoad) {
     // baseline: treat everything currently listed as already-known (no notification spam)
     currentSkus.forEach((s) => state.known.add(s));
-  } else if (appeared.length) {
-    // genuinely new since last visit on this device
-    appeared.forEach((s) => {
-      state.known.add(s);
-      state.unack.add(s);
-    });
-    notifyNewArrivals(appeared);
   } else {
-    currentSkus.forEach((s) => state.known.add(s)); // keep set fresh
+    appeared.forEach((s) => state.known.add(s));
+    fresh.forEach((s) => state.unack.add(s));
+    if (fresh.length) notifyNewArrivals(fresh);
+    if (!appeared.length) currentSkus.forEach((s) => state.known.add(s)); // keep set fresh
   }
 
   // prune unack/known of skus no longer present to avoid unbounded growth handled lightly
@@ -202,12 +206,12 @@ function applyFeed(data, { fromNetwork }) {
 
 // ---------- notifications ----------
 function notifyNewArrivals(skus) {
+  // 호출하는 쪽에서 이미 카탈로그 기준 신상품만 걸러서 넘긴다
   const items = state.products.filter((p) => skus.includes(p.sku));
-  const recent = items.filter(isCatalogNew);
-  const n = recent.length || items.length;
+  const n = items.length;
   if (n <= 0) return;
 
-  const sample = (recent[0] || items[0]);
+  const sample = items[0];
   toast(`신상품 ${n}종 입고 🆕`);
 
   if (store.get(LS.notify, "0") === "1" && "Notification" in window &&
