@@ -1,7 +1,7 @@
-"""코빈즈커피 — 위사(Wisa) 솔루션 자체 쇼핑몰.
+"""위사(Wisa) 솔루션 쇼핑몰 — 코빈즈커피 / 알마시엘로.
 Catalog: /shop/big_section.php?cno1=<category>&sort=1&page=N
 Product: /shop/detail.php?pno=<HEX>
-사용자가 준 URL은 cno1=1037 (신규입고/New Arrival) — 알림 봇 목적에 가장 적합.
+코빈즈는 cno1=1037 (신규입고/New Arrival) — 알림 봇 목적에 가장 적합.
 """
 from __future__ import annotations
 import re
@@ -17,13 +17,13 @@ from scrapers.base import (
 _PNO_RE = re.compile(r"[?&]pno=([A-F0-9]+)")
 
 
-class CobeansScraper(Scraper):
-    name = "cobeans"
-    supplier_name = "코빈즈커피"
-    base = "https://www.cobeans.com"
-    # cno1=1037 = New Arrival. 일반 생두 카테고리 전체를 보고 싶으면
-    # 여러 cno1을 돌리도록 확장 가능 (1015 에티오피아, 1022 아프리카, 1023 라틴, 1024 아시아 등)
-    catalog_url_template = "{base}/shop/big_section.php?cno1=1037&sort=1&page={page}"
+class WisaScraper(Scraper):
+    # --- subclass config ---
+    name: str
+    supplier_name: str
+    base: str
+    catalog_url_template: str   # must include {base} and {page}
+    # ------------------------
     max_pages = 5
 
     def fetch(self) -> list[Product]:
@@ -88,3 +88,20 @@ class CobeansScraper(Scraper):
                 url=full_url,
                 in_stock=in_stock,
             )
+
+
+class CobeansScraper(WisaScraper):
+    name = "cobeans"
+    supplier_name = "코빈즈커피"
+    base = "https://www.cobeans.com"
+    # cno1=1037 = New Arrival. 일반 생두 카테고리 전체를 보고 싶으면
+    # 여러 cno1을 돌리도록 확장 가능 (1015 에티오피아, 1022 아프리카, 1023 라틴, 1024 아시아 등)
+    catalog_url_template = "{base}/shop/big_section.php?cno1=1037&sort=1&page={page}"
+
+
+class AlmacieloScraper(WisaScraper):
+    name = "almacielo"
+    supplier_name = "알마시엘로"
+    base = "https://www.almacielo.com"
+    catalog_url_template = "{base}/shop/big_section.php?cno1=1070&page={page}"
+    max_pages = 10

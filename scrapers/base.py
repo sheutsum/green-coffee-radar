@@ -73,12 +73,20 @@ PRICE_RE = re.compile(
 UNIT_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(kg|g)\b", re.IGNORECASE)
 
 
+# 통화 기호도 '원'도 없이 "판매가 : 26,000"으로만 찍는 스킨이 꽤 있다
+LABELED_PRICE_RE = re.compile(
+    r"(?:판매가격|판매가|소비자가|가격|Price)\s*[:：]?\s*(\d{1,3}(?:,\d{3})+|\d{4,})"
+)
+
+
 def parse_price_krw(text: str) -> Optional[int]:
     m = PRICE_RE.search(text)
-    if not m:
-        return None
-    raw = m.group(1) or m.group(2)
-    return int(raw.replace(",", ""))
+    if m:
+        return int((m.group(1) or m.group(2)).replace(",", ""))
+    m = LABELED_PRICE_RE.search(text)
+    if m:
+        return int(m.group(1).replace(",", ""))
+    return None
 
 
 def parse_unit_g(name: str, default: Optional[int] = None) -> Optional[int]:
@@ -160,7 +168,10 @@ class Cafe24Scraper(Scraper):
     name: str
     supplier_name: str
     base: str
-    catalog_url_template: str   # must include {page}
+    catalog_url_template: str = "{base}/product/list.html?cate_no={cate}&page={page}"
+    # if set, the default template above is run once per category id
+    # (shops that split 생두 across 아프리카/중남미/아시아/디카페인 …)
+    cate_nos: tuple[int, ...] = ()
     # if set, only product URLs whose path contains this substring are kept
     # (defends against "추천 상품" sidebars leaking non-green-bean items)
     url_must_contain: tuple[str, ...] = ()
@@ -175,21 +186,29 @@ class Cafe24Scraper(Scraper):
         seen_ids: set[str] = set()
         with httpx.Client(headers=_HEADERS, timeout=self.timeout,
                           follow_redirects=True) as c:
-            for page in range(1, self.max_pages + 1):
-                if page > 1:
-                    polite_sleep()
-                url = self.catalog_url_template.format(base=self.base, page=page)
-                r = get_with_retry(c, url)
-                r.raise_for_status()
-                items = list(self._parse_list(r.text))
-                # stop when a page yields nothing new (handles end-of-pagination
-                # and Cafe24's tendency to loop back to page 1 past the end)
-                new = [p for p in items if p.sku not in seen_ids]
-                if not new:
-                    break
-                for p in new:
-                    seen_ids.add(p.sku)
-                    out.append(p)
+            for cate in (self.cate_nos or (None,)):
+                # end-of-pagination is decided per category — a category that
+                # only repeats another one's items must not abort the rest
+                cat_seen: set[str] = set()
+                for page in range(1, self.max_pages + 1):
+                    if page > 1 or out:
+                        polite_sleep()
+                    url = self.catalog_url_template.format(
+                        base=self.base, page=page, cate=cate
+                    )
+                    r = get_with_retry(c, url)
+                    r.raise_for_status()
+                    items = list(self._parse_list(r.text))
+                    # stop when a page yields nothing new (handles end-of-pagination
+                    # and Cafe24's tendency to loop back to page 1 past the end)
+                    new = [p for p in items if p.sku not in cat_seen]
+                    if not new:
+                        break
+                    for p in new:
+                        cat_seen.add(p.sku)
+                        if p.sku not in seen_ids:
+                            seen_ids.add(p.sku)
+                            out.append(p)
         return out
 
     def _parse_list(self, html: str):

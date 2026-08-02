@@ -179,6 +179,40 @@ class CafeNogalesScraper(SixshopScraper):
     )
 
 
+class KoffeeRouteScraper(SixshopScraper):
+    name = "koffeeroute"
+    supplier_name = "커피루트"
+    site_id = "93932"
+    base = "https://koffeeroute.com"
+    categories = ("1078095", "1095426", "178569", "902882", "1099911",
+                  "1115583", "1115584")
+
+
+class HankookCoffeeTradingScraper(SixshopScraper):
+    name = "hankook"
+    supplier_name = "한국커피트레이딩"
+    site_id = "159040"
+    base = "https://hankookcoffeetrading.com"
+    categories = ("1017168", "764570", "367043", "367044", "367042",
+                  "366480", "1076530")
+
+
+class UnicoCoffeeScraper(SixshopScraper):
+    name = "unico"
+    supplier_name = "우니코커피"
+    site_id = "225319"
+    base = "https://unicocoffee.kr"
+    categories = ("831238", "848823", "831243", "860295")
+
+
+class EthicoCoffeeScraper(SixshopScraper):
+    name = "ethico"
+    supplier_name = "에티코커피"
+    site_id = "151083"
+    base = "https://www.ethicocoffee.com"
+    categories = ("463268", "315045")
+
+
 class CompassCoffeeScraper(SixshopScraper):
     name = "compass"
     supplier_name = "콤파스 커피"

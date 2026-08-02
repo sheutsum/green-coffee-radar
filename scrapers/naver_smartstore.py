@@ -350,6 +350,20 @@ class ChBeanScraper(NaverSmartStoreScraper):
     category_id = "86715f19337349238c32fde6c5655a13"
 
 
+class AyantuScraper(NaverSmartStoreScraper):
+    name = "ayantu"
+    supplier_name = "아얀투"
+    store_id = "ayantu"
+    category_id = "f07249d4ca074fb2b71750a0859784fd"
+
+
+class GimisaScraper(NaverSmartStoreScraper):
+    name = "gimisa"
+    supplier_name = "기미사"
+    store_id = "gimisa"
+    category_id = "59dc91aff0c04921a19ddc9b8fe553a2"
+
+
 class DoanSelectShopScraper(NaverSmartStoreScraper):
     name = "doan"
     supplier_name = "도안 셀렉트 샵"

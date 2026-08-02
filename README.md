@@ -74,27 +74,57 @@ python run.py
 > ⚠️ GitHub Actions의 scheduled workflow는 60일간 레포에 커밋이 없으면
 > 비활성화됩니다. 봇이 매번 seen.sqlite를 커밋하므로 자연스럽게 유지됩니다.
 
-## 현재 등록된 스크레이퍼 (11곳)
+## 현재 등록된 스크레이퍼 (30곳)
 
-| name | supplier | 플랫폼 | URL 패턴 |
+| name | supplier | 플랫폼 | 스코프 |
 |---|---|---|---|
-| `momos` | 모모스커피 | Cafe24 (new skin) | `/product/<slug>/<id>/` |
-| `coffeemeup` | 커피미업 | Cafe24 (new skin) | `/product/<slug>/<id>/` |
-| `libre` | 커피 리브레 | Cafe24 (old skin) | `/product/detail.html?product_no=<id>` |
-| `cobeans` | 코빈즈커피 | Wisa | `/shop/detail.php?pno=<HEX>` |
+| `momos` | 모모스커피 | ~~Cafe24~~ → imweb | ⚠️ **깨짐** (사이트 개편, 아래 참고) |
+| `coffeemeup` | 커피미업 | Cafe24 (new skin) | 생두 카테고리 |
+| `libre` | 커피 리브레 | Cafe24 (old skin) | 생두 카테고리 |
+| `sopex` | 소펙스코리아 | Cafe24 | cate_no 24·26·27·66·74 |
+| `rnc` | 레햄코리아(RNC) | Cafe24 | cate_no 43~47 (대륙별) |
+| `namusairo` | 나무사이로 | Cafe24 | cate_no 24 (GREEN) |
+| `coffeespell` | 커피스펠 | Cafe24 | cate_no 25 (생두) |
+| `cobeans` | 코빈즈커피 | Wisa | cno1 1037 (신규입고) |
+| `almacielo` | 알마시엘로 | Wisa | cno1 1070 (생두찾기) |
 | `blackroad` | 블랙로드커피 | imweb | `/<cat>/?idx=<id>` |
-| `verde` | 베르데 트레이드 | 네이버 스마트스토어 | SSR JSON 파싱 |
-| `ryubeans` | 류빈스커피 | 네이버 스마트스토어 | SSR JSON 파싱 |
-| `chbean` | 씨에이치빈 | 네이버 스마트스토어 | SSR JSON 파싱 |
-| `doan` | 도안 셀렉트 샵 | 네이버 스마트스토어 | SSR JSON 파싱 |
-| `cafenogales` | 카페노갈레스 | 식스샵 | 내부 API (`/apis/mall/shop/products-catalog`) |
-| `compass` | 콤파스 커피 | 식스샵 | 내부 API (`/apis/mall/shop/products-catalog`) |
+| `gsc` | 지에스씨(GSC) | 고도몰 | cateCd 014 |
+| `micoffee` | 엠아이커피 | 고도몰 | cateCd 001~004·024 |
+| `wbeans` | 더블유빈즈 | 고도몰 | cateCd 024·003·004·005·027 |
+| `royal` | 로얄커피코리아 | 고도몰 | cateCd 039 |
+| `asianbean` | 에이션빈 | 메이크샵 | xcode 007~011·014·015 |
+| `sewoong` | 세웅지씨 | 영카트 | ca_id 10~60·b0 |
+| `blessbean` | 블레스빈 | 영카트 | ca_id 2010~2040 |
+| `falcon` | 팔콘 마이크로 코리아 | Shopify | `korea-store-all-coffee` 컬렉션 |
+| `verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa` | (6곳) | 네이버 스마트스토어 | SSR JSON, 최신 20개 |
+| `cafenogales` `compass` `koffeeroute` `hankook` `unico` `ethico` | (6곳) | 식스샵 | 내부 API |
 
-플랫폼별로 공통 베이스 클래스로 묶여 있음:
-- `Cafe24Scraper` → momos / coffeemeup / libre
-- `NaverSmartStoreScraper` → verde / ryubeans / chbean / doan
-- `SixshopScraper` → cafenogales / compass
-- 단일 사이트: cobeans (Wisa), blackroad (imweb)
+플랫폼별 공통 베이스 클래스:
+- `Cafe24Scraper` (base.py) → coffeemeup / libre / sopex / rnc / namusairo / coffeespell
+- `GodomallScraper` (godomall.py) → gsc / micoffee / wbeans / royal
+- `MakeshopScraper` (makeshop.py) → asianbean
+- `YoungcartScraper` (youngcart.py) → sewoong / blessbean
+- `WisaScraper` (cobeans.py) → cobeans / almacielo
+- `ShopifyScraper` (shopify.py) → falcon
+- `NaverSmartStoreScraper` (naver_smartstore.py) → 스마트스토어 6곳
+- `SixshopScraper` (sixshop.py) → 식스샵 6곳
+- 단일 사이트: blackroad (imweb)
+
+### 점검
+
+```bash
+python tools/check_scrapers.py            # 전부 한 번 긁어서 개수/가격/링크 확인
+python tools/check_scrapers.py gsc sopex  # 일부만
+```
+
+상품 0개는 예외가 아니라 조용한 실패라서, `run.py`가 이를 에러로 취급해
+`feed.json`의 `errors`에 넣는다.
+
+### ⚠️ momos 깨짐 (2026-08 확인)
+
+모모스커피가 Cafe24 → imweb으로 사이트를 갈아엎어서
+`cate_no=162` 카탈로그 URL이 홈으로 리다이렉트된다(상품 0개).
+`/shop_view/<id>` 구조라 blackroad와 같은 imweb 어댑터 계열로 다시 짜야 한다.
 
 ### 네이버 스마트스토어 주의사항
 
@@ -138,7 +168,20 @@ class XxxScraper(Cafe24Scraper):
 
 그리고 `run.py`의 `SCRAPERS` 리스트에 추가.
 
-### Cafe24가 아닌 경우 (네이버 스마트스토어, 자체 솔루션)
+여러 카테고리(대륙별 등)로 쪼개져 있으면 `cate_nos = (24, 26, 27)`만 채우면
+기본 `catalog_url_template`(`/product/list.html?cate_no={cate}&page={page}`)이
+카테고리마다 돌아간다.
+
+### 고도몰 / 메이크샵 / 영카트 / Shopify / 식스샵이라면
+
+해당 베이스 클래스를 상속하고 카테고리 코드만 채운다. 코드 찾는 법:
+- 고도몰 · 메이크샵 · 영카트 → 홈페이지 네비게이션의 `cateCd=` / `xcode=` / `ca_id=` 링크
+- Shopify → `/collections.json?limit=250`
+- 식스샵 → 브라우저 개발자도구 네트워크 탭에서 `/apis/mall/shop/products-catalog`
+  요청의 `categories=` 파라미터. **`categories`는 필수**라서 빼면 400이 난다.
+  `site_id`는 페이지 소스의 `data-siteNo` 또는 `contents.sixshop.com/uploadedFiles/<숫자>/`.
+
+### 그 외 (네이버 스마트스토어, 자체 솔루션)
 
 `Scraper`를 직접 상속하고 `fetch()` 구현. base.py의 휴리스틱(`guess_origin`, `guess_process`, `parse_price_krw`, `parse_unit_g`)은 그대로 재활용 가능.
 

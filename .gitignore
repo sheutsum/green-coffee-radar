@@ -13,3 +13,5 @@ node_modules/
 .claude/
 scheduled_run.ps1
 scheduled_run.vbs
+
+.playwright-mcp/

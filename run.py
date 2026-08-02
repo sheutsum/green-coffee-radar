@@ -13,12 +13,25 @@ from tools.build_feed import write_feed
 from scrapers.momos import MomosScraper
 from scrapers.coffeemeup import CoffeeMeUpScraper
 from scrapers.coffeelibre import CoffeeLibreScraper
-from scrapers.cobeans import CobeansScraper
+from scrapers.cobeans import CobeansScraper, AlmacieloScraper
 from scrapers.blackroad import BlackRoadScraper
 from scrapers.naver_smartstore import (
     VerdeTradeScraper, RyubeansScraper, ChBeanScraper, DoanSelectShopScraper,
+    AyantuScraper, GimisaScraper,
 )
-from scrapers.sixshop import CafeNogalesScraper, CompassCoffeeScraper
+from scrapers.sixshop import (
+    CafeNogalesScraper, CompassCoffeeScraper, KoffeeRouteScraper,
+    HankookCoffeeTradingScraper, UnicoCoffeeScraper, EthicoCoffeeScraper,
+)
+from scrapers.cafe24_shops import (
+    SopexScraper, RnCScraper, NamusairoScraper, CoffeeSpellScraper,
+)
+from scrapers.godomall import (
+    GscScraper, MiCoffeeScraper, WbeansScraper, RoyalCoffeeScraper,
+)
+from scrapers.makeshop import AsianBeanScraper
+from scrapers.youngcart import SewoongScraper, BlessBeanScraper
+from scrapers.shopify import FalconMicroScraper
 
 SCRAPERS = [
     MomosScraper(),
@@ -32,6 +45,26 @@ SCRAPERS = [
     DoanSelectShopScraper(),
     CafeNogalesScraper(),
     CompassCoffeeScraper(),
+    # --- 2026-08 추가 ---
+    SopexScraper(),
+    RnCScraper(),
+    NamusairoScraper(),
+    CoffeeSpellScraper(),
+    GscScraper(),
+    MiCoffeeScraper(),
+    WbeansScraper(),
+    RoyalCoffeeScraper(),
+    AsianBeanScraper(),
+    AlmacieloScraper(),
+    SewoongScraper(),
+    BlessBeanScraper(),
+    KoffeeRouteScraper(),
+    HankookCoffeeTradingScraper(),
+    UnicoCoffeeScraper(),
+    EthicoCoffeeScraper(),
+    FalconMicroScraper(),
+    AyantuScraper(),
+    GimisaScraper(),
 ]
 
 DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")
@@ -52,6 +85,13 @@ def main() -> int:
         except Exception:
             print(f"\n!! {scraper.name} fetch failed:")
             traceback.print_exc()
+            errors.append(scraper.name)
+            continue
+
+        if not products:
+            # 예외 없이 0개 = 사이트 개편으로 셀렉터가 헛도는 경우. 조용히
+            # 피드에서 사라지는 게 제일 나쁘므로 에러로 표시한다.
+            print(f"{scraper.name}: 0 products — layout changed?")
             errors.append(scraper.name)
             continue
 
