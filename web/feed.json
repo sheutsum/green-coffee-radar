@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T06:47:34+00:00",
+  "generated_at": "2026-08-02T07:02:37+00:00",
   "count": 395,
   "suppliers": [
     "도안 셀렉트 샵",
@@ -2787,14 +2787,14 @@
     {
       "sku": "compass:8033402",
       "supplier": "콤파스 커피",
-      "name": "[생두] 인도네시아 브네르 므리아 마디 웻헐 DP",
+      "name": "[생두] 인도네시아 브네르 므리아 마디 웻헐",
       "origin": "Indonesia",
       "process": null,
-      "price_krw": 16500,
+      "price_krw": 19000,
       "unit_g": 1000,
       "url": "https://compasscoffee.kr/product/8033402",
       "in_stock": true,
-      "price_per_kg": 16500,
+      "price_per_kg": 19000,
       "first_seen": "2026-05-14T07:43:05"
     },
     {
