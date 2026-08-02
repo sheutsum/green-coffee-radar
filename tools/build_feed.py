@@ -68,7 +68,9 @@ def write_feed(products: list[Product], errors: list[str] | None = None,
     payload = build_payload(products, errors or [])
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+        # 상품 1600여 개 × 30분마다 커밋 + 앱이 매번 내려받는 파일이라 압축해서 쓴다
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
     )
     return out_path
 
