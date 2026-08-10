@@ -78,7 +78,7 @@ python run.py
 
 | name | supplier | 플랫폼 | 스코프 |
 |---|---|---|---|
-| `momos` | 모모스커피 | ~~Cafe24~~ → imweb | ⚠️ **깨짐** (사이트 개편, 아래 참고) |
+| `momos` | 모모스커피 | imweb (백오피스 공개 API) | ✅ |
 | `coffeemeup` | 커피미업 | Cafe24 (new skin) | 생두 카테고리 |
 | `libre` | 커피 리브레 | Cafe24 (old skin) | 생두 카테고리 |
 | `sopex` | 소펙스코리아 | Cafe24 | cate_no 24·26·27·66·74 |
@@ -131,11 +131,21 @@ TLS 지문까지 흉내내도 동일해서, 지문이 아니라 데이터센터 
 (과거 네이버 스마트스토어도 같은 증상이었으나 `chrome131_android` 지문으로
 해결됨 — 지문 문제와 IP 문제는 구분해서 봐야 한다.)
 
-### ⚠️ momos 깨짐 (2026-08 확인)
+### momos imweb 이전 (2026-08-10 복구)
 
-모모스커피가 Cafe24 → imweb으로 사이트를 갈아엎어서
-`cate_no=162` 카탈로그 URL이 홈으로 리다이렉트된다(상품 0개).
-`/shop_view/<id>` 구조라 blackroad와 같은 imweb 어댑터 계열로 다시 짜야 한다.
+모모스커피가 Cafe24 → imweb으로 갈아엎어서 `cate_no=162` 카탈로그 URL이
+홈으로 301된다(2026-07-28 이후 상품 0개).
+
+imweb 스토어프론트는 상품을 HTML에 렌더하지 않고 백오피스 공개 API를
+브라우저에서 호출한다. HTML 어댑터를 다시 짜는 대신 그 API를 직접 쓴다:
+
+    GET https://office.momos.co.kr/api/public/green-beans
+    → {"greenBeans": [{prodNo, name, price, origin, process, sca, variety, ...}]}
+
+산지·가공을 서버가 구조화해서 주므로 base.py 이름 휴리스틱보다 정확하다.
+상품 URL은 `https://momos.co.kr/shop_view/?idx=<prodNo>`.
+같은 백오피스에 `/api/public/products`, `/api/public/origins`,
+`/api/public/filters`도 열려 있다.
 
 ### 네이버 스마트스토어 주의사항
 
@@ -206,7 +216,7 @@ green-coffee-radar/
 │   └── notify.py    # Telegram push (DRY-RUN 지원)
 ├── scrapers/
 │   ├── base.py      # 인터페이스 + 공통 휴리스틱 (origin/process 추정)
-│   └── momos.py     # 첫 스크레이퍼 (Cafe24 패턴 예제)
+│   └── momos.py     # imweb — 백오피스 JSON API 직접 호출
 ├── tools/
 │   ├── build_feed.py # 카탈로그 → web/feed.json (run.py가 재사용)
 │   └── make_icons.py # PWA 아이콘 생성
