@@ -51,14 +51,19 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      # dedup DB를 원격 main 최신본으로 강제 동기화.
-      # checkout@v4는 "트리거한 SHA"의 seen.sqlite를 가져오는데, 이 SHA가
-      # 직전 실행의 auto-commit을 반영 못 하면(schedule 이벤트 지연/배치, push 레이스)
-      # 같은 상품을 다시 "새 SKU"로 보고 중복 알림이 난다. 항상 최신 seen으로 비교.
-      - name: Sync dedup state to latest main
+      # 작업 트리 전체를 원격 main 최신본으로 강제 동기화.
+      # checkout@v4는 "트리거한 SHA"를 가져오는데, 이 SHA가 직전 실행의
+      # auto-commit을 반영 못 하면(schedule 이벤트 지연/배치, push 레이스)
+      # (a) 같은 상품을 다시 "새 SKU"로 보고 중복 알림이 나고
+      # (b) 마지막 auto-commit push가 non-fast-forward로 튕겨 실행이 실패한다.
+      #
+      # 2026-08-16: 전에는 `git checkout FETCH_HEAD -- seen.sqlite` 로 파일만
+      # 끌어왔는데, HEAD가 낡은 SHA에 남아 (b)를 못 막았다. reset --hard 면
+      # seen.sqlite 최신화와 fast-forward push가 한 번에 해결된다.
+      - name: Sync to latest main
         run: |
           git fetch --depth=1 origin main
-          git checkout FETCH_HEAD -- seen.sqlite || echo "no seen.sqlite on remote yet"
+          git reset --hard FETCH_HEAD
 
       # 스크레이프 → 텔레그램 알림 → web/feed.json 생성 (단일 수집)
       - name: Scrape, notify, build feed
