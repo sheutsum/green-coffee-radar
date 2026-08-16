@@ -50,8 +50,9 @@ jobs:
               echo "OK"
               exit 0
             fi
-            msg="🚨 green-coffee-radar: ${age_h}시간째 성공한 수집 실행 없음 (마지막 ${last})
-https://github.com/${GITHUB_REPOSITORY}/actions/workflows/cron.yml"
+            # 한 줄로 유지할 것 — run: | 블록 안에서 문자열을 줄바꿈하면 YAML
+            # 블록 스칼라가 깨지고, GitHub이 트리거조차 못 읽는다.
+            msg="🚨 green-coffee-radar: ${age_h}시간째 성공한 수집 실행 없음 (마지막 ${last}) https://github.com/${GITHUB_REPOSITORY}/actions/workflows/cron.yml"
           fi
 
           echo "$msg"
