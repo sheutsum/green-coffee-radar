@@ -24,6 +24,10 @@ on:
         description: '무성공 허용 시간(h). 0이면 알림 경로 테스트'
         required: false
         default: '6'
+      max_errors:
+        description: 'feed.json errors 허용 개수. 0이면 알림 경로 테스트'
+        required: false
+        default: '3'
 
 permissions:
   actions: read
@@ -42,26 +46,56 @@ jobs:
           # 정상 주기는 최선 1시간, schedule 드롭 시 ~90분. 6시간 무성공은
           # 확실히 비정상이다. 6시간마다 검사하므로 최악 탐지 지연은 ~12시간.
           MAX_AGE_H: ${{ inputs.max_age_h || '6' }}
+          # 스크레이퍼 한둘이 일시적으로 죽는 건 흔하다(사이트 점검, 순간 429).
+          # 3곳 이상 동시에 죽으면 그건 우연이 아니다.
+          MAX_ERRORS: ${{ inputs.max_errors || '3' }}
         run: |
           set -uo pipefail
 
+          # 메시지 줄은 반드시 한 줄로 쓸 것 — run: | 블록 안에서 문자열 리터럴을
+          # 줄바꿈하면 YAML 블록 스칼라가 깨지고, GitHub이 트리거조차 못 읽는다.
+          # 여러 줄이 필요하면 아래처럼 $'\n' 로 이어붙인다.
+          NL=$'\n'
+          issues=""
+          # $'\n' 는 ${var:+...} 안에서는 해석되지 않으므로 변수로 빼서 쓴다.
+          add_issue() { issues="${issues}${issues:+$NL}$1"; }
+
+          # (1) 수집이 아예 안 돌고 있는가
           last=$(gh run list -R "$GITHUB_REPOSITORY" -w cron.yml -s success -L 1 \
                    --json updatedAt --jq '.[0].updatedAt // empty')
 
           if [ -z "$last" ]; then
-            msg="🚨 green-coffee-radar: 최근 성공한 수집 실행을 찾을 수 없음"
+            add_issue "🚨 최근 성공한 수집 실행을 찾을 수 없음"
           else
             age_h=$(( ( $(date -u +%s) - $(date -u -d "$last" +%s) ) / 3600 ))
             echo "last success: $last (${age_h}h ago, threshold ${MAX_AGE_H}h)"
-            if [ "$age_h" -lt "$MAX_AGE_H" ]; then
-              echo "OK"
-              exit 0
+            if [ "$age_h" -ge "$MAX_AGE_H" ]; then
+              add_issue "🚨 ${age_h}시간째 성공한 수집 실행 없음 (마지막 ${last})"
             fi
-            # 한 줄로 유지할 것 — run: | 블록 안에서 문자열을 줄바꿈하면 YAML
-            # 블록 스칼라가 깨지고, GitHub이 트리거조차 못 읽는다.
-            msg="🚨 green-coffee-radar: ${age_h}시간째 성공한 수집 실행 없음 (마지막 ${last}) https://github.com/${GITHUB_REPOSITORY}/actions/workflows/cron.yml"
           fi
 
+          # (2) 돌고는 있는데 스크레이퍼가 무더기로 깨졌는가.
+          #     run 은 스크레이퍼가 죽어도 success 로 끝나므로 (1)로는 안 잡힌다.
+          #     Pages 배포가 아니라 raw 를 읽는다 — 배포가 밀려도 상태는 봐야 하므로.
+          feed_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/web/feed.json"
+          if feed=$(curl -sSf --max-time 30 "$feed_url"); then
+            n_err=$(printf '%s' "$feed" | jq '(.errors // []) | length')
+            names=$(printf '%s' "$feed" | jq -r '(.errors // []) | join(", ")')
+            n_prod=$(printf '%s' "$feed" | jq '(.products // []) | length')
+            echo "feed: ${n_prod} products, ${n_err} errors (threshold ${MAX_ERRORS}) [${names}]"
+            if [ "$n_err" -ge "$MAX_ERRORS" ]; then
+              add_issue "⚠️ 스크레이퍼 ${n_err}곳 실패: ${names}"
+            fi
+          else
+            add_issue "⚠️ feed.json 을 읽을 수 없음 (${feed_url})"
+          fi
+
+          if [ -z "$issues" ]; then
+            echo "OK"
+            exit 0
+          fi
+
+          msg="green-coffee-radar${NL}${issues}${NL}https://github.com/${GITHUB_REPOSITORY}/actions/workflows/cron.yml"
           echo "$msg"
           # 알림 자체가 실패해도 워크플로는 실패로 남겨서(-f) 흔적을 남긴다.
           curl -sS -f -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
