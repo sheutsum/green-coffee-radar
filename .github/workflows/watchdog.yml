@@ -1,0 +1,63 @@
+name: watchdog
+
+# 수집 파이프라인이 "조용히" 죽는 걸 잡는다.
+#
+# 2026-08-12 실행 하나가 러너를 못 받고 queued 로 박혀 concurrency: pages 를
+# 점유했고, 뒤따른 97개 실행이 전부 cancelled 로 죽었다. 취소는 실패가 아니라서
+# GitHub 실패 메일도 안 왔고, 결국 4일간 알림이 끊긴 걸 사람이 눈치챌 때까지
+# 아무도 몰랐다. cron.yml 쪽은 cancel-in-progress 로 자동 복구되게 고쳤지만,
+# "성공한 실행이 N시간째 없다"는 사실 자체를 알려주는 장치가 따로 필요하다.
+#
+# 한계: 이것도 GitHub Actions 위에서 돈다. Actions 자체가 죽으면 이 감시도 같이
+# 죽는다. 진짜 독립 감시가 필요하면 로컬 PC(작업 스케줄러)에 둬야 하는데,
+# 그 PC는 절반은 꺼져 있어서 그것대로 못 미덥다. 현실적 타협.
+
+on:
+  schedule:
+    # 6시간마다. :23 은 혼잡 시간대(정각/30분)를 피한 오프셋.
+    - cron: '23 */6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  actions: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    # cron.yml 의 `pages` 그룹에 절대 끼지 않는다 — 감시자가 감시 대상 큐에
+    # 갇히면 의미가 없다.
+    steps:
+      - name: Alert if the collector has been silent
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+          # 정상 주기는 최선 1시간, schedule 드롭 시 ~90분. 6시간 무성공은
+          # 확실히 비정상이다. 6시간마다 검사하므로 최악 탐지 지연은 ~12시간.
+          MAX_AGE_H: '6'
+        run: |
+          set -uo pipefail
+
+          last=$(gh run list -R "$GITHUB_REPOSITORY" -w cron.yml -s success -L 1 \
+                   --json updatedAt --jq '.[0].updatedAt // empty')
+
+          if [ -z "$last" ]; then
+            msg="🚨 green-coffee-radar: 최근 성공한 수집 실행을 찾을 수 없음"
+          else
+            age_h=$(( ( $(date -u +%s) - $(date -u -d "$last" +%s) ) / 3600 ))
+            echo "last success: $last (${age_h}h ago, threshold ${MAX_AGE_H}h)"
+            if [ "$age_h" -lt "$MAX_AGE_H" ]; then
+              echo "OK"
+              exit 0
+            fi
+            msg="🚨 green-coffee-radar: ${age_h}시간째 성공한 수집 실행 없음 (마지막 ${last})
+https://github.com/${GITHUB_REPOSITORY}/actions/workflows/cron.yml"
+          fi
+
+          echo "$msg"
+          # 알림 자체가 실패해도 워크플로는 실패로 남겨서(-f) 흔적을 남긴다.
+          curl -sS -f -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TG_CHAT}" \
+            --data-urlencode "text=${msg}" \
+            --data-urlencode "disable_web_page_preview=true" > /dev/null
+          exit 1
