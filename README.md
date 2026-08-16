@@ -91,7 +91,7 @@ python run.py
 | `gsc` | 지에스씨(GSC) | 고도몰 | cateCd 014 |
 | `micoffee` | 엠아이커피 | 고도몰 | cateCd 001~004·024 |
 | `wbeans` | 더블유빈즈 | 고도몰 | cateCd 024·003·004·005·027 |
-| `royal` | 로얄커피코리아 | 고도몰 | cateCd 039 |
+| ~~`royal`~~ | 로얄커피코리아 | 고도몰 | cateCd 039 — **IP 차단으로 제외**, 아래 참고 |
 | `asianbean` | 에이션빈 | 메이크샵 | xcode 007~011·014·015 |
 | `sewoong` | 세웅지씨 | 영카트 | ca_id 10~60·b0 |
 | `blessbean` | 블레스빈 | 영카트 | ca_id 2010~2040 |
@@ -120,16 +120,31 @@ python tools/check_scrapers.py gsc sopex  # 일부만
 상품 0개는 예외가 아니라 조용한 실패라서, `run.py`가 이를 에러로 취급해
 `feed.json`의 `errors`에 넣는다.
 
-### ⚠️ 클라우드에서만 막히는 곳 (2026-08 확인)
+### ⚠️ 클라우드에서만 막히는 곳
 
-`royal`(403) · `falcon`(429 `local_rate_limited`) 은 **자택 IP에서는 되고
-GitHub Actions runner IP에서만 막힌다.** httpx → curl_cffi impersonate 로
-TLS 지문까지 흉내내도 동일해서, 지문이 아니라 데이터센터 IP 차단으로 보인다.
-매 크론마다 `feed.json`의 `errors`에 남고 그 두 곳 상품(약 98개)은 빠진다.
-뚫으려면 프록시가 필요한데, 30곳 중 2곳 때문에 붙일 값어치는 없다고 판단해 뒀다.
+`royal`(로얄커피코리아)은 **자택 IP에서는 200, GitHub Actions runner IP에서는
+403**이다. 마지막 정상 수집은 2026-08-02.
 
-(과거 네이버 스마트스토어도 같은 증상이었으나 `chrome131_android` 지문으로
-해결됨 — 지문 문제와 IP 문제는 구분해서 봐야 한다.)
+2026-08-16 러너(Azure US, Des Moines)에서 직접 프로브를 돌려 원인을 확정했다:
+
+| 프로브 | 결과 |
+|---|---|
+| plain curl / 풀 브라우저 헤더 / curl_cffi `chrome131`·`chrome124`·`safari17_0` | 전부 403, 응답 3750바이트로 **동일** |
+| 사이트 루트 `/` | 403 — 카탈로그가 아니라 **호스트 전체** 차단 |
+| `gsc` (같은 고도몰, 같은 러너) | 200 — 러너 평판/플랫폼 문제 아님 |
+
+403 본문이 고도몰 관리자 기능인 차단 안내 페이지(`.blackout`,
+`/admin/gd_share/img/icon_error.png`)다. 즉 봇 탐지가 아니라 **상점주가 관리자에서
+켠 해외/특정 IP 차단**이다. UA·헤더·TLS 지문으로는 뚫리지 않는다 — 한국 IP만 된다.
+
+프록시를 붙일 값어치는 없다고 판단해(30곳 중 1곳), `run.py`의 `SCRAPERS`에서
+제외했다. 매 실행 `errors`에 쌓이면 진짜 고장 신호가 묻히기 때문이다.
+클래스는 남아 있으니 자택에서 `python tools/check_scrapers.py royal` 로 차단이
+풀렸는지 확인할 수 있고, 200이 나오면 `SCRAPERS`에 다시 넣으면 된다.
+
+(`falcon`도 한때 429 `local_rate_limited` 로 같은 증상이었으나 지금은 정상.
+과거 네이버 스마트스토어는 `chrome131_android` 지문으로 해결 — 지문 문제와 IP
+문제는 구분해서 봐야 한다.)
 
 ### momos imweb 이전 (2026-08-10 복구)
 

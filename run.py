@@ -27,7 +27,7 @@ from scrapers.cafe24_shops import (
     SopexScraper, RnCScraper, NamusairoScraper, CoffeeSpellScraper,
 )
 from scrapers.godomall import (
-    GscScraper, MiCoffeeScraper, WbeansScraper, RoyalCoffeeScraper,
+    GscScraper, MiCoffeeScraper, WbeansScraper,
 )
 from scrapers.makeshop import AsianBeanScraper
 from scrapers.youngcart import SewoongScraper, BlessBeanScraper
@@ -53,7 +53,10 @@ SCRAPERS = [
     GscScraper(),
     MiCoffeeScraper(),
     WbeansScraper(),
-    RoyalCoffeeScraper(),
+    # RoyalCoffeeScraper() — 2026-08-02부터 Actions 러너에서 호스트 전체가 403.
+    # 매 실행 errors 에 쌓여서 진짜 고장 신호를 묻어버리므로 목록에서 뺐다.
+    # 클래스는 그대로 두니 자택에서 `python tools/check_scrapers.py royal` 로
+    # 차단이 풀렸는지 확인 가능. 자세한 건 README "클라우드에서만 막히는 곳".
     AsianBeanScraper(),
     AlmacieloScraper(),
     SewoongScraper(),
