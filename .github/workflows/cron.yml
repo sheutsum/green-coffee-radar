@@ -2,12 +2,15 @@ name: green-coffee-radar
 
 on:
   schedule:
-    # 30분 간격 (UTC). 신상 마이크로랏을 빨리 잡기 위함.
     # 정각/30분(:00,:30)은 GitHub 부하가 가장 커서 schedule 트리거가 자주 드롭됨 →
-    # 혼잡 시간대를 피해 :07,:37 로 오프셋. 그래도 schedule은 best-effort라
-    # 하루 수회만 뜰 수 있음. 안정적 30분 간격이 필요하면 외부 핑거(workflow_dispatch) 사용.
+    # 혼잡 시간대를 피해 :37 로 오프셋. 그래도 schedule은 best-effort라
+    # 하루 수회만 뜰 수 있음. 안정적 주기가 필요하면 외부 핑거(workflow_dispatch) 사용.
+    #
+    # 2026-08-16: :07 슬롯 제거. 로컬 핑거가 매시 :01에 쏘고 한 바퀴 ~20분이라
+    # :07이 그 안에 들어왔다. 아래 cancel-in-progress: true 와 겹치면 매시 핑거
+    # 실행이 :07에 취소된다. :37은 핑거 실행이 끝난 뒤라 안전.
     # 사이트별 throttle/retry는 scrapers/base.py 의 polite_sleep/get_with_retry 참고.
-    - cron: '7,37 * * * *'
+    - cron: '37 * * * *'
   workflow_dispatch: {}
 
 # contents: 상태(seen.sqlite/feed.json) 커밋 / pages·id-token: PWA 배포
@@ -17,13 +20,24 @@ permissions:
   id-token: write
 
 # Pages 배포는 동시에 하나만 (스케줄 겹침 방지)
+#
+# 2026-08-16: false → true. 2026-08-12 실행 하나가 러너를 배정받지 못한 채
+# queued 로 박혀서(GitHub 쪽 stuck job) 이 그룹을 4일간 물고 있었고, 뒤따른 97개
+# 실행이 전부 pending → cancelled 로 죽었다. 알림이 조용히 끊겼는데 실패 메일도
+# 안 온다(취소는 실패가 아니라서). true면 다음 실행이 박힌 놈을 밀어내고 한
+# 사이클 안에 스스로 복구된다.
+# 대가: 진짜로 돌던 실행이 중간에 잘리면 seen.sqlite 커밋을 못 해 다음 실행에서
+# 같은 상품이 한 번 더 알림 온다. 4일 무음보다 낫다.
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    # 한 바퀴 16~22분. cancel-in-progress: true 라 36분을 넘기면 다음 트리거를
+    # 스스로 잡아먹기 시작하므로 그 전에 끊는다.
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
