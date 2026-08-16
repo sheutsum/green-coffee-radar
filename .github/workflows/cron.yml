@@ -6,9 +6,9 @@ on:
     # 혼잡 시간대를 피해 :37 로 오프셋. 그래도 schedule은 best-effort라
     # 하루 수회만 뜰 수 있음. 안정적 주기가 필요하면 외부 핑거(workflow_dispatch) 사용.
     #
-    # 2026-08-16: :07 슬롯 제거. 로컬 핑거가 매시 :01에 쏘고 한 바퀴 ~20분이라
-    # :07이 그 안에 들어왔다. 아래 cancel-in-progress: true 와 겹치면 매시 핑거
-    # 실행이 :07에 취소된다. :37은 핑거 실행이 끝난 뒤라 안전.
+    # 2026-08-16: :07 슬롯 제거. 로컬 핑거가 매시 :01에 쏘는데, 아래
+    # cancel-in-progress: true 와 겹치면 :07 스케줄이 그 실행을 취소해버린다.
+    # 실측 한 바퀴 ~7분이라 :07은 아슬아슬하고 :37은 확실히 안전하다.
     # 사이트별 throttle/retry는 scrapers/base.py 의 polite_sleep/get_with_retry 참고.
     - cron: '37 * * * *'
   workflow_dispatch: {}
@@ -35,8 +35,9 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    # 한 바퀴 16~22분. cancel-in-progress: true 라 36분을 넘기면 다음 트리거를
-    # 스스로 잡아먹기 시작하므로 그 전에 끊는다.
+    # 실측 한 바퀴 ~7분(2026-08-16). 30분을 넘겼다면 정상 실행이 아니라 어딘가
+    # 매달린 것이므로 끊는다 — cancel-in-progress: true 라 방치하면 다음 트리거를
+    # 스스로 잡아먹는다.
     timeout-minutes: 30
     environment:
       name: github-pages

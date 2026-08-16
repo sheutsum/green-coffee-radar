@@ -27,7 +27,7 @@ from scrapers.cafe24_shops import (
     SopexScraper, RnCScraper, NamusairoScraper, CoffeeSpellScraper,
 )
 from scrapers.godomall import (
-    GscScraper, MiCoffeeScraper, WbeansScraper,
+    GscScraper, MiCoffeeScraper, WbeansScraper, RoyalCoffeeScraper,
 )
 from scrapers.makeshop import AsianBeanScraper
 from scrapers.youngcart import SewoongScraper, BlessBeanScraper
@@ -53,10 +53,6 @@ SCRAPERS = [
     GscScraper(),
     MiCoffeeScraper(),
     WbeansScraper(),
-    # RoyalCoffeeScraper() — 2026-08-02부터 Actions 러너에서 호스트 전체가 403.
-    # 매 실행 errors 에 쌓여서 진짜 고장 신호를 묻어버리므로 목록에서 뺐다.
-    # 클래스는 그대로 두니 자택에서 `python tools/check_scrapers.py royal` 로
-    # 차단이 풀렸는지 확인 가능. 자세한 건 README "클라우드에서만 막히는 곳".
     AsianBeanScraper(),
     AlmacieloScraper(),
     SewoongScraper(),
@@ -68,6 +64,17 @@ SCRAPERS = [
     FalconMicroScraper(),
     AyantuScraper(),
     GimisaScraper(),
+]
+
+# 정기 수집에서 뺐지만 코드는 살아있는 스크레이퍼. 매 실행 errors 에 쌓이면
+# 진짜 고장 신호가 묻히기 때문에 SCRAPERS 에서 뺐을 뿐, 차단이 풀렸는지는
+# 자택(한국 IP)에서 `python tools/check_scrapers.py royal` 로 확인할 수 있어야
+# 한다 — check_scrapers.py 가 이 목록까지 뒤진다. 200 이 나오면 SCRAPERS 로
+# 되돌리면 된다. 사유는 README "클라우드에서만 막히는 곳" 참고.
+#
+# royal: 2026-08-02부터 Actions 러너에서 호스트 전체 403 (상점주 IP 차단)
+BLOCKED = [
+    RoyalCoffeeScraper(),
 ]
 
 DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")

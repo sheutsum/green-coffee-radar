@@ -12,12 +12,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from run import SCRAPERS  # noqa: E402
+from run import SCRAPERS, BLOCKED  # noqa: E402
 
 
 def main(argv: list[str]) -> int:
     wanted = set(argv[1:])
-    targets = [s for s in SCRAPERS if not wanted or s.name in wanted]
+    # BLOCKED(정기 수집에서 뺀 곳)는 이름을 명시할 때만 대상이 된다. 전체 점검이
+    # 막힌 곳 때문에 항상 실패하면 점검 결과를 아무도 안 보게 된다.
+    pool = SCRAPERS + BLOCKED if wanted else SCRAPERS
+    targets = [s for s in pool if not wanted or s.name in wanted]
     if not targets:
         print(f"no scraper matched {sorted(wanted)}")
         return 1
