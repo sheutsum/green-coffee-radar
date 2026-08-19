@@ -29,8 +29,7 @@ on:
         required: false
         default: '3'
 
-permissions:
-  actions: read
+permissions: {}   # 아무 API 도 안 쓴다 — feed 는 public raw 로 읽는다
 
 jobs:
   check:
@@ -40,11 +39,10 @@ jobs:
     steps:
       - name: Alert if the collector has been silent
         env:
-          GH_TOKEN: ${{ github.token }}
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT: ${{ secrets.TG_CHAT }}
-          # 정상 주기는 최선 1시간, schedule 드롭 시 ~90분. 6시간 무성공은
-          # 확실히 비정상이다. 6시간마다 검사하므로 최악 탐지 지연은 ~12시간.
+          # 정상 주기는 최선 1시간, schedule 드롭 시 ~90분. feed.json 이 6시간째
+          # 그대로면 확실히 비정상이다. 6시간마다 검사하므로 최악 탐지 지연은 ~12시간.
           MAX_AGE_H: ${{ inputs.max_age_h || '6' }}
           # 스크레이퍼 한둘이 일시적으로 죽는 건 흔하다(사이트 점검, 순간 429).
           # 3곳 이상 동시에 죽으면 그건 우연이 아니다.
@@ -60,12 +58,19 @@ jobs:
           # $'\n' 는 ${var:+...} 안에서는 해석되지 않으므로 변수로 빼서 쓴다.
           add_issue() { issues="${issues}${issues:+$NL}$1"; }
 
-          # (1) 돌고는 있는데 스크레이퍼가 무더기로 깨졌는가.
-          #     run 은 스크레이퍼가 죽어도 success 로 끝나므로 (2)로는 안 잡힌다.
-          #     Pages 배포가 아니라 raw 를 읽는다 — 배포가 밀려도 상태는 봐야 하므로.
-          #     generated_at 은 (2)의 교차검증에도 쓴다.
-          # 못 읽거나 파싱 실패 = "모름". 모름은 (2)의 침묵 경보를 막지 않는다.
-          feed_age_h=""
+          # feed.json 하나만 본다. 이게 수집의 산출물이라 "돌았다"의 직접 증거다.
+          # Pages 배포가 아니라 raw 를 읽는다 — 배포가 밀려도 상태는 봐야 하므로.
+          #
+          # 2026-08-19까지는 `gh run list -w cron.yml -s success` 로 마지막 성공
+          # 시각도 같이 봤다. 그런데 러너 안에서 이 쿼리가 3주 전 run 을 "최신 성공"
+          # 으로 돌려주는 게 재현됐다(같은 명령이 로컬에서는 정상, per_page=1 API
+          # 직접 호출도 로컬은 정상). 러너에선 늘 531h 로 읽혀 침묵 경보가 상시 참이
+          # 됐고 오탐이 울렸다. 감시기가 도는 곳에서만 틀리는 신호는 감시에 못 쓴다.
+          # 다시 넣지 말 것.
+          #
+          # generated_at 이 멈춘다 = 수집이 멈췄거나 상태 커밋이 계속 튕긴다.
+          # 후자면 seen.sqlite 도 안 밀려 다음 run 이 전 품목을 신상으로 재발송한다.
+          # 둘 다 울릴 값어치가 있다.
           feed_url="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/web/feed.json"
           if feed=$(curl -sSf --max-time 30 "$feed_url"); then
             n_err=$(printf '%s' "$feed" | jq '(.errors // []) | length')
@@ -74,36 +79,25 @@ jobs:
             gen=$(printf '%s' "$feed" | jq -r '.generated_at // empty')
             # date 파싱이 죽으면 스텝이 통째로 죽어 텔레그램도 못 보낸다. 반드시 guard.
             if [ -n "$gen" ] && gen_s=$(date -u -d "$gen" +%s 2>/dev/null); then
-              feed_age_h=$(( ( $(date -u +%s) - gen_s ) / 3600 ))
+              age_h=$(( ( $(date -u +%s) - gen_s ) / 3600 ))
+            else
+              # 시각을 못 읽는 것 자체가 이상 신호다. 침묵으로 취급해 울린다.
+              age_h=999
             fi
-            echo "feed: ${n_prod} products, ${n_err} errors (threshold ${MAX_ERRORS}) [${names}], generated ${gen:-?} (${feed_age_h:-?}h ago)"
+            echo "feed: ${n_prod} products, ${n_err} errors (threshold ${MAX_ERRORS}), generated ${gen:-?} (${age_h}h ago, threshold ${MAX_AGE_H}h) [${names}]"
+
+            # (1) 수집이 아예 안 돌고 있는가
+            if [ "$age_h" -ge "$MAX_AGE_H" ]; then
+              add_issue "🚨 ${age_h}시간째 수집 결과가 갱신되지 않음 (마지막 ${gen:-?})"
+            fi
+
+            # (2) 돌고는 있는데 스크레이퍼가 무더기로 깨졌는가.
+            #     run 은 스크레이퍼가 죽어도 success 로 끝나므로 (1)로는 안 잡힌다.
             if [ "$n_err" -ge "$MAX_ERRORS" ]; then
               add_issue "⚠️ 스크레이퍼 ${n_err}곳 실패: ${names}"
             fi
           else
             add_issue "⚠️ feed.json 을 읽을 수 없음 (${feed_url})"
-          fi
-
-          # (2) 수집이 아예 안 돌고 있는가.
-          #     2026-08-19, Actions API 가 3주 전 run 을 "최신 성공"으로 돌려주는
-          #     stale read 때문에 오탐이 울렸다(그 4분 전 성공 run 이 멀쩡히 있었다).
-          #     오탐은 감시기를 못 믿게 만들어 진짜 알림까지 무시하게 만든다. 그래서
-          #     Actions API 와 raw CDN(feed.json generated_at) 이 둘 다 오래됐을
-          #     때만 운다 — 독립 소스라 한쪽 stale read 로는 안 울린다. 정작 잡아야
-          #     할 pages wedge 는 run 도 상태 커밋도 멈추므로 둘 다 늙어 여전히 걸린다.
-          last=$(gh run list -R "$GITHUB_REPOSITORY" -w cron.yml -s success -L 1 \
-                   --json updatedAt --jq '.[0].updatedAt // empty')
-
-          if [ -n "$last" ] && last_s=$(date -u -d "$last" +%s 2>/dev/null); then
-            run_age_h=$(( ( $(date -u +%s) - last_s ) / 3600 ))
-          else
-            # 성공 run 이 없거나 시각을 못 읽음 → 최대한 늙은 것으로 취급
-            run_age_h=999
-            last="${last:-없음}"
-          fi
-          echo "last success: $last (${run_age_h}h ago, threshold ${MAX_AGE_H}h)"
-          if [ "$run_age_h" -ge "$MAX_AGE_H" ] && [ "${feed_age_h:-999}" -ge "$MAX_AGE_H" ]; then
-            add_issue "🚨 ${run_age_h}시간째 성공한 수집 실행 없음 (마지막 ${last}, feed ${feed_age_h:-?}h 전)"
           fi
 
           if [ -z "$issues" ]; then
