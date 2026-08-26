@@ -94,7 +94,8 @@ def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
         reverse=True,
     )
     payload["count"] = len(payload["products"])
-    payload["suppliers"] = sorted({d["supplier"] for d in payload["products"]})
+    payload["suppliers"] = sorted(
+        {d["supplier"] for d in payload["products"] if d.get("supplier")})
     return payload
 
 
