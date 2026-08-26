@@ -126,6 +126,13 @@ def polite_sleep(min_s: float = 0.8, max_s: float = 1.8) -> None:
     time.sleep(random.uniform(min_s, max_s))
 
 
+# 403 도 재시도 대상이다 — 이 동네 쇼핑몰(영카트/위사/카페24)은 러너 IP 가
+# 잠깐 빨리 긁으면 429 대신 403 을 뱉는다. 한 페이지 403 에 스크레이퍼 하나가
+# 통째로 죽으면 그 공급사 상품 100여 개가 피드에서 사라진다. 진짜 차단이면
+# 재시도해도 403 이라 그대로 raise 된다.
+RETRY_STATUS = (403, 429, 502, 503, 504)
+
+
 def get_with_retry(
     client: "httpx.Client",
     url: str,
@@ -134,9 +141,9 @@ def get_with_retry(
     base_backoff: float = 2.0,
     **kwargs,
 ) -> "httpx.Response":
-    """GET with exponential backoff on 429/5xx and transient transport errors.
-    Honors Retry-After when present. Returns the final Response so the caller
-    can still inspect / raise_for_status()."""
+    """GET with exponential backoff on 403/429/5xx and transient transport
+    errors. Honors Retry-After when present. Returns the final Response so the
+    caller can still inspect / raise_for_status()."""
     for attempt in range(max_retries + 1):
         try:
             r = client.get(url, **kwargs)
@@ -146,7 +153,7 @@ def get_with_retry(
             time.sleep(base_backoff ** (attempt + 1) + random.uniform(0, 1))
             continue
 
-        if r.status_code in (429, 502, 503, 504) and attempt < max_retries:
+        if r.status_code in RETRY_STATUS and attempt < max_retries:
             ra = r.headers.get("Retry-After", "").strip()
             if ra.isdigit():
                 delay = float(ra)
@@ -177,7 +184,7 @@ def cc_get_with_retry(session, url, *, max_retries: int = 3,
     last = None
     for attempt in range(max_retries + 1):
         last = session.get(url, impersonate=CC_IMPERSONATE, **kwargs)
-        if last.status_code not in (429, 502, 503, 504) or attempt >= max_retries:
+        if last.status_code not in RETRY_STATUS or attempt >= max_retries:
             return last
         ra = str(last.headers.get("Retry-After", "")).strip()
         delay = float(ra) if ra.isdigit() else base_backoff ** (attempt + 1) / 2

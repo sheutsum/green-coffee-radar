@@ -63,9 +63,45 @@ def build_payload(products: list[Product], errors: list[str]) -> dict:
     }
 
 
+def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
+    """실패한 스크레이퍼의 상품을 직전 feed 에서 그대로 물려온다.
+
+    403 한 번에 그 공급사 상품 100여 개(카탈로그의 6%)가 피드에서 통째로
+    사라졌다가 다음 실행에 돌아오는 걸 막는다. 어떤 곳이 갱신 안 된 상태인지는
+    payload["errors"] 가 그대로 들고 있다.
+
+    ponytail: 영구 폐업/개편이면 옛 상품이 계속 남는다 — errors 가 매번 울리니
+    사람이 보고 지우면 된다. 자동 만료가 필요해지면 first_seen 대신 last_seen
+    기준으로 N일 지난 건 버리는 식으로 올리면 된다.
+    """
+    if not errors or not out_path.exists():
+        return payload
+    try:
+        prev = json.loads(out_path.read_text(encoding="utf-8"))["products"]
+    except (ValueError, KeyError, OSError):
+        return payload
+
+    failed = set(errors)
+    fresh = {d["sku"] for d in payload["products"]}
+    carried = [d for d in prev
+               if d.get("sku", "").split(":", 1)[0] in failed and d["sku"] not in fresh]
+    if not carried:
+        return payload
+
+    payload["products"].extend(carried)
+    payload["products"].sort(
+        key=lambda d: (d.get("first_seen") or "0000", d.get("name") or ""),
+        reverse=True,
+    )
+    payload["count"] = len(payload["products"])
+    payload["suppliers"] = sorted({d["supplier"] for d in payload["products"]})
+    return payload
+
+
 def write_feed(products: list[Product], errors: list[str] | None = None,
                out_path: Path = OUT_PATH) -> Path:
-    payload = build_payload(products, errors or [])
+    errors = errors or []
+    payload = carry_forward(build_payload(products, errors), errors, out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         # 상품 1600여 개 × 30분마다 커밋 + 앱이 매번 내려받는 파일이라 압축해서 쓴다
