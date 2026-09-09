@@ -28,6 +28,10 @@ on:
         description: 'feed.json errors 허용 개수. 0이면 알림 경로 테스트'
         required: false
         default: '3'
+      max_stale_h:
+        description: '스크레이퍼 한 곳이 수집 못 한 채 버틸 수 있는 시간(h). 0이면 알림 경로 테스트'
+        required: false
+        default: '12'
 
 permissions: {}   # 아무 API 도 안 쓴다 — feed 는 public raw 로 읽는다
 
@@ -47,6 +51,12 @@ jobs:
           # 스크레이퍼 한둘이 일시적으로 죽는 건 흔하다(사이트 점검, 순간 429).
           # 3곳 이상 동시에 죽으면 그건 우연이 아니다.
           MAX_ERRORS: ${{ inputs.max_errors || '3' }}
+          # 한 곳만 조용히 영구 사망하는 걸 잡는다. carry_forward 가 그 곳 상품을
+          # 직전 피드에서 메워주기 때문에 count 도 안 줄고, errors 도 1이라
+          # MAX_ERRORS(3)에 영영 안 걸린다 — 2026-09-08 커피미업이 카테고리
+          # 182 -> 78 이동으로 404 나며 하루 넘게 그렇게 묻혔다.
+          # 간헐 타임아웃(위사 계열이 몇 분씩 죽는다)에 울면 안 되므로 시간을 넉넉히.
+          MAX_STALE_H: ${{ inputs.max_stale_h || '12' }}
         run: |
           set -uo pipefail
 
@@ -95,6 +105,24 @@ jobs:
             #     run 은 스크레이퍼가 죽어도 success 로 끝나므로 (1)로는 안 잡힌다.
             if [ "$n_err" -ge "$MAX_ERRORS" ]; then
               add_issue "⚠️ 스크레이퍼 ${n_err}곳 실패: ${names}"
+            fi
+            # (3) 한 곳이 며칠째 수집을 못 하고 있는가. (2)와 달리 동시성이
+            #     아니라 지속성을 본다 — 이게 조용한 영구 고장을 잡는 유일한 신호다.
+            #     last_ok 가 없는 옛 피드면 이 검사만 건너뛴다(나머지는 그대로 돈다).
+            #     jq 의 fromdateiso8601 은 "...Z" 만 받고 우리가 쓰는 "+00:00"
+            #     오프셋에서는 에러를 낸다 — 날짜 계산은 date -u -d 로 한다.
+            #     (파이프 말고 herestring: while 이 서브셸로 가면 stale 이 날아간다)
+            stale=""
+            while read -r name ts; do
+              [ -n "$name" ] || continue
+              ok_s=$(date -u -d "$ts" +%s 2>/dev/null) || continue
+              h=$(( ( $(date -u +%s) - ok_s ) / 3600 ))
+              if [ "$h" -ge "$MAX_STALE_H" ]; then
+                stale="${stale}${stale:+, }${name}(${h}h)"
+              fi
+            done <<< "$(printf '%s' "$feed" | jq -r '(.last_ok // {}) | to_entries[] | "\(.key) \(.value)"')"
+            if [ -n "$stale" ]; then
+              add_issue "🩺 ${MAX_STALE_H}시간 넘게 수집 못 한 스크레이퍼: ${stale}"
             fi
           else
             add_issue "⚠️ feed.json 을 읽을 수 없음 (${feed_url})"

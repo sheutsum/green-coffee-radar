@@ -1,4 +1,4 @@
-"""403 재시도 + 실패 공급사 carry-forward 회귀 테스트. `python test_feed_resilience.py`"""
+"""403 재시도 + carry-forward + last_ok 회귀 테스트. `python test_feed_resilience.py`"""
 from __future__ import annotations
 import json
 import sys
@@ -34,8 +34,9 @@ def test_hard_403_still_surfaces():
     assert get_with_retry(c, "http://x").status_code == 403
 
 
-def _payload(products, errors):
-    return {"count": len(products), "suppliers": sorted({p["supplier"] for p in products}),
+def _payload(products, errors, generated_at="2026-09-09T00:00:00+00:00"):
+    return {"generated_at": generated_at, "count": len(products),
+            "suppliers": sorted({p["supplier"] for p in products}),
             "errors": errors, "products": list(products)}
 
 
@@ -60,6 +61,45 @@ def test_carry_forward():
         both = now + [{"sku": "blessbean:a1", "supplier": "블레스빈", "name": "n", "first_seen": "2026-01-01"}]
         p = carry_forward(_payload(both, ["blessbean"]), ["blessbean"], out)
         assert len(p["products"]) == 2
+
+
+def test_last_ok_tracks_silent_permanent_death():
+    """한 곳만 죽으면 carry_forward 가 count 도 errors 도 조용하게 만든다 —
+    last_ok 만이 '커피미업이 하루째 못 긁고 있다'를 들고 있다."""
+    momos = {"sku": "momos:m1", "supplier": "모모스", "name": "n", "first_seen": "2026-01-01"}
+    cmu = {"sku": "coffeemeup:c1", "supplier": "커피미업", "name": "n", "first_seen": "2026-01-01"}
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / "feed.json"
+
+        # 1회차: 둘 다 정상 → 둘 다 지금 시각
+        p = carry_forward(_payload([momos, cmu], [], "2026-09-08T00:00:00+00:00"),
+                          [], out)
+        assert p["last_ok"] == {"momos": "2026-09-08T00:00:00+00:00",
+                                "coffeemeup": "2026-09-08T00:00:00+00:00"}
+        out.write_text(json.dumps(p), encoding="utf-8")
+
+        # 2회차: coffeemeup 만 죽음 → 상품은 물려와서 count 는 그대로,
+        # last_ok 만 1회차에 멈춰 있다 (워치독이 이걸 보고 운다)
+        p = carry_forward(_payload([momos], ["coffeemeup"], "2026-09-09T00:00:00+00:00"),
+                          ["coffeemeup"], out)
+        assert p["count"] == 2 and p["errors"] == ["coffeemeup"]
+        assert p["last_ok"]["momos"] == "2026-09-09T00:00:00+00:00"
+        assert p["last_ok"]["coffeemeup"] == "2026-09-08T00:00:00+00:00"
+        out.write_text(json.dumps(p), encoding="utf-8")
+
+        # 3회차: 되살아나면 last_ok 도 따라 올라온다
+        p = carry_forward(_payload([momos, cmu], [], "2026-09-09T12:00:00+00:00"),
+                          [], out)
+        assert p["last_ok"]["coffeemeup"] == "2026-09-09T12:00:00+00:00"
+
+
+def test_last_ok_first_run_failure_starts_clock_now():
+    """처음 추가한 스크레이퍼가 첫 실행부터 실패해도 즉시 울리지 않는다."""
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / "feed.json"
+        p = carry_forward(_payload([], ["newshop"], "2026-09-09T00:00:00+00:00"),
+                          ["newshop"], out)
+        assert p["last_ok"] == {"newshop": "2026-09-09T00:00:00+00:00"}
 
 
 if __name__ == "__main__":

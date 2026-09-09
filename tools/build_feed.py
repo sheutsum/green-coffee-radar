@@ -63,6 +63,28 @@ def build_payload(products: list[Product], errors: list[str]) -> dict:
     }
 
 
+def _last_ok(payload: dict, prev_doc: dict) -> dict[str, str]:
+    """스크레이퍼별 '마지막으로 실제 수집에 성공한 시각'.
+
+    carry_forward 가 실패한 곳의 상품을 메워주면서 count 도 errors 도 조용해진다 —
+    한 곳만 영구히 죽으면(예: 2026-09-08 커피미업 카테고리 404) 워치독의
+    "3곳 동시 실패" 조건에 영영 안 걸려서 하루 넘게 아무도 모른다. 이 맵이 그
+    구멍을 막는 유일한 상태다. 워치독이 이걸 보고 오래된 곳을 잡아낸다.
+
+    성공 판정은 fresh 상품의 SKU 접두사로 한다 — run.py 가 0개 수집도 errors 로
+    보내므로, 이번 실행에 상품이 있는 곳 = 성공한 곳이다.
+    """
+    now = payload["generated_at"]
+    prev = prev_doc.get("last_ok") or {}
+    fresh = {d["sku"].split(":", 1)[0] for d in payload["products"] if d.get("sku")}
+    out = {name: now for name in fresh}
+    for name in payload.get("errors", []):
+        # 처음 보는 곳이 첫 실행부터 실패하면 기준 시각이 없다 — now 로 잡아
+        # 임계 시간이 지난 뒤부터 울리게 한다(배포 직후 오탐 방지).
+        out[name] = prev.get(name, now)
+    return out
+
+
 def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
     """실패한 스크레이퍼의 상품을 직전 feed 에서 그대로 물려온다.
 
@@ -74,12 +96,17 @@ def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
     사람이 보고 지우면 된다. 자동 만료가 필요해지면 first_seen 대신 last_seen
     기준으로 N일 지난 건 버리는 식으로 올리면 된다.
     """
-    if not errors or not out_path.exists():
+    prev_doc: dict = {}
+    if out_path.exists():
+        try:
+            prev_doc = json.loads(out_path.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            prev_doc = {}
+    payload["last_ok"] = _last_ok(payload, prev_doc)
+
+    if not errors or "products" not in prev_doc:
         return payload
-    try:
-        prev = json.loads(out_path.read_text(encoding="utf-8"))["products"]
-    except (ValueError, KeyError, OSError):
-        return payload
+    prev = prev_doc["products"]
 
     failed = set(errors)
     fresh = {d["sku"] for d in payload["products"]}
