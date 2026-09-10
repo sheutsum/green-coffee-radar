@@ -308,4 +308,16 @@ class Cafe24Scraper(Scraper):
             generic = ("스페셜티", "드립백커피", "원두커피", "Coffee Me Up", "커피 리브레", "MOMOS")
             if alt and not any(alt.startswith(g) for g in generic):
                 return alt
+
+        # 스킨이 커스텀 클래스를 쓰면 위 셀렉터가 전부 헛돈다 — 노드는 찾았는데
+        # 이름이 없어 상품이 하나씩 조용히 버려지고, 결국 그 공급사가 0개가 된다
+        # (2026-09-10 커피미업이 h2.cmu-card__title 로 개편되며 그렇게 사라졌다).
+        # 클래스에 title/name 이 든 요소를 마지막으로 훑는다. 여기까지 왔다는 건
+        # 어차피 버릴 상품이었다는 뜻이라, 이름이 조금 지저분해도 버리는 것보단 낫다.
+        for sel in ("[class*='title']", "[class*='name']"):
+            el = node.css_first(sel)
+            if el:
+                name = el.text(strip=True)
+                if name:
+                    return re.sub(r"^\s*상품명\s*:\s*", "", name).strip()
         return ""

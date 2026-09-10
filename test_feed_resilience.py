@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from scrapers.base import RETRY_STATUS, get_with_retry
+from scrapers.base import RETRY_STATUS, get_with_retry, Cafe24Scraper
 from tools.build_feed import carry_forward
 
 
@@ -32,6 +32,48 @@ def test_403_is_retried():
 def test_hard_403_still_surfaces():
     c = _FakeClient([403] * 9)
     assert get_with_retry(c, "http://x").status_code == 403
+
+
+_CMU_SKIN = """
+<ul class="prdList">
+  <li class="cmu-card" id="anchorBoxId_2381">
+    <a href="/product/x/2381/category/78/display/1/">
+      <div class="cmu-card__media"><img alt="Coffee Me Up 커피미업 스토어"></div>
+      <div class="cmu-card__foot">
+        <h2 class="cmu-card__title"><span>(생두) 과테말라 게이샤 워시드</span></h2>
+        <p class="cmu-card__price"><span>￦59,000</span></p>
+      </div>
+    </a>
+  </li>
+</ul>
+"""
+
+
+class _CmuShop(Cafe24Scraper):
+    """커피미업이 2026-09-10 에 갈아탄 커스텀 스킨. 표준 셀렉터가 전부 헛돈다."""
+    name = "cmu"
+    supplier_name = "커피미업"
+    base = "https://coffeemeup.store"
+    url_must_contain = ("/category/78/",)
+    default_unit_g = None
+
+
+def test_custom_skin_name_fallback():
+    """이름 셀렉터가 다 빗나가도 상품을 버리지 않는다 — 버리면 공급사가 0개가 되고,
+    0개는 곧 그 상점이 피드에서 통째로 사라진다는 뜻이다."""
+    items = list(_CmuShop()._parse_list(_CMU_SKIN))
+    assert len(items) == 1, items
+    p = items[0]
+    assert p.sku == "cmu:2381"
+    assert p.name == "(생두) 과테말라 게이샤 워시드"
+    assert p.price_krw == 59000
+    assert p.url.endswith("/category/78/display/1/")
+
+
+def test_generic_img_alt_still_skipped():
+    """상점 공통 alt('Coffee Me Up ...')를 상품명으로 쓰면 안 된다."""
+    p = list(_CmuShop()._parse_list(_CMU_SKIN))[0]
+    assert not p.name.startswith("Coffee Me Up")
 
 
 def _payload(products, errors, generated_at="2026-09-09T00:00:00+00:00"):
