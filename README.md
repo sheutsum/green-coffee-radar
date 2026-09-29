@@ -96,7 +96,7 @@ python run.py
 | `sewoong` | 세웅지씨 | 영카트 | ca_id 10~60·b0 |
 | `blessbean` | 블레스빈 | 영카트 | ca_id 2010~2040 |
 | `falcon` | 팔콘 마이크로 코리아 | Shopify | `korea-store-all-coffee` 컬렉션 |
-| `verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa` | (6곳) | 네이버 스마트스토어 | SSR JSON, 최신 20개 |
+| ~~`verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa`~~ | (6곳) | 네이버 스마트스토어 | **로그인 필수화로 제외**, 아래 참고 |
 | `cafenogales` `compass` `koffeeroute` `hankook` `unico` `ethico` | (6곳) | 식스샵 | 내부 API |
 
 플랫폼별 공통 베이스 클래스:
@@ -145,6 +145,23 @@ python tools/check_scrapers.py gsc sopex  # 일부만
 (`falcon`도 한때 429 `local_rate_limited` 로 같은 증상이었으나 지금은 정상.
 과거 네이버 스마트스토어는 `chrome131_android` 지문으로 해결 — 지문 문제와 IP
 문제는 구분해서 봐야 한다.)
+
+### ⚠️ 네이버 스마트스토어 6곳 제외 (2026-09-23~)
+
+2026-09-23 01:07Z부터 스마트스토어 **카테고리·검색 목록이 비로그인 요청을 전부
+`nid.naver.com` 로그인으로 보낸다.** 2026-09-24 자택에서 확인:
+
+| 시도 | 결과 |
+|---|---|
+| curl_cffi 지문 50여 종 (데스크톱·iOS·android — 7월의 우회책이던 `chrome131_android` 포함) | 로그인 월 |
+| Playwright 헤드리스(Pixel 7 / 데스크톱), 실제 Chrome headful | 로그인 월 / 429 |
+| 자택 IP | 동일 — IP 문제 아님 |
+| 스토어 홈 `/<store>` | 200이지만 위젯 상품 0~9개뿐 (ryubeans·chbean·doan 0개) |
+
+공식 대안인 네이버 쇼핑 검색 API는 2026-07-31 **완전 종료**(대체 API 없음,
+NAVER API HUB에도 쇼핑은 없다). 로그인 쿠키 주입은 약관 위반 + 계정 정지 위험이라
+안 한다. 그래서 `BLOCKED`로 옮겼다. 풀렸는지는
+`python tools/check_scrapers.py verde` 로 확인.
 
 ### momos imweb 이전 (2026-08-10 복구)
 

@@ -39,10 +39,6 @@ SCRAPERS = [
     CoffeeLibreScraper(),
     CobeansScraper(),
     BlackRoadScraper(),
-    VerdeTradeScraper(),
-    RyubeansScraper(),
-    ChBeanScraper(),
-    DoanSelectShopScraper(),
     CafeNogalesScraper(),
     CompassCoffeeScraper(),
     # --- 2026-08 추가 ---
@@ -62,8 +58,6 @@ SCRAPERS = [
     UnicoCoffeeScraper(),
     EthicoCoffeeScraper(),
     FalconMicroScraper(),
-    AyantuScraper(),
-    GimisaScraper(),
 ]
 
 # 정기 수집에서 뺐지만 코드는 살아있는 스크레이퍼. 매 실행 errors 에 쌓이면
@@ -73,8 +67,15 @@ SCRAPERS = [
 # 되돌리면 된다. 사유는 README "클라우드에서만 막히는 곳" 참고.
 #
 # royal: 2026-08-02부터 Actions 러너에서 호스트 전체 403 (상점주 IP 차단)
+# 네이버 6곳: 2026-09-23부터 스마트스토어 목록이 비로그인에 로그인 필수 (IP 무관)
 BLOCKED = [
     RoyalCoffeeScraper(),
+    VerdeTradeScraper(),
+    RyubeansScraper(),
+    ChBeanScraper(),
+    DoanSelectShopScraper(),
+    AyantuScraper(),
+    GimisaScraper(),
 ]
 
 DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")
