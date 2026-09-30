@@ -2,7 +2,6 @@
 
 카탈로그: /shop/list.php?ca_id=<카테고리>&page=N
 상품 링크는 스킨마다 다르다 —
-  세웅지씨:  /shop/item.php?it_id=<숫자>
   블레스빈:  /shop/<상품코드>?ca_id=...   (rewrite 사용)
 그래서 상품 id를 뽑는 정규식만 사이트별로 갈아끼운다.
 
@@ -112,17 +111,6 @@ class YoungcartScraper(Scraper):
 
 
 # --- concrete stores -------------------------------------------------------
-
-class SewoongScraper(YoungcartScraper):
-    name = "sewoong"
-    supplier_name = "세웅지씨"
-    base = "https://www.sewoonggc.com"
-    # 10 아프리카 / 20 아메리카 / 30 아시아 / 40 마이크로랏 / 50 게이샤
-    # 60 디카페인 / b0 대회 후원 생두
-    ca_ids = ("10", "20", "30", "40", "50", "60", "b0")
-    item_selector = "ul.itemlist_01 > li, li"
-    name_selector = ".item_tit, .sct_txt a"
-
 
 class BlessBeanScraper(YoungcartScraper):
     name = "blessbean"

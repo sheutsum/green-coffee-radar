@@ -93,7 +93,7 @@ python run.py
 | `wbeans` | 더블유빈즈 | 고도몰 | cateCd 024·003·004·005·027 |
 | ~~`royal`~~ | 로얄커피코리아 | 고도몰 | cateCd 039 — **IP 차단으로 제외**, 아래 참고 |
 | `asianbean` | 에이션빈 | 메이크샵 | xcode 007~011·014·015 |
-| `sewoong` | 세웅지씨 | 영카트 | ca_id 10~60·b0 |
+| `sewoong` | 세웅지씨 | 고도몰 | cateCd 003·011 (2026-09-30 영카트에서 이전) |
 | `blessbean` | 블레스빈 | 영카트 | ca_id 2010~2040 |
 | `falcon` | 팔콘 마이크로 코리아 | Shopify | `korea-store-all-coffee` 컬렉션 |
 | ~~`verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa`~~ | (6곳) | 네이버 스마트스토어 | **로그인 필수화로 제외**, 아래 참고 |
@@ -101,9 +101,9 @@ python run.py
 
 플랫폼별 공통 베이스 클래스:
 - `Cafe24Scraper` (base.py) → coffeemeup / libre / sopex / rnc / namusairo / coffeespell
-- `GodomallScraper` (godomall.py) → gsc / micoffee / wbeans / royal
+- `GodomallScraper` (godomall.py) → gsc / micoffee / wbeans / royal / sewoong
 - `MakeshopScraper` (makeshop.py) → asianbean
-- `YoungcartScraper` (youngcart.py) → sewoong / blessbean
+- `YoungcartScraper` (youngcart.py) → blessbean
 - `WisaScraper` (cobeans.py) → cobeans / almacielo
 - `ShopifyScraper` (shopify.py) → falcon
 - `NaverSmartStoreScraper` (naver_smartstore.py) → 스마트스토어 6곳

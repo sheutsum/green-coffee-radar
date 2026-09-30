@@ -147,3 +147,13 @@ class RoyalCoffeeScraper(GodomallScraper):
     supplier_name = "로얄커피코리아"
     base = "https://www.royalcoffeekorea.co.kr"
     cate_cds = ("039",)                 # 생두주문
+
+
+class SewoongScraper(GodomallScraper):
+    # 2026-09-30 영카트 -> 고도몰 이전 (옛 /shop/list.php 는 404).
+    # 003 생두 상위 카테고리가 하위(대륙별·마이크로랏·게이샤·디카페인)를 전부 포함한다.
+    name = "sewoong"
+    supplier_name = "세웅지씨"
+    base = "https://www.sewoonggc.com"
+    cate_cds = ("003", "011")           # 생두 / 대회용생두
+    max_pages = 30                      # 003 하나에 200개+

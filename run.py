@@ -28,9 +28,10 @@ from scrapers.cafe24_shops import (
 )
 from scrapers.godomall import (
     GscScraper, MiCoffeeScraper, WbeansScraper, RoyalCoffeeScraper,
+    SewoongScraper,
 )
 from scrapers.makeshop import AsianBeanScraper
-from scrapers.youngcart import SewoongScraper, BlessBeanScraper
+from scrapers.youngcart import BlessBeanScraper
 from scrapers.shopify import FalconMicroScraper
 
 SCRAPERS = [
