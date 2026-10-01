@@ -163,6 +163,15 @@ NAVER API HUB에도 쇼핑은 없다). 로그인 쿠키 주입은 약관 위반 
 안 한다. 그래서 `BLOCKED`로 옮겼다. 풀렸는지는
 `python tools/check_scrapers.py verde` 로 확인.
 
+대신 **자택 PC에서** 로그인 세션을 쓰는 `tools/naver_local.py` 가 2시간마다 돈다
+(작업 스케줄러 `green-coffee-radar-naver` → `naver_run.vbs`, 로그 `logs/naver.log`).
+Playwright 영구 프로필(`~/.green-coffee-radar/naver-profile`)에 로그인이 남고,
+중복 방지는 `~/.green-coffee-radar/naver_seen.json`. PC가 꺼져 있으면 그동안은 못 본다.
+
+- 로그인할 때 **"로그인 상태 유지"를 반드시 체크** — 안 하면 세션 쿠키라 창을 닫는 순간 사라진다.
+- 헤드리스는 로그인해도 429. 일반 창을 화면 밖(-32000)에 띄운다.
+- 로그인이 풀리면 텔레그램으로 한 번 알린다 → `python tools/naver_local.py --login`.
+
 ### momos imweb 이전 (2026-08-10 복구)
 
 모모스커피가 Cafe24 → imweb으로 갈아엎어서 `cate_no=162` 카탈로그 URL이
