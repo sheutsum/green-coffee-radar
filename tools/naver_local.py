@@ -73,13 +73,24 @@ def check() -> int:
             PROFILE, headless=False, locale="ko-KR",
             args=["--window-position=-32000,-32000"])
         page = ctx.new_page()
+        # 2026-10-01: 새 브라우저가 곧장 카테고리 URL 로 page.goto 하던 방식은
+        # 세 번째 실행에서 429 → 세션 강제 로그아웃을 당했다. 하루 넘게 버틴
+        # MCP 창은 스토어 홈을 열어둔 채 페이지 안에서 fetch() 로 읽었다 — 그 흐름을 따른다.
+        page.goto(f"{STORES[0].base}/{STORES[0].store_id}", wait_until="load", timeout=45000)
+        time.sleep(random.uniform(3, 6))
         for s in STORES:
             time.sleep(random.uniform(2, 5))
             try:
                 # 하이드레이션 뒤 DOM 이 아니라 서버가 준 원본 HTML 을 파싱한다
-                resp = page.goto(s._catalog_url(1).replace("size=20", "size=40"),
-                                 wait_until="domcontentloaded", timeout=45000)
-                if "nidlogin" in page.url:
+                resp = page.evaluate(
+                    """async (u) => { const r = await fetch(u, {credentials: "include"});
+                       return {url: r.url, status: r.status, text: await r.text()}; }""",
+                    s._catalog_url(1).replace("size=20", "size=40"))
+                if resp["status"] == 429:
+                    # 계속 두드리면 세션이 끊긴다. 이번 회차는 바로 접는다.
+                    _log(f"{s.name}: HTTP 429 — 이번 회차 중단")
+                    break
+                if "nidlogin" in resp["url"]:
                     _log("로그인 풀림")
                     if not state["login_alerted"]:
                         _alert("🔑 네이버 로그인이 풀렸습니다. PC에서 실행:\n"
@@ -87,10 +98,10 @@ def check() -> int:
                         state["login_alerted"] = True
                     break
                 state["login_alerted"] = False
-                if resp.status >= 400:
-                    _log(f"{s.name}: HTTP {resp.status}")
+                if resp["status"] >= 400:
+                    _log(f"{s.name}: HTTP {resp['status']}")
                     continue
-                products = list(s._extract_products(resp.text()))
+                products = list(s._extract_products(resp["text"]))
             except Exception:
                 _log(f"{s.name} 실패:\n{traceback.format_exc()}")
                 continue
