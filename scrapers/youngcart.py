@@ -62,6 +62,9 @@ class YoungcartScraper(Scraper):
                         polite_sleep()
                     r = get_with_retry(c, self._catalog_url(ca_id, page))
                     r.raise_for_status()
+                    if "접근 불가" in r.text[:200]:
+                        # 상점주 IP 차단 페이지(29바이트). 2026-10-02 러너에서 확인.
+                        raise RuntimeError(f"{self.name}: IP 차단 페이지 ({r.url})")
                     items = list(self._parse(r.text, rx))
                     new = [p for p in items if p.sku not in cat_seen]
                     if not new:

@@ -179,11 +179,12 @@ CC_IMPERSONATE = "chrome131"
 
 
 def cc_get_with_retry(session, url, *, max_retries: int = 3,
-                      base_backoff: float = 4.0, **kwargs):
+                      base_backoff: float = 4.0, impersonate: str = CC_IMPERSONATE,
+                      **kwargs):
     """curl_cffi 세션용 GET + 429/5xx 지수 백오프. 최종 응답을 그대로 돌려준다."""
     last = None
     for attempt in range(max_retries + 1):
-        last = session.get(url, impersonate=CC_IMPERSONATE, **kwargs)
+        last = session.get(url, impersonate=impersonate, **kwargs)
         if last.status_code not in RETRY_STATUS or attempt >= max_retries:
             return last
         ra = str(last.headers.get("Retry-After", "")).strip()

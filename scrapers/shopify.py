@@ -38,7 +38,10 @@ class ShopifyScraper(Scraper):
                 # Shopify는 UA만 바꿔서는 안 되고 TLS 지문까지 본다. 그래도
                 # 공용 IP(Actions runner)에서는 429 local_rate_limited가 나서
                 # 백오프 재시도가 필요하다.
+                # 2026-10-02 Actions 러너 프로브: 컬렉션 products.json 이 chrome131
+                # 지문엔 매번 403, safari17_0 엔 매번 200. 지문 차단이라 재시도로는 안 풀린다.
                 r = cc_get_with_retry(c, url, timeout=self.timeout,
+                                      impersonate="safari17_0",
                                       params={"limit": self.page_size,
                                               "page": page})
                 if r.status_code >= 400:
