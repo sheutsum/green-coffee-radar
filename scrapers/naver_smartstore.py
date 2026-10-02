@@ -13,7 +13,12 @@ SSR 데이터가 박혀 있다:
 safari, edge 전부 확인)의 smartstore 요청을 nid.naver.com 로그인으로 리다이렉트
 시킨다. IP는 무관 — 자택 IP와 GitHub Actions 양쪽에서 동일하게 막힌다.
 모바일 프로파일(chrome131_android)만 통과하며, 이 경우 m.smartstore.naver.com
-모바일 SSR 페이지로 붙는다. 그래서 _IMPERSONATE는 android 고정이다.
+모바일 SSR 페이지로 붙는다.
+
+2026-09-23 android 도 막혔다(카테고리 목록이 전부 로그인 월). 2026-10-03 찾은
+해법: **Referer: https://www.google.com/** — 구글 검색에서 들어온 방문자에겐
+로그인 없이 데스크톱 카테고리 페이지를 그대로 준다. 지문은 safari.
+(스토어 홈을 Referer 로 주던 기존 방식이 오히려 로그인 월로 보냈다.)
 """
 from __future__ import annotations
 import re
@@ -36,9 +41,9 @@ _NAVER_EXTRA_HEADERS = {
     "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-# 반드시 android 프로파일. 데스크톱 지문은 전부 로그인 월로 튕긴다(모듈 docstring
-# 참고). 최신 chrome146도 막히므로 "버전을 올리는" 방향으로는 해결되지 않는다.
-_IMPERSONATE = "chrome131_android"
+# 모듈 docstring 참고 — 핵심은 지문이 아니라 Referer 다.
+_IMPERSONATE = "safari"
+_REFERER = "https://www.google.com/"
 
 _PRELOAD_RE = re.compile(
     r"window\.__PRELOADED_STATE__\s*=\s*({.+?})\s*;", re.DOTALL
@@ -125,12 +130,9 @@ class NaverSmartStoreScraper(Scraper):
     supplier_name: str = ""
 
     base = "https://smartstore.naver.com"
-    page_size = 20
-    # ponytail: 모바일 SSR은 page/size 파라미터를 무시하고 st=RECENT 최신 20개만
-    # 준다(page=1,2,3 모두 동일한 20개 반환 확인). 즉 카탈로그 전체(verde 기준
-    # categoryProducts.totalCount=341)가 아니라 최신 20개만 본다.
-    # 15분 주기 신상 감시가 목적이라 한 스토어가 15분 안에 21개 이상을 올리지
-    # 않는 한 놓치지 않는다. 다만 PWA feed의 네이버 스토어 상품 수도 20으로 잘린다.
+    page_size = 40
+    # ponytail: 최신 40개만 본다(verde 전체는 364개). 신상 감시 목적이라 한 시간에
+    # 41개 이상 올리지 않는 한 놓치지 않는다. PWA feed 의 네이버 상품 수도 40으로 잘린다.
     # 전체 카탈로그가 필요해지면 내부 API(/i/v1/stores/{channelNo}/categories/
     # {catId}/products)를 뚫어야 하는데 2026-07 기준 429로 막혀 있다.
     max_pages = 1
@@ -147,21 +149,10 @@ class NaverSmartStoreScraper(Scraper):
         # 4개 네이버 가게가 동시에 호출하지 않도록 호출 직전 무작위 대기
         time.sleep(random.uniform(2.5, 6.0))
 
-        # curl_cffi.Session — TLS 지문까지 Chrome 흉내내서 봇 검출 우회
         with cc_requests.Session() as c:
             c.headers.update(_NAVER_EXTRA_HEADERS)
-
-            # 메인 페이지 prefetch — 쿠키/세션 워밍업 (정상 브라우저 흐름 흉내)
-            home_url = f"{self.base}/{self.store_id}"
-            try:
-                c.get(home_url, impersonate=_IMPERSONATE, timeout=15,
-                      allow_redirects=True)
-                time.sleep(random.uniform(1.2, 2.8))
-            except Exception:
-                pass  # 워밍업 실패해도 본 요청은 시도
-
-            # 카테고리 페이지로 넘어갈 때는 home에서 온 것처럼 Referer 설정
-            cat_headers = {"Referer": home_url}
+            # 스토어 홈 워밍업은 하지 않는다 — 홈을 거치면 오히려 로그인 월로 간다.
+            cat_headers = {"Referer": _REFERER}
             for page in range(1, self.max_pages + 1):
                 url = self._catalog_url(page)
                 r = c.get(url, headers=cat_headers,
@@ -170,8 +161,7 @@ class NaverSmartStoreScraper(Scraper):
                 if r.status_code in (403, 429):
                     raise RuntimeError(
                         f"{self.name}: Naver returned {r.status_code} "
-                        "(anti-bot). curl_cffi+impersonate도 막힘 — "
-                        "Playwright 검토 필요."
+                        "(anti-bot)."
                     )
                 if r.status_code >= 400:
                     raise RuntimeError(
@@ -183,8 +173,7 @@ class NaverSmartStoreScraper(Scraper):
                 if "nidlogin" in str(r.url):
                     raise RuntimeError(
                         f"{self.name}: 로그인 월로 리다이렉트됨({r.url}). "
-                        f"impersonate={_IMPERSONATE} 가 봇으로 검출됨 — "
-                        "다른 모바일 프로파일 검토 필요."
+                        f"Referer={_REFERER} 우회가 막혔을 수 있음."
                     )
                 items = list(self._extract_products(r.text))
                 new = [p for p in items if p.sku not in seen]

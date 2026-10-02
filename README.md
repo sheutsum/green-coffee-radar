@@ -96,7 +96,7 @@ python run.py
 | `sewoong` | 세웅지씨 | 고도몰 | cateCd 003·011 (2026-09-30 영카트에서 이전) |
 | `blessbean` | 블레스빈 | 영카트 | ca_id 2010~2040 |
 | `falcon` | 팔콘 마이크로 코리아 | Shopify | `korea-store-all-coffee` 컬렉션 |
-| ~~`verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa`~~ | (6곳) | 네이버 스마트스토어 | **로그인 필수화로 제외**, 아래 참고 |
+| `verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa` | (6곳) | 네이버 스마트스토어 | SSR JSON, 최신 40개 — **Referer: google 필수**, 아래 참고 |
 | `cafenogales` `compass` `koffeeroute` `hankook` `unico` `ethico` | (6곳) | 식스샵 | 내부 API |
 
 플랫폼별 공통 베이스 클래스:
@@ -146,7 +146,12 @@ python tools/check_scrapers.py gsc sopex  # 일부만
 과거 네이버 스마트스토어는 `chrome131_android` 지문으로 해결 — 지문 문제와 IP
 문제는 구분해서 봐야 한다.)
 
-### ⚠️ 네이버 스마트스토어 6곳 제외 (2026-09-23~)
+### ⚠️ 네이버 스마트스토어 6곳 — 로그인 월 (2026-09-23 ~ 10-03 복구)
+
+**2026-10-03 복구: `Referer: https://www.google.com/` 을 주면 비로그인으로도
+카테고리 페이지가 그대로 온다.** (insane-search 엔진의 referer 격자에서 발견.)
+지문은 safari. 스토어 홈을 Referer 로 주거나 홈을 먼저 들르면 오히려 로그인 월로
+간다. 계정은 쓰지 않는다. 아래는 그 전까지의 기록.
 
 2026-09-23 01:07Z부터 스마트스토어 **카테고리·검색 목록이 비로그인 요청을 전부
 `nid.naver.com` 로그인으로 보낸다.** 2026-09-24 자택에서 확인:
