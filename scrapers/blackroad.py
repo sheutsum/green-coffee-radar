@@ -8,7 +8,7 @@ Product: /37/?idx=<product_id>
 from __future__ import annotations
 import re
 import httpx
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from core.models import Product
 from scrapers.base import (

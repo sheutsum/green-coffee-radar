@@ -113,7 +113,7 @@ class Scraper(ABC):
 #   2) /product/detail.html?product_no=<id>&cate_no=<n>...           (older)
 # ---------------------------------------------------------------------------
 import httpx
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 _HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; GreenCoffeeRadar/0.1; personal alert bot)",

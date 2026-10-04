@@ -12,7 +12,7 @@ import re
 from typing import Iterator
 
 from curl_cffi import requests as cc_requests
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
 from core.models import Product
 from scrapers.base import (
@@ -21,6 +21,14 @@ from scrapers.base import (
 )
 
 _GOODS_NO_RE = re.compile(r"goodsNo=(\d+)")
+
+
+def _first(node, *sels):
+    for sel in sels:
+        el = node.css_first(sel)
+        if el:
+            return el
+    return None
 
 
 class GodomallScraper(Scraper):
@@ -80,12 +88,14 @@ class GodomallScraper(Scraper):
 
             name, price = self._from_data_attrs(node)
             if not name:
-                el = node.css_first(".item_name, .item_tit_box a")
+                # 쉼표 셀렉터 금지: lexbor 는 나열 순서가 아니라 문서 순서로 첫 매치를
+                # 준다(micoffee 이름이 전부 앞쪽 라벨 "SOUTH AMERICA" 가 됐다).
+                el = _first(node, ".item_name", ".item_tit_box a")
                 name = el.text(strip=True) if el else ""
             if not name:
                 continue
             if price is None:
-                money = node.css_first(".item_money_box .item_price, .item_money_box")
+                money = _first(node, ".item_money_box .item_price", ".item_money_box")
                 price = parse_price_krw(money.text()) if money else None
 
             text = node.text()

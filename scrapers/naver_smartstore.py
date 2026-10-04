@@ -26,7 +26,7 @@ import json
 import time
 import random
 from curl_cffi import requests as cc_requests
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser as HTMLParser
 from typing import Iterator
 
 from core.models import Product
