@@ -27,7 +27,7 @@ on:
       max_errors:
         description: 'feed.json errors 허용 개수. 0이면 알림 경로 테스트'
         required: false
-        default: '3'
+        default: '4'
       max_stale_h:
         description: '스크레이퍼 한 곳이 수집 못 한 채 버틸 수 있는 시간(h). 0이면 알림 경로 테스트'
         required: false
@@ -49,8 +49,10 @@ jobs:
           # 그대로면 확실히 비정상이다. 6시간마다 검사하므로 최악 탐지 지연은 ~12시간.
           MAX_AGE_H: ${{ inputs.max_age_h || '6' }}
           # 스크레이퍼 한둘이 일시적으로 죽는 건 흔하다(사이트 점검, 순간 429).
-          # 3곳 이상 동시에 죽으면 그건 우연이 아니다.
-          MAX_ERRORS: ${{ inputs.max_errors || '3' }}
+          # 3곳 이상 동시에 죽으면 그건 우연이 아니다. 단 blessbean 은 러너 IP 차단으로
+          # 거의 늘 실패해 한 자리를 상시 차지한다(2026-10-08 위사 두 곳의 순간 타임아웃만으로
+          # 울렸다). 그래서 4. blessbean 이 영영 죽는 건 MAX_STALE_H 가 따로 잡는다.
+          MAX_ERRORS: ${{ inputs.max_errors || '4' }}
           # 한 곳만 조용히 영구 사망하는 걸 잡는다. carry_forward 가 그 곳 상품을
           # 직전 피드에서 메워주기 때문에 count 도 안 줄고, errors 도 1이라
           # MAX_ERRORS(3)에 영영 안 걸린다 — 2026-09-08 커피미업이 카테고리
