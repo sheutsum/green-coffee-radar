@@ -31,6 +31,7 @@ class ShopifyScraper(Scraper):
         out: list[Product] = []
         seen: set[str] = set()
         url = f"{self.base}/collections/{self.collection}/products.json"
+        imps = ["firefox133", "safari17_0", "chrome131"]
         with cc_requests.Session() as c:
             for page in range(1, self.max_pages + 1):
                 if page > 1:
@@ -38,12 +39,17 @@ class ShopifyScraper(Scraper):
                 # Shopify는 UA만 바꿔서는 안 되고 TLS 지문까지 본다. 그래도
                 # 공용 IP(Actions runner)에서는 429 local_rate_limited가 나서
                 # 백오프 재시도가 필요하다.
-                # 2026-10-02 Actions 러너 프로브: 컬렉션 products.json 이 chrome131
-                # 지문엔 매번 403, safari17_0 엔 매번 200. 지문 차단이라 재시도로는 안 풀린다.
-                r = cc_get_with_retry(c, url, timeout=self.timeout,
-                                      impersonate="safari17_0",
-                                      params={"limit": self.page_size,
-                                              "page": page})
+                # 지문 차단은 재시도로 안 풀리고, 막히는 지문이 바뀐다(2026-10-02 러너는
+                # chrome131 만 403, 2026-11-05 엔 safari17_0 도 403·firefox133 만 200).
+                # 403 이면 다음 지문으로 넘어가고, 통한 지문을 앞으로 당겨 다음 페이지에 쓴다.
+                for imp in list(imps):
+                    r = cc_get_with_retry(c, url, timeout=self.timeout,
+                                          impersonate=imp,
+                                          params={"limit": self.page_size,
+                                                  "page": page})
+                    if r.status_code != 403:
+                        imps.remove(imp); imps.insert(0, imp)
+                        break
                 if r.status_code >= 400:
                     raise RuntimeError(
                         f"{self.name}: HTTP {r.status_code} from {url}"
