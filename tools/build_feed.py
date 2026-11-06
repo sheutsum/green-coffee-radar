@@ -63,7 +63,7 @@ def build_payload(products: list[Product], errors: list[str]) -> dict:
     }
 
 
-def _last_ok(payload: dict, prev_doc: dict) -> dict[str, str]:
+def _last_ok(payload: dict, prev_doc: dict, skipped=()) -> dict[str, str]:
     """스크레이퍼별 '마지막으로 실제 수집에 성공한 시각'.
 
     carry_forward 가 실패한 곳의 상품을 메워주면서 count 도 errors 도 조용해진다 —
@@ -78,14 +78,15 @@ def _last_ok(payload: dict, prev_doc: dict) -> dict[str, str]:
     prev = prev_doc.get("last_ok") or {}
     fresh = {d["sku"].split(":", 1)[0] for d in payload["products"] if d.get("sku")}
     out = {name: now for name in fresh}
-    for name in payload.get("errors", []):
+    for name in [*payload.get("errors", []), *skipped]:
         # 처음 보는 곳이 첫 실행부터 실패하면 기준 시각이 없다 — now 로 잡아
         # 임계 시간이 지난 뒤부터 울리게 한다(배포 직후 오탐 방지).
         out[name] = prev.get(name, now)
     return out
 
 
-def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
+def carry_forward(payload: dict, errors: list[str], out_path: Path,
+                  skipped: list[str] = ()) -> dict:
     """실패한 스크레이퍼의 상품을 직전 feed 에서 그대로 물려온다.
 
     403 한 번에 그 공급사 상품 100여 개(카탈로그의 6%)가 피드에서 통째로
@@ -102,13 +103,15 @@ def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
             prev_doc = json.loads(out_path.read_text(encoding="utf-8"))
         except (ValueError, OSError):
             prev_doc = {}
-    payload["last_ok"] = _last_ok(payload, prev_doc)
+    payload["last_ok"] = _last_ok(payload, prev_doc, skipped)
+    # 느린 조(run.py SLOW)를 마지막으로 돌린 시각. 빠른 조만 돈 회차는 물려받는다.
+    payload["slow_at"] = (prev_doc.get("slow_at") if skipped else None) or payload["generated_at"]
 
-    if not errors or "products" not in prev_doc:
+    if not (errors or skipped) or "products" not in prev_doc:
         return payload
     prev = prev_doc["products"]
 
-    failed = set(errors)
+    failed = set(errors) | set(skipped)
     fresh = {d["sku"] for d in payload["products"]}
     carried = [d for d in prev
                if d.get("sku", "").split(":", 1)[0] in failed and d["sku"] not in fresh]
@@ -127,9 +130,9 @@ def carry_forward(payload: dict, errors: list[str], out_path: Path) -> dict:
 
 
 def write_feed(products: list[Product], errors: list[str] | None = None,
-               out_path: Path = OUT_PATH) -> Path:
+               out_path: Path = OUT_PATH, skipped: list[str] = ()) -> Path:
     errors = errors or []
-    payload = carry_forward(build_payload(products, errors), errors, out_path)
+    payload = carry_forward(build_payload(products, errors), errors, out_path, skipped)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         # 상품 1600여 개 × 30분마다 커밋 + 앱이 매번 내려받는 파일이라 압축해서 쓴다

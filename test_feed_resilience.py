@@ -144,6 +144,25 @@ def test_last_ok_first_run_failure_starts_clock_now():
         assert p["last_ok"] == {"newshop": "2026-09-09T00:00:00+00:00"}
 
 
+def test_skipped_slow_tier_is_carried_not_errored():
+    """빠른 조만 돈 회차: 느린 조 상품은 물려오고, errors 에도 안 들어가며,
+    last_ok 와 slow_at 은 직전 값을 유지한다."""
+    momos = {"sku": "momos:m1", "supplier": "모모스", "name": "n", "first_seen": "2026-01-01"}
+    verde = {"sku": "verde:v1", "supplier": "베르데", "name": "n", "first_seen": "2026-01-01"}
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / "feed.json"
+        p = carry_forward(_payload([momos, verde], [], "2026-11-06T00:00:00+00:00"), [], out)
+        assert p["slow_at"] == "2026-11-06T00:00:00+00:00"
+        out.write_text(json.dumps(p), encoding="utf-8")
+
+        p = carry_forward(_payload([momos], [], "2026-11-06T00:20:00+00:00"), [], out,
+                          skipped=["verde"])
+        assert {x["sku"] for x in p["products"]} == {"momos:m1", "verde:v1"}
+        assert p["errors"] == [] and p["slow_at"] == "2026-11-06T00:00:00+00:00"
+        assert p["last_ok"]["verde"] == "2026-11-06T00:00:00+00:00"
+        assert p["last_ok"]["momos"] == "2026-11-06T00:20:00+00:00"
+
+
 if __name__ == "__main__":
     for fn in [v for k, v in sorted(vars().items()) if k.startswith("test_")]:
         fn(); print("ok", fn.__name__)

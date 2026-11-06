@@ -10,7 +10,10 @@ on:
     # cancel-in-progress: true 와 겹치면 :07 스케줄이 그 실행을 취소해버린다.
     # 실측 한 바퀴 ~7분이라 :07은 아슬아슬하고 :37은 확실히 안전하다.
     # 사이트별 throttle/retry는 scrapers/base.py 의 polite_sleep/get_with_retry 참고.
-    - cron: '37 * * * *'
+    #
+    # 2026-11-06 시험: 20분 주기(:11/:31/:51). 느린 조는 run.py 가 55분에 한 번만
+    # 돌린다. 로컬 핑거(:01)와는 10분씩 떨어져 cancel-in-progress 에 안 걸린다.
+    - cron: '11,31,51 * * * *'
   workflow_dispatch: {}
 
 # contents: 상태(seen.sqlite/feed.json) 커밋 / pages·id-token: PWA 배포

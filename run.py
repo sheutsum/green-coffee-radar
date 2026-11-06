@@ -1,7 +1,9 @@
 from __future__ import annotations
+import json
 import os
 import sys
 import traceback
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # Allow running from project root
@@ -80,6 +82,20 @@ BLOCKED = [
 
 DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")
 
+# 2026-11-06 시험: 나머지는 20분마다, 이 곳들은 1시간마다만 친다. 네이버는 Referer
+# 우회 하나로 버티는 중이라 요청을 늘리면 막힐 수 있고, falcon(Cloudflare 지문 차단)과
+# blessbean(IP 차단)은 자주 쳐봐야 차단만 굳는다. 건너뛴 회차엔 직전 피드에서 물려온다.
+SLOW = {"verde", "ryubeans", "chbean", "doan", "ayantu", "gimisa", "falcon", "blessbean"}
+SLOW_EVERY = timedelta(minutes=55)
+
+
+def _slow_due(feed_path: Path = Path("web/feed.json")) -> bool:
+    try:
+        at = json.loads(feed_path.read_text(encoding="utf-8")).get("slow_at")
+        return datetime.now(timezone.utc) - datetime.fromisoformat(at) >= SLOW_EVERY
+    except Exception:
+        return True
+
 
 def main() -> int:
     print(f"Mode: {'DRY-RUN (no Telegram)' if DRY_RUN else 'LIVE'}")
@@ -89,8 +105,12 @@ def main() -> int:
     total_new = 0
     all_products = []
     errors: list[str] = []
+    skipped = [] if _slow_due() else sorted(SLOW)
+    print(f"Tier: {'fast only (skip ' + ', '.join(skipped) + ')' if skipped else 'all'}")
 
     for scraper in SCRAPERS:
+        if scraper.name in skipped:
+            continue
         try:
             products = scraper.fetch()
         except Exception:
@@ -116,7 +136,7 @@ def main() -> int:
 
     # Snapshot the full catalog for the PWA. Done after diff_and_record so
     # first_seen timestamps for brand-new SKUs are already in the DB.
-    feed_path = write_feed(all_products, errors)
+    feed_path = write_feed(all_products, errors, skipped=skipped)
     print(f"\nDone. {total_new} new product(s) announced. "
           f"Feed: {len(all_products)} products -> {feed_path}")
     return 0
