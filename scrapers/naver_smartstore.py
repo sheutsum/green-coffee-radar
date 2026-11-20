@@ -192,6 +192,15 @@ class NaverSmartStoreScraper(Scraper):
             raise RuntimeError(
                 f"{self.name}: SSR JSON not found. Site layout may have changed."
             )
+        # 휴점/운영 중지 스토어는 페이지는 200 으로 멀쩡히 오고 상품만 0개다.
+        # 그대로 두면 run.py 가 "layout changed?" 라고 엉뚱하게 진단한다
+        # (2026-11-17 doan: channelExternalStatusType=STOP).
+        status = (data.get("channel") or {}).get("channelExternalStatusType") \
+            if isinstance(data, dict) else None
+        if status and status != "NORMAL":
+            raise RuntimeError(
+                f"{self.name}: 스토어 운영 상태 {status} (휴점/운영 중지) — 스크레이퍼 고장 아님."
+            )
         seen_ids: set[str] = set()
         for d in _walk(data):
             pid = str(

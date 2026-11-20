@@ -163,6 +163,17 @@ def test_skipped_slow_tier_is_carried_not_errored():
         assert p["last_ok"]["momos"] == "2026-11-06T00:20:00+00:00"
 
 
+def test_naver_closed_store_is_not_layout_change():
+    from scrapers.naver_smartstore import VerdeTradeScraper
+    page = '<script>window.__PRELOADED_STATE__={"channel":{"channelExternalStatusType":"%s"}};</script>'
+    try:
+        list(VerdeTradeScraper()._extract_products(page % "STOP"))
+        raise AssertionError("STOP 스토어는 명시적 에러여야 한다")
+    except RuntimeError as e:
+        assert "STOP" in str(e)
+    assert list(VerdeTradeScraper()._extract_products(page % "NORMAL")) == []
+
+
 if __name__ == "__main__":
     for fn in [v for k, v in sorted(vars().items()) if k.startswith("test_")]:
         fn(); print("ok", fn.__name__)

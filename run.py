@@ -64,7 +64,6 @@ SCRAPERS = [
     VerdeTradeScraper(),
     RyubeansScraper(),
     ChBeanScraper(),
-    DoanSelectShopScraper(),
     AyantuScraper(),
     GimisaScraper(),
 ]
@@ -76,8 +75,12 @@ SCRAPERS = [
 # 되돌리면 된다. 사유는 README "클라우드에서만 막히는 곳" 참고.
 #
 # royal: 2026-08-02부터 Actions 러너에서 호스트 전체 403 (상점주 IP 차단)
+# doan:  2026-11-17 스토어 자체가 운영 중지(channelExternalStatusType=STOP, 상품 0개).
+#        차단이 아니라 휴점이라 자택 IP 점검으론 구분이 안 된다(자택은 네이버가
+#        로그인 월로 보냄). 스토어가 다시 열리면 SCRAPERS 로 되돌린다.
 BLOCKED = [
     RoyalCoffeeScraper(),
+    DoanSelectShopScraper(),
 ]
 
 DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")
@@ -85,7 +88,7 @@ DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")
 # 2026-11-06 시험: 나머지는 20분마다, 이 곳들은 1시간마다만 친다. 네이버는 Referer
 # 우회 하나로 버티는 중이라 요청을 늘리면 막힐 수 있고, falcon(Cloudflare 지문 차단)과
 # blessbean(IP 차단)은 자주 쳐봐야 차단만 굳는다. 건너뛴 회차엔 직전 피드에서 물려온다.
-SLOW = {"verde", "ryubeans", "chbean", "doan", "ayantu", "gimisa", "falcon", "blessbean"}
+SLOW = {"verde", "ryubeans", "chbean", "ayantu", "gimisa", "falcon", "blessbean"}
 SLOW_EVERY = timedelta(minutes=55)
 
 
