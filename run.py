@@ -18,7 +18,7 @@ from scrapers.coffeelibre import CoffeeLibreScraper
 from scrapers.cobeans import CobeansScraper, AlmacieloScraper
 from scrapers.blackroad import BlackRoadScraper
 from scrapers.naver_smartstore import (
-    VerdeTradeScraper, RyubeansScraper, ChBeanScraper, DoanSelectShopScraper,
+    VerdeTradeScraper, RyubeansScraper, ChBeanScraper,
     AyantuScraper, GimisaScraper,
 )
 from scrapers.sixshop import (
@@ -35,6 +35,7 @@ from scrapers.godomall import (
 from scrapers.makeshop import AsianBeanScraper
 from scrapers.youngcart import BlessBeanScraper
 from scrapers.shopify import FalconMicroScraper
+from scrapers.imweb import DoanScraper
 
 SCRAPERS = [
     MomosScraper(),
@@ -66,6 +67,8 @@ SCRAPERS = [
     ChBeanScraper(),
     AyantuScraper(),
     GimisaScraper(),
+    # 2026-11-20 네이버(STOP) → 자사몰 doancompany.kr 이전
+    DoanScraper(),
 ]
 
 # 정기 수집에서 뺐지만 코드는 살아있는 스크레이퍼. 매 실행 errors 에 쌓이면
@@ -75,12 +78,8 @@ SCRAPERS = [
 # 되돌리면 된다. 사유는 README "클라우드에서만 막히는 곳" 참고.
 #
 # royal: 2026-08-02부터 Actions 러너에서 호스트 전체 403 (상점주 IP 차단)
-# doan:  2026-11-17 스토어 자체가 운영 중지(channelExternalStatusType=STOP, 상품 0개).
-#        차단이 아니라 휴점이라 자택 IP 점검으론 구분이 안 된다(자택은 네이버가
-#        로그인 월로 보냄). 스토어가 다시 열리면 SCRAPERS 로 되돌린다.
 BLOCKED = [
     RoyalCoffeeScraper(),
-    DoanSelectShopScraper(),
 ]
 
 DB_PATH = os.environ.get("RADAR_DB", "seen.sqlite")

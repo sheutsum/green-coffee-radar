@@ -26,7 +26,7 @@ from playwright.sync_api import sync_playwright  # noqa: E402
 
 from core.notify import send, TG_TOKEN, TG_CHAT  # noqa: E402
 from scrapers.naver_smartstore import (  # noqa: E402
-    VerdeTradeScraper, RyubeansScraper, ChBeanScraper, DoanSelectShopScraper,
+    VerdeTradeScraper, RyubeansScraper, ChBeanScraper,
     AyantuScraper, GimisaScraper,
 )
 
@@ -34,7 +34,7 @@ HOME = Path.home() / ".green-coffee-radar"
 PROFILE = HOME / "naver-profile"
 STATE = HOME / "naver_seen.json"
 STORES = [VerdeTradeScraper(), RyubeansScraper(), ChBeanScraper(),
-          DoanSelectShopScraper(), AyantuScraper(), GimisaScraper()]
+          AyantuScraper(), GimisaScraper()]
 
 
 def _log(msg: str) -> None:

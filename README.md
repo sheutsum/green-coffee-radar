@@ -88,6 +88,7 @@ python run.py
 | `cobeans` | 코빈즈커피 | Wisa | cno1 1037 (신규입고) |
 | `almacielo` | 알마시엘로 | Wisa | cno1 1070 (생두찾기) |
 | `blackroad` | 블랙로드커피 | imweb | `/<cat>/?idx=<id>` |
+| `doan` | 도안 셀렉트 샵 | imweb | `/GREEN` — 카드의 `data-product-properties` JSON (2026-11-20 네이버에서 이전) |
 | `gsc` | 지에스씨(GSC) | 고도몰 | cateCd 014 |
 | `micoffee` | 엠아이커피 | 고도몰 | cateCd 001~004·024 |
 | `wbeans` | 더블유빈즈 | 고도몰 | cateCd 024·003·004·005·027 |
@@ -96,7 +97,7 @@ python run.py
 | `sewoong` | 세웅지씨 | 고도몰 | cateCd 003·011 (2026-09-30 영카트에서 이전) |
 | `blessbean` | 블레스빈 | 영카트 | ca_id 2010~2040 |
 | `falcon` | 팔콘 마이크로 코리아 | Shopify | `korea-store-all-coffee` 컬렉션 |
-| `verde` `ryubeans` `chbean` `doan` `ayantu` `gimisa` | (6곳) | 네이버 스마트스토어 | SSR JSON, 최신 40개 — **Referer: google 필수**, 아래 참고 |
+| `verde` `ryubeans` `chbean` `ayantu` `gimisa` | (5곳) | 네이버 스마트스토어 | SSR JSON, 최신 40개 — **Referer: google 필수**, 아래 참고 |
 | `cafenogales` `compass` `koffeeroute` `hankook` `unico` `ethico` | (6곳) | 식스샵 | 내부 API |
 
 플랫폼별 공통 베이스 클래스:

@@ -174,6 +174,16 @@ def test_naver_closed_store_is_not_layout_change():
     assert list(VerdeTradeScraper()._extract_products(page % "NORMAL")) == []
 
 
+def test_imweb_card_parse():
+    from scrapers.imweb import DoanScraper
+    card = ('<div class="shop-item _shop_item" data-product-properties="{&quot;idx&quot;:%d,'
+            '&quot;name&quot;:&quot;에티오피아 구지 내추럴&quot;,&quot;price&quot;:51000}">%s</div>')
+    html = card % (179, '<img class="sold_out">') + card % (130, "")
+    a, b = DoanScraper()._parse(html)
+    assert (a.sku, a.price_krw, a.unit_g, a.in_stock) == ("doan:179", 51000, 1000, False)
+    assert b.in_stock and b.url == "https://www.doancompany.kr/GREEN/?idx=130"
+
+
 if __name__ == "__main__":
     for fn in [v for k, v in sorted(vars().items()) if k.startswith("test_")]:
         fn(); print("ok", fn.__name__)

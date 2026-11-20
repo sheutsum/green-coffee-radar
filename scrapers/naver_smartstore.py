@@ -361,9 +361,4 @@ class GimisaScraper(NaverSmartStoreScraper):
     store_id = "gimisa"
     category_id = "59dc91aff0c04921a19ddc9b8fe553a2"
 
-
-class DoanSelectShopScraper(NaverSmartStoreScraper):
-    name = "doan"
-    supplier_name = "도안 셀렉트 샵"
-    store_id = "doanselectshop"
-    category_id = "7cf945cf3b334753baeed79a7f9a4b25"
+# doan(doanselectshop)은 2026-11 자사몰로 이전 → scrapers/imweb.py
