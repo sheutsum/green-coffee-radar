@@ -44,7 +44,7 @@ jobs:
     timeout-minutes: 30
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy_first.outputs.page_url || steps.deploy_retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -125,6 +125,20 @@ jobs:
         with:
           path: web
 
+      # 2026-11-18~24 7회: 업로드 finalize 0.02초 뒤 deploy 가 artifact 목록을 조회하면
+      # GitHub API 가 아직 0개를 돌려줘 "No artifacts named github-pages" 로 실패했다
+      # (반영 지연). 수집, 알림, 상태 커밋은 이미 끝난 뒤라 PWA 만 한 시간 밀린다.
+      # 첫 시도가 실패하면 잠깐 기다렸다 한 번 더 배포한다.
       - name: Deploy to GitHub Pages
-        id: deploy
+        id: deploy_first
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before deploy retry
+        if: steps.deploy_first.outcome == 'failure'
+        run: sleep 20
+
+      - name: Deploy to GitHub Pages (retry)
+        id: deploy_retry
+        if: steps.deploy_first.outcome == 'failure'
         uses: actions/deploy-pages@v4
